@@ -104,7 +104,13 @@
 .main-content_first-theme {
   height: 100vh; }
 
+.date_first-theme {
+  margin: 5px; }
+
 .date-name_first-theme {
-  width: 150px;
+  width: 120px;
   padding: 5px;
   background-color: peachpuff; }
+
+.date__ul_close {
+  display: none; }
