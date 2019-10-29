@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 16px; }
+
+.wrapper_first-theme {
+  min-width: 1024px;
+  max-width: 1024px;
+  margin: 10px auto; }
+
+.header__global-navigation_first-theme {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  border-bottom: 1px solid black; }
+  .header__global-navigation_first-theme .header__h1_first-theme {
+    margin: 0;
+    padding: 0;
+    font-size: 36px; }
+  .header__global-navigation_first-theme .header__nav_first-theme,
+  .header__global-navigation_first-theme .date-ul_first-theme {
+    margin: 0;
+    padding: 0; }
+
+.section-navigation__img_first-theme,
+.nav__img_first-theme,
+.appeal__img_first-theme {
+  width: 20px; }
+
+.section-navigation__img_first-theme {
+  margin-top: 2px; }
+
+.nav__ul_first-theme {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end; }
+
+.nav__li_first-theme,
+.section-navigation__li_first-theme {
+  display: inline-block;
+  margin: 5px; }
+
+.nav__link_first-theme {
+  font-size: 20px; }
+
+.nav__link_first-theme,
+.search__link_first-theme {
+  text-decoration: none; }
+
+.section-navigation_first-theme {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row; }
+
+.section-navigation__button_first-theme {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 2px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+.content-wrapper_first-theme {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row; }
+
+.sidebar_first-theme {
+  float: left;
+  width: 600px;
+  height: 100vh;
+  padding: 5px;
+  overflow: scroll;
+  overflow-x: hidden;
+  background-color: palevioletred; }
+
+.main-content_first-theme {
+  height: 100vh; }
+
+.date-name_first-theme {
+  width: 150px;
+  padding: 5px;
+  background-color: peachpuff; }
