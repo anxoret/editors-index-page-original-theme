@@ -1,5 +1,11 @@
 "use strict" 
 
+// scroll width of .dates-sidebar 
+let datesSidebar = document.querySelector(".dates-sidebar ");
+let scrollWidth = datesSidebar.offsetWidth - datesSidebar.clientWidth;
+// console.log(scrollWidth);
+console.log(datesSidebar.offsetWidth);
+
 const showAndHideDomElement = (element, className) => {
     element.classList.toggle(className);
 };
@@ -13,9 +19,9 @@ dates.forEach(date => {
     });
 });
 
-let sectionNavigationButton = document.querySelector(".section-navigation__button");
+let sectionNavigationButton = document.querySelector(".sections-navigation__button");
 sectionNavigationButton.addEventListener("click", () => {
-    let ul = sectionNavigationButton.querySelector(".section-navigation__ul");
-    showAndHideDomElement(ul, "section-navigation__ul_close");
+    let ul = sectionNavigationButton.querySelector(".sections-navigation__ul");
+    showAndHideDomElement(ul, "sections-navigation__ul_close");
 });
 

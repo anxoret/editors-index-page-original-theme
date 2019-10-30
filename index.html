@@ -28,43 +28,65 @@
                     </ul>
                 </nav>
             </div>
-            <div class="section-navigation section-navigation_first-theme"> <!-- Придумать другое название классу -->
-                <button class="section-navigation__button section-navigation__button_first-theme">
+            <div class="sections-navigation sections-navigation_first-theme"> <!-- Придумать другое название классу -->
+                <button class="sections-navigation__button sections-navigation__button_first-theme">
                     Обращения ЦОВ
-                    <img class="section-navigation__img section-navigation__img_first-theme" src="img/arrow-down.png" alt="arrow-down"> <!-- Сделать фигуру на CSS -->
-                    <ul class="section-navigation__ul section-navigation__ul_first-theme section-navigation__ul_close">
-                        <li class="section-navigation__li section-navigation__li_first-theme">
-                            Вопросы из приложения
+                    <img class="sections-navigation__img sections-navigation__img_first-theme" src="img/arrow-down.png" alt="arrow-down"> <!-- Сделать фигуру на CSS -->
+                    <ul class="sections-navigation__ul sections-navigation__ul_first-theme sections-navigation__ul_close">
+                        <li class="sections-navigation__li sections-navigation__li_first-theme">
+                            <a class="sections-navigation__link sections-navigation__link_first-theme" href="#">
+                                Вопросы из приложения
+                            </a>
                         </li>
-                        <li class="section-navigation__li section-navigation__li_first-theme">
-                            СМС
+                        <li class="sections-navigation__li sections-navigation__li_first-theme">
+                            <a class="sections-navigation__link sections-navigation__link_first-theme" href="#">
+                                СМС
+                            </a>
                         </li>
-                        <li class="section-navigation__li section-navigation__li_first-theme">
-                            Обращения с сайта
+                        <li class="sections-navigation__li sections-navigation__li_first-theme">
+                            <a class="sections-navigation__link sections-navigation__link_first-theme" href="#">
+                                Обращения с сайта
+                            </a>
                         </li>
-                        <li class="section-navigation__li section-navigation__li_first-theme">
-                            ММС
+                        <li class="sections-navigation__li sections-navigation__li_first-theme">
+                            <a class="sections-navigation__link sections-navigation__link_first-theme" href="#">
+                                ММС
+                            </a>
                         </li>
-                        <li class="section-navigation__li section-navigation__li_first-theme">
-                            Обращения из соц. сетей
+                        <li class="sections-navigation__li sections-navigation__li_first-theme">
+                            <a class="sections-navigation__link sections-navigation__link_first-theme" href="#">
+                                Обращения из соц. сетей
+                            </a>
                         </li>
-                        <li class="section-navigation__li section-navigation__li_first-theme">
-                            Видеообращения из приложения
+                        <li class="sections-navigation__li sections-navigation__li_first-theme">
+                            <a class="sections-navigation__link sections-navigation__link_first-theme" href="#">
+                                Видеообращения из приложения
+                            </a>
                         </li>
-                        <li class="section-navigation__li section-navigation__li_first-theme">
-                            Видеообращения из соц. сетей
+                        <li class="sections-navigation__li sections-navigation__li_first-theme">
+                            <a class="sections-navigation__link sections-navigation__link_first-theme" href="#">
+                                Видеообращения из соц. сетей
+                            </a>
                         </li>
-                        <li class="section-navigation__li section-navigation__li_first-theme">
-                            Видеодиалоги из приложения
+                        <li class="sections-navigation__li sections-navigation__li_first-theme">
+                            <a class="sections-navigation__link sections-navigation__link_first-theme" href="#">
+                                Видеодиалоги из приложения
+                            </a>
                         </li>
-                        <li class="section-navigation__li section-navigation__li_first-theme">
-                            Работа с аудио
+                        <li class="sections-navigation__li sections-navigation__li_first-theme">
+                            <a class="sections-navigation__link sections-navigation__link_first-theme" href="#">
+                                Работа с аудио
+                            </a>
                         </li>
-                        <li class="section-navigation__li section-navigation__li_first-theme">
-                            Общий поиск
+                        <li class="sections-navigation__li sections-navigation__li_first-theme">
+                            <a class="sections-navigation__link sections-navigation__link_first-theme" href="#">
+                                Общий поиск
+                            </a>
                         </li>
-                        <li class="section-navigation__li section-navigation__li_first-theme">
-                            Статистика
+                        <li class="sections-navigation__li sections-navigation__li_first-theme">
+                            <a class="sections-navigation__link sections-navigation__link_first-theme" href="#">
+                                Статистика
+                            </a>
                         </li>  
                     </ul>
                 </button>
@@ -501,42 +523,38 @@
             </aside>
         
             <section class="main-content main-content_first-theme">
-                <h2 class="main-content__h2 main-content__h2_first-theme">Обращения 18 июня 01:00-01:59</h2>
-                <div class="search search_first-theme">
-                    <form class="search__form search__form_first-theme" action="" method="post">
-                        <div class="search__by-text search__by-text_first-theme">
-                            <textarea class="search__textarea search__textarea_first-theme" rows="2" cols="25" name="text">Введите текст</textarea>
-                            <div class="search__wrapper">
-                                <label class="search__radio radio radio_first-theme">
-                                    <input class="radio__input radio__input_first-theme" type="radio" checked name="search-by-words" value="search-by-words"/>
-                                    <div class="radio__text radio__text_first-theme">по словам</div>
-                                </label>
-                                <label class="search__radio radio radio_first-theme">
-                                    <input class="radio__input radio__input_first-theme" type="radio" name="search-by-phrase" value="search-by-phrase"/>
-                                    <div class="radio__text radio__text_first-theme">по фразе</div>
-                                </label>
+                <div class="search-information search-information_first-theme">
+                    <h2 class="main-content__h2 main-content__h2_first-theme">Обращения 18 июня 01:00-01:59</h2>
+                    <div class="search search_first-theme">
+                        <form class="search__form search__form_first-theme" action="" method="post">
+                            <div class="search__by-text search__by-text_first-theme">
+                                <textarea class="search__textarea search__textarea_first-theme" rows="2" cols="25" name="text">Введите текст</textarea>
+                                <div class="search__wrapper">
+                                    <label class="search__radio radio radio_first-theme">
+                                        <input class="radio__input radio__input_first-theme" type="radio" checked name="search-by-words" value="search-by-words"/>
+                                        <div class="radio__text radio__text_first-theme">по словам</div>
+                                    </label>
+                                    <label class="search__radio radio radio_first-theme">
+                                        <input class="radio__input radio__input_first-theme" type="radio" name="search-by-phrase" value="search-by-phrase"/>
+                                        <div class="radio__text radio__text_first-theme">по фразе</div>
+                                    </label>
+                                </div>
                             </div>
-                        </div>
-                        <div class="search__by-appeal-number search__by-appeal-number_first-theme">
-                            <textarea class="search__textarea search__textarea_first-theme" rows="1" cols="25" name="text">Введите номер обращения</textarea>
-                        </div>
-                        <div class="search__by-telephone-number search__by-telephone-number_first-theme">
-                            <textarea class="search__textarea search__textarea_first-theme" rows="1" cols="25" name="text">79999999999</textarea>
-                        </div>
-                        <button class="search__button search__button_first-theme">Найти</button>
-                    </form>
-                    <!-- <div class="search__result search__result_first-theme">
-                        <span class="search__span search__span_first-theme">Отобрано: 1</span>
-                        <span class="search__span search__span_first-theme">
-                            <a class="search__link search__link_first-theme" href="#">Перейти к отобранным</a>
+                            <div class="search__by-appeal-number search__by-appeal-number_first-theme">
+                                <textarea class="search__textarea search__textarea_first-theme" rows="1" cols="25" name="text">Введите номер обращения</textarea>
+                            </div>
+                            <div class="search__by-telephone-number search__by-telephone-number_first-theme">
+                                <textarea class="search__textarea search__textarea_first-theme" rows="1" cols="25" name="text">79999999999</textarea>
+                            </div>
+                            <button class="search__button search__button_first-theme">Найти</button>
+                        </form>
+                    </div>
+                    <div class="selected-appeals selected-appeals_first-theme">
+                        <span class="selected-appeals__span selected-appeals__span_first-theme">Отобрано: 1</span>
+                        <span class="selected-appeals__span selected-appeals__span_first-theme">
+                            <a class="selected-appeals__link selected-appeals__link_first-theme" href="#">Перейти к отобранным</a>
                         </span>
-                    </div> -->
-                </div>
-                <div class="selected-appeals selected-appeals_first-theme">
-                    <span class="selected-appeals__span selected-appeals__span_first-theme">Отобрано: 1</span>
-                    <span class="selected-appeals__span selected-appeals__span_first-theme">
-                        <a class="selected-appeals__link selected-appeals__link_first-theme" href="#">Перейти к отобранным</a>
-                    </span>
+                    </div>
                 </div>
                 <article class="appeal appeal_first-theme">
                     <div class="appeal__wrapper appeal__wrapper_first-theme">
@@ -598,6 +616,34 @@
                     <div class="appeal__wrapper appeal__wrapper_first-theme">
                         <div class="appeal__information appeal__information_first-theme">
                             <span class="appeal__date appeal__information_first-theme">18.06.2020 01:13:03</span>
+                            <span class="appeal__status appeal__information_first-theme">Логин редактирует обращение</span> 
+                        </div>
+                        <div class="appeal__interactions appeal__interactions_first-theme">
+                            <div class="appeal__mark appeal__mark_first-theme appeal__mark_marked"></div>
+                            <div class="appeal__edit appeal__edit_first-theme">
+                                <img class="appeal__img appeal__img_first-theme" src="img/edit.png" alt="edit">
+                            </div>
+                            <div class="appeal__print appeal__print_first-theme">
+                                <img class="appeal__img appeal__img_first-theme" src="img/print.png" alt="print">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="appeal__text appeal__text_first-theme">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure 
+                        dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non 
+                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing
+                    </div>
+                    <div class="appeal__open-all-text appeal__open-all-text_first-theme">
+                        <div class="appeal__arrows appeal__arrows_first-theme">
+                            <img class="appeal__img appeal__img_first-theme" src="img/expand_more.png" alt="open-all-text">
+                            <img class="appeal__img appeal__img_first-theme" src="img/expand_more.png" alt="open-all-text">
+                        </div>   
+                    </div>
+                </article>
+                <article class="appeal appeal_first-theme">
+                    <div class="appeal__wrapper appeal__wrapper_first-theme">
+                        <div class="appeal__information appeal__information_first-theme">
+                            <span class="appeal__date appeal__information_first-theme">17.06.2020 14:00:39</span>
                             <span class="appeal__status appeal__information_first-theme">Логин редактирует обращение</span> 
                         </div>
                         <div class="appeal__interactions appeal__interactions_first-theme">
