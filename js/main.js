@@ -1,14 +1,21 @@
 "use strict" 
 
-// const showAndHideDomElement = (element) => {
-//     element.classList.toggle("date__ul_open");
-//     alert("<D");
-// };
+const showAndHideDomElement = (element, className) => {
+    element.classList.toggle(className);
+};
 
+let dates = document.querySelectorAll(".date");
 
-// let dates = document.querySelectorAll(".date-name_first-theme");
-// let datesUl = document.querySelectorAll(".date__ul_open");
+dates.forEach(date => {
+    date.addEventListener("click", () => {
+        let ul = date.querySelector(".date__ul");
+        showAndHideDomElement(ul, "date__ul_close");
+    });
+});
 
-// dates.forEach( (date, i) => {
-//     date.addEventListener("click", showAndHideDomElement(datesUl[i]));
-// });
+let sectionNavigationButton = document.querySelector(".section-navigation__button");
+sectionNavigationButton.addEventListener("click", () => {
+    let ul = sectionNavigationButton.querySelector(".section-navigation__ul");
+    showAndHideDomElement(ul, "section-navigation__ul_close");
+});
+
