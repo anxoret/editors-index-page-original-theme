@@ -32,3 +32,4 @@ sectionsNavBtn.addEventListener("click", () => {
     ul.classList.toggle("sections-navigation__ul_close");
 });
 
+
