@@ -1,27 +1,34 @@
 "use strict" 
 
-// scroll width of .dates-sidebar 
-let datesSidebar = document.querySelector(".dates-sidebar ");
-let scrollWidth = datesSidebar.offsetWidth - datesSidebar.clientWidth;
-// console.log(scrollWidth);
-console.log(datesSidebar.offsetWidth);
+let openUl = false;
 
-const showAndHideDomElement = (element, className) => {
-    element.classList.toggle(className);
+const showAndHideDateUl = (element, className) => {
+    if (openUl == element) {
+        element.classList.add(className);
+        openUl = false;
+    } else if (openUl) {
+        openUl.classList.add(className);
+        element.classList.remove(className);
+        openUl = element;
+    } else {
+        element.classList.remove(className);
+        openUl = element;
+    }
 };
 
 let dates = document.querySelectorAll(".date");
+let datesNames = document.querySelectorAll(".date__name");
 
-dates.forEach(date => {
-    date.addEventListener("click", () => {
-        let ul = date.querySelector(".date__ul");
-        showAndHideDomElement(ul, "date__ul_close");
+datesNames.forEach((dateName, i) => {
+    dateName.addEventListener("click", () => {
+        let ul = dates[i].querySelector(".date__ul");
+        showAndHideDateUl(ul, "date__ul_close");
     });
 });
 
-let sectionNavigationButton = document.querySelector(".sections-navigation__button");
-sectionNavigationButton.addEventListener("click", () => {
-    let ul = sectionNavigationButton.querySelector(".sections-navigation__ul");
-    showAndHideDomElement(ul, "sections-navigation__ul_close");
+let currentSection = document.querySelector(".sections-navigation__current-section");
+currentSection.addEventListener("click", () => {
+    let ul = document.querySelector(".sections-navigation__ul");
+    ul.classList.toggle("sections-navigation__ul_close");
 });
 
