@@ -9,11 +9,9 @@
   margin: 10px auto; }
 
 .header_first-theme {
-  position: fixed;
   width: 1024px;
   height: 90px;
-  background-color: lightseagreen;
-  z-index: 9999; }
+  border: 1px solid black; }
 
 .header__global-navigation_first-theme {
   display: -webkit-box;
@@ -38,143 +36,13 @@
     margin: 0;
     padding: 0; }
 
-.nav__img_first-theme,
-.sections-navigation__img_first-theme,
-.appeal__img_first-theme {
-  margin: 0 2px;
-  width: 20px; }
-
-.sections-navigation__img_first-theme {
-  margin-top: 2px; }
-
-.nav__ul_first-theme {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin: 0;
-  padding: 0;
-  -webkit-box-align: end;
-  -ms-flex-align: end;
-  align-items: flex-end; }
-
-.nav__li_first-theme,
-.sections-navigation__li_first-theme,
-.section-navigation__li_first-theme {
-  display: inline-block;
-  margin: 5px; }
-
-.nav__link_first-theme {
-  font-size: 18px; }
-
-.nav__link_first-theme,
-.sections-navigation__link_first-theme,
-.section-navigation__link_first-theme,
-.search__link_first-theme {
-  text-decoration: none; }
-
-.sections-navigation_first-theme {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: row;
-  flex-direction: row; }
-
-.sections-navigation__ul_first-theme {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  background-color: mediumaquamarine;
-  width: 150px; }
-
-.sections-navigation__button_first-theme {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  padding: 2px;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  height: 40px;
-  width: 150px; }
-
-.sections-navigation_first-theme .sections-navigation__ul_close {
-  display: none; }
-
-.section-navigation__ul_first-theme {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  z-index: 9999; }
-
-.content-wrapper_first-theme {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: row;
-  flex-direction: row; }
-
-.dates-sidebar_first-theme {
-  position: fixed;
-  display: block;
-  top: 90px;
-  float: left;
-  width: 200px;
-  margin: 10px 0 0;
-  height: 100vh;
-  overflow-x: hidden;
-  overflow-y: overlay;
-  background-color: palevioletred;
-  z-index: 9998; }
-
-.main-content_first-theme {
-  width: 824px; }
-
-.date_first-theme {
-  margin: 5px; }
-
-.date__name_first-theme {
-  margin: 15px 20px 0 5px;
-  padding: 5px;
-  background-color: peachpuff; }
-
-.date__ul_close {
-  display: none; }
-
-.date__li_first-theme {
-  list-style-type: none; }
-
 .search-information_first-theme {
-  position: fixed;
-  top: 90px;
-  right: 200px;
-  z-index: 9999; }
-
-.main-content__h2_first-theme {
-  font-size: 26px;
-  text-align: center;
-  background-color: mediumvioletred;
-  z-index: 9999; }
+  width: 824px;
+  height: 125px; }
 
 .search_first-theme {
   padding: 5px;
-  border: 1px solid black;
-  background-color: lightpink; }
+  border: 1px solid black; }
 
 .search__form_first-theme {
   display: -webkit-box;
@@ -247,14 +115,142 @@
 .search__button_first-theme {
   height: 20px; }
 
+.nav__img_first-theme,
+.sections-navigation__img_first-theme,
+.appeal__img_first-theme {
+  margin: 0 2px;
+  width: 20px; }
+
+.sections-navigation__img_first-theme {
+  margin-top: 2px; }
+
+.nav__ul_first-theme {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end; }
+
+.nav__li_first-theme,
+.sections-navigation__li_first-theme,
+.section-navigation__li_first-theme {
+  display: inline-block;
+  margin: 5px; }
+
+.nav__link_first-theme {
+  font-size: 18px; }
+
+.nav__link_first-theme,
+.sections-navigation__link_first-theme,
+.section-navigation__link_first-theme,
+.search__link_first-theme {
+  text-decoration: none; }
+
+.sections-navigation_first-theme {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row; }
+
+.sections-navigation__ul_first-theme {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 40px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  background-color: mediumaquamarine;
+  width: 150px;
+  z-index: 9999; }
+
+.sections-navigation__button_first-theme {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 2px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 40px;
+  width: 150px; }
+
+.sections-navigation_first-theme .sections-navigation__ul_close {
+  display: none; }
+
+.section-navigation__ul_first-theme {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row; }
+
+.content-wrapper_first-theme {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row; }
+
+.dates-sidebar_first-theme {
+  display: block;
+  float: left;
+  width: 200px;
+  height: calc(100vh - 90px - 20px);
+  overflow-x: hidden;
+  overflow-y: overlay;
+  border: 1px solid black; }
+
+.date_first-theme {
+  margin: 5px; }
+
+.date__name_first-theme {
+  margin: 10px 20px 0 5px;
+  padding: 5px;
+  border: 1px solid black; }
+
+.date__ul_close {
+  display: none; }
+
+.date__li_first-theme {
+  list-style-type: none; }
+
+.main-content_first-theme {
+  width: 824px; }
+
+.main-content__h2_first-theme {
+  font-size: 26px;
+  text-align: center; }
+
+.appeals-container_first-theme {
+  height: calc(100vh - 90px - 125px);
+  overflow-x: hidden;
+  overflow-y: overlay; }
+
 .selected-appeals_first-theme {
-  position: fixed;
   text-align: right; }
 
 .appeal_first-theme {
-  margin: 20px 0;
-  border: 1px solid black;
-  padding: 5px; }
+  margin: 10px 30px 30px 10px;
+  padding: 5px;
+  border: 1px solid black; }
 
 .appeal__wrapper_first-theme {
   display: -webkit-box;

@@ -26,8 +26,8 @@ datesNames.forEach((dateName, i) => {
     });
 });
 
-let currentSection = document.querySelector(".sections-navigation__current-section");
-currentSection.addEventListener("click", () => {
+let sectionsNavBtn = document.querySelector(".sections-navigation__button_first-theme");
+sectionsNavBtn.addEventListener("click", () => {
     let ul = document.querySelector(".sections-navigation__ul");
     ul.classList.toggle("sections-navigation__ul_close");
 });
