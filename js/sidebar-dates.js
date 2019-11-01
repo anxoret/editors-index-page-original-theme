@@ -10,7 +10,7 @@ const fillSidebarWithDates = ((sidebarInDOM, monthName, startDay, endDay) => {
     
         let dateNameDiv = document.createElement("div");
         dateNameDiv.classList = "date__name date__name_first-theme";
-        dateNameDiv.innerText = `${i} ${monthName}`;
+        dateNameDiv.textContent = `${i} ${monthName}`;
         dateDiv.append(dateNameDiv);
 
         let dateUl = document.createElement("ul");
@@ -36,7 +36,7 @@ const fillSidebarWithDates = ((sidebarInDOM, monthName, startDay, endDay) => {
             }
 
             let timeStr = `${startHour}:${startMinutes} - ${startHour}:${minutes + 59}`;
-            dateLi.innerText = timeStr;
+            dateLi.textContent = timeStr;
             dateUl.append(dateLi);
 
             hour++;

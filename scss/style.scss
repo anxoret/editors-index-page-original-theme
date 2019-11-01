@@ -287,6 +287,7 @@
     border: 1px solid black;
 }
 .appeal__mark_first-theme {
+    position: relative;
     display: inline-block;
     margin: 0 2px;
     width: 20px;
@@ -295,10 +296,22 @@
 
     &:hover {
         &::before {
+            position: absolute;
+            top: 0;
+            bottom: 0;
             content: "\2714";
-            margin: 3px;
-            font-size: 20px;
+            font-size: 16px;
         }
+    }
+}
+
+.appeal__mark_marked {
+    &::before {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        content: "\2714";
+        font-size: 16px;
     }
 }
 

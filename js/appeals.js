@@ -64,7 +64,7 @@ for (let i = 0; i < appealsArray.length; i++) {
         hour = "0" + hour;
     }
 
-    let date = `${day}.06.2019 ${hour}.00.00`;
+    let date = `${day}.06.2019 ${hour}:00:00`;
     let status = getRandomStatus();
     let text = getRandomText();
     appealsArray[i] = createAppealObject(date, status, text);
@@ -90,18 +90,18 @@ appealsArray.forEach((appeal, i) => {
 
     let appealDate = document.createElement("span");
     appealDate.classList = "appeal__date appeal__date_first-theme";
-    appealDate.innerText = appeal.date;
+    appealDate.textContent = appeal.date;
     appealInformationDiv.append(appealDate);
 
     let appealStatus = document.createElement("span");
     appealStatus.classList = "appeal__status appeal__status_first-theme";
-    appealStatus.innerText = appeal.status;
+    appealStatus.textContent = appeal.status;
     appealInformationDiv.append(appealStatus);
 
     let appealInteractions = document.createElement("div");
     appealInteractions.classList = "appeal__interactions appeal__interactions_first-theme";
     appealInteractions.innerHTML = `
-        <div class="appeal__mark appeal__mark_first-theme appeal__mark_marked"></div>
+        <div class="appeal__mark appeal__mark_first-theme"></div>
         <div class="appeal__edit appeal__edit_first-theme">
             <img class="appeal__img appeal__img_first-theme" src="img/edit.png" alt="edit">
         </div>
@@ -119,17 +119,17 @@ appealsArray.forEach((appeal, i) => {
         let cuttenText = allText.slice(0, 601);
         let restText = allText.slice(601);
 
-        appealText.innerText = cuttenText;
+        appealText.textContent = cuttenText;
         wrapper.append(appealText);
 
         let ellipsisSpan = document.createElement("span");
         ellipsisSpan.classList = "appeal__ellipsis-span appeal__ellipsis-span_first-theme";
-        ellipsisSpan.innerText = "...";
+        ellipsisSpan.textContent = "...";
         appealText.append(ellipsisSpan);
 
         let restTextSpan = document.createElement("span");
         restTextSpan.classList = "appeal__rest-text-span appeal__rest-text-span_first-theme appeal__rest-text-span_close";
-        restTextSpan.innerText = restText;
+        restTextSpan.textContent = restText;
         appealText.append(restTextSpan);
 
         let appealOpenAllText = document.createElement("div");
@@ -144,7 +144,7 @@ appealsArray.forEach((appeal, i) => {
 
         appealsNumbersWithBigTexts.push(i);
     } else {
-        appealText.innerText = appeal.text;
+        appealText.textContent = appeal.text;
         wrapper.append(appealText);
     }
 
@@ -165,4 +165,25 @@ appealsNumbersWithBigTexts.forEach( (appealNumber, i) => {
 
             appealArrows.classList.toggle("appeal__arrows_up");
         });
+});
+
+let allAppealMarks = document.querySelectorAll(".appeal__mark");
+
+let selectedAppealsNumber = 0;
+let selectedAppealsNumberSpan = document.querySelector(".selected-appeals__number");
+console.info(selectedAppealsNumberSpan);
+selectedAppealsNumberSpan.textContent = selectedAppealsNumber;
+
+allAppealMarks.forEach(appealMark => {
+    appealMark.addEventListener("click", () => {
+        if (appealMark.classList.contains("appeal__mark_marked")) {
+            appealMark.classList.remove("appeal__mark_marked");
+            selectedAppealsNumber--;
+            selectedAppealsNumberSpan.textContent = selectedAppealsNumber;
+        } else {
+            appealMark.classList.add("appeal__mark_marked");
+            selectedAppealsNumber++;
+            selectedAppealsNumberSpan.textContent = selectedAppealsNumber;
+        }
+    });
 });
