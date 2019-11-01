@@ -45,5 +45,13 @@ const fillSidebarWithDates = ((sidebarInDOM, monthName, startDay, endDay) => {
     }
 });
 
+// primary on page Editors index page we show latest date with its latest appeals  
 let datesSidebar = document.querySelector(".dates-sidebar");
 fillSidebarWithDates(datesSidebar, "июня", 9, 22);
+
+let lastDateTimePeriods = document.querySelectorAll(".date__ul")[22 - 9];
+lastDateTimePeriods.classList.remove("date__ul_close");
+
+let dateLiSelected = lastDateTimePeriods.querySelectorAll(".date__li")[23].classList.add("date__li_selected");
+
+datesSidebar.scrollTop = datesSidebar.scrollHeight;

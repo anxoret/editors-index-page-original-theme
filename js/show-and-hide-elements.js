@@ -1,6 +1,6 @@
 "use strict" 
 
-let openUl = false;
+let openUl = lastDateTimePeriods;
 
 const showAndHideDateUl = (element, className) => {
     if (openUl == element) {
@@ -14,6 +14,7 @@ const showAndHideDateUl = (element, className) => {
         element.classList.remove(className);
         openUl = element;
     }
+
 };
 
 let dates = document.querySelectorAll(".date");

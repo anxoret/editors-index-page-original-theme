@@ -97,7 +97,7 @@
                 <nav class="section-navigation__nav section-navigation__nav_first-theme">
                     <ul class="section-navigation__ul section-navigation__ul_first-theme">
                         <li class="section-navigation__li section-navigation__li_first-theme">
-                            <a class="section-navigation__link section-navigation__link_first-theme" href="#">Работа с обращениями</a>
+                            <a class="section-navigation__link section-navigation__link_first-theme section-navigation__link_open-section" href="#">Работа с обращениями</a>
                         </li>
                         <li class="section-navigation__li section-navigation__li_first-theme">
                             <a class="section-navigation__link section-navigation__link_first-theme" href="#">Фильтрация обращений</a>
@@ -123,14 +123,22 @@
         
             <section class="main-content main-content_first-theme">
                 <div class="search-information search-information_first-theme">
-                    <h2 class="main-content__h2 main-content__h2_first-theme">Обращения 18 июня 01:00-01:59</h2>
+                    <h2 class="main-content__h2 main-content__h2_first-theme">
+                        Обращения 
+                        <span class="main-content__date-span main-content__date-span_first-theme">
+                            22 июня
+                        </span> 
+                        <span class="main-content__time-span main-content__time-span_first-theme">
+                            23:00 - 23:59
+                        </span>
+                    </h2>
                     <div class="search search_first-theme">
                         <form class="search__form search__form_first-theme" action="" method="post">
                             <div class="search__by-text search__by-text_first-theme">
                                 <textarea class="search__textarea search__textarea_first-theme" rows="2" cols="25" name="text">Введите текст</textarea>
                                 <div class="search__wrapper">
                                     <label class="search__radio radio radio_first-theme">
-                                        <input class="radio__input radio__input_first-theme" type="radio" name="search" value="search-by-words"/>
+                                        <input class="radio__input radio__input_first-theme" type="radio" name="search" value="search-by-words" checked/>
                                         <div class="radio__text radio__text_first-theme">по словам</div>
                                     </label>
                                     <label class="search__radio radio radio_first-theme">
@@ -160,15 +168,15 @@
                 <section class="appeals-container appeals-container_first-theme">
                 </section>
 
-                
             </section>
                 
         </div>
     </div>
     
-    <script src="js/main.js"></script>
     <script src="js/sidebar-dates.js"></script>
     <script src="js/appeals.js"></script>
+    <script src="js/marked-appeals.js"></script>
     <script src="js/show-and-hide-elements.js"></script>
+    <script src="js/open-appeals-by-the-time.js"></script>
 </body>
 </html>

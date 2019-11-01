@@ -156,7 +156,6 @@ let appealsInDOM = document.querySelectorAll(".appeal");
 appealsNumbersWithBigTexts.forEach( (appealNumber, i) => {
     let appealArrows = appealsInDOM[appealNumber].querySelector(".appeal__arrows");
         appealArrows.addEventListener("click", () => {
-            console.log("Click!");
             let appealRestText = document.querySelectorAll(".appeal__rest-text-span")[i];
             appealRestText.classList.toggle("appeal__rest-text-span_close");
 
@@ -167,23 +166,3 @@ appealsNumbersWithBigTexts.forEach( (appealNumber, i) => {
         });
 });
 
-let allAppealMarks = document.querySelectorAll(".appeal__mark");
-
-let selectedAppealsNumber = 0;
-let selectedAppealsNumberSpan = document.querySelector(".selected-appeals__number");
-console.info(selectedAppealsNumberSpan);
-selectedAppealsNumberSpan.textContent = selectedAppealsNumber;
-
-allAppealMarks.forEach(appealMark => {
-    appealMark.addEventListener("click", () => {
-        if (appealMark.classList.contains("appeal__mark_marked")) {
-            appealMark.classList.remove("appeal__mark_marked");
-            selectedAppealsNumber--;
-            selectedAppealsNumberSpan.textContent = selectedAppealsNumber;
-        } else {
-            appealMark.classList.add("appeal__mark_marked");
-            selectedAppealsNumber++;
-            selectedAppealsNumberSpan.textContent = selectedAppealsNumber;
-        }
-    });
-});

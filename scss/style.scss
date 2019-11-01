@@ -141,6 +141,10 @@
     text-decoration: none;
 }
 
+.section-navigation__link_open-section {
+    text-decoration: underline;
+}
+
 .sections-navigation_first-theme {
     position: relative;
     display: flex;
@@ -214,10 +218,16 @@
 
 .date__li_first-theme {
     list-style-type: none;
+    position: relative;
 
     &:hover {
-        background-color: olivedrab;
+        // background-color: olivedrab;
+        text-decoration: underline;
+
         &::after {
+            position: absolute;
+            top: 0;
+            bottom: 0;
             margin-left: 5px;
             content: "\27F3";
             // width: 20px;
@@ -225,16 +235,23 @@
     }
 }
 
+.date__li_selected {
+    background-color: lighten(black, 60%);
+}
+
 .main-content_first-theme {
-    // margin: 100px 10px 0 225px;
     width: 824px;
 }
 
 .main-content__h2_first-theme {
     font-size: 26px;
     text-align: center;
-    // background-color: mediumvioletred;
-    // z-index: 9999;
+
+    .main-content__date-span_first-theme,
+    .main-content__time-span_first-theme {
+        font-size: 26px;
+    }
+
 }
 
 .appeals-container_first-theme {
