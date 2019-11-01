@@ -195,14 +195,17 @@
 }
 
 .date_first-theme {
-    margin: 5px;
+    margin: 5px 10px;
 }
 
 .date__name_first-theme {
-    margin: 10px 20px 0 5px;
-    padding: 5px;
+    padding: 5px 10px;
     // background-color: peachpuff;
     border: 1px solid black;
+}
+
+.date__ul_first-theme {
+    padding: 5px 10px;
 }
 
 .date__ul_close {
@@ -211,6 +214,15 @@
 
 .date__li_first-theme {
     list-style-type: none;
+
+    &:hover {
+        background-color: olivedrab;
+        &::after {
+            margin-left: 5px;
+            content: "\27F3";
+            // width: 20px;
+        }
+    }
 }
 
 .main-content_first-theme {
@@ -280,6 +292,14 @@
     width: 20px;
     height: 20px;
     border: 1px solid black;
+
+    &:hover {
+        &::before {
+            content: "\2714";
+            margin: 3px;
+            font-size: 20px;
+        }
+    }
 }
 
 .appeal__edit_first-theme,

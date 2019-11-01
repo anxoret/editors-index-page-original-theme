@@ -22,17 +22,16 @@ const fillSidebarWithDates = ((sidebarInDOM, monthName, startDay, endDay) => {
         let minutes = 0;
 
         while(allHours > 0) {
-            console.log("Li начала создаваться");
             let dateLi = document.createElement("li");
             dateLi.classList = "date__li date__li_first-theme";
 
             let startHour = hour;
-            if (startHour < 9) {
+            if (startHour < 10) {
                 startHour = "0" + startHour;  
             }
 
             let startMinutes = minutes;
-            if (startMinutes < 9) {
+            if (startMinutes < 10) {
                 startMinutes = "0" + startMinutes;
             }
 

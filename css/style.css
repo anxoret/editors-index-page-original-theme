@@ -221,18 +221,25 @@
   border: 1px solid black; }
 
 .date_first-theme {
-  margin: 5px; }
+  margin: 5px 10px; }
 
 .date__name_first-theme {
-  margin: 10px 20px 0 5px;
-  padding: 5px;
+  padding: 5px 10px;
   border: 1px solid black; }
+
+.date__ul_first-theme {
+  padding: 5px 10px; }
 
 .date__ul_close {
   display: none; }
 
 .date__li_first-theme {
   list-style-type: none; }
+  .date__li_first-theme:hover {
+    background-color: olivedrab; }
+    .date__li_first-theme:hover::after {
+      margin-left: 5px;
+      content: "\27F3"; }
 
 .main-content_first-theme {
   width: 824px; }
@@ -275,6 +282,10 @@
   width: 20px;
   height: 20px;
   border: 1px solid black; }
+  .appeal__mark_first-theme:hover::before {
+    content: "\2714";
+    margin: 3px;
+    font-size: 20px; }
 
 .appeal__edit_first-theme,
 .appeal__print_first-theme {
