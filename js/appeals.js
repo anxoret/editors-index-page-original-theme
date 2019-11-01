@@ -118,7 +118,6 @@ appealsArray.forEach((appeal, i) => {
         let allText = appeal.text;
         let cuttenText = allText.slice(0, 601);
         let restText = allText.slice(601);
-        console.log(restText);
 
         appealText.innerText = cuttenText;
         wrapper.append(appealText);
@@ -151,8 +150,6 @@ appealsArray.forEach((appeal, i) => {
 
     
 });
-
-// console.info(appealsNumbersWithBigTexts);
 
 let appealsInDOM = document.querySelectorAll(".appeal");
 
