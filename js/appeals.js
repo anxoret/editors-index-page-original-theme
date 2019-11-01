@@ -1,3 +1,5 @@
+"use strict" 
+
 const createAppealObject = (date, status, appealText) => {
     let appeal = {};
 
@@ -150,19 +152,20 @@ appealsArray.forEach((appeal, i) => {
     
 });
 
-console.info(appealsNumbersWithBigTexts);
+// console.info(appealsNumbersWithBigTexts);
 
 let appealsInDOM = document.querySelectorAll(".appeal");
-let allAppealArrows = document.querySelectorAll(".appeal__arrows");
 
-allAppealArrows.forEach( (appealArrows, i) => {
-    appealArrows.addEventListener("click", () => {
-        appealsInDOM[i].classList.toggle(".appeal__rest-text-span_close");
-        // console.log("Click!");
-    });
+appealsNumbersWithBigTexts.forEach( (appealNumber, i) => {
+    let appealArrows = appealsInDOM[appealNumber].querySelector(".appeal__arrows");
+        appealArrows.addEventListener("click", () => {
+            console.log("Click!");
+            let appealRestText = document.querySelectorAll(".appeal__rest-text-span")[i];
+            appealRestText.classList.toggle("appeal__rest-text-span_close");
+
+            let appealEllipsisSpan = document.querySelectorAll(".appeal__ellipsis-span")[i];
+            appealEllipsisSpan.classList.toggle("appeal__ellipsis-span_close");
+
+            appealArrows.classList.toggle("appeal__arrows_up");
+        });
 });
-
-// appealArrows.addEventListener("click", () => {
-//     let ul = document.querySelector(".sections-navigation__ul");
-//     ul.classList.toggle(".appeal__rest_close");
-// });

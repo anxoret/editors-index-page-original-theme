@@ -291,6 +291,10 @@
   -webkit-box-pack: end;
   -ms-flex-pack: end;
   justify-content: flex-end; }
+  .appeal__open-all-text_first-theme .appeal__arrows_up {
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg); }
 
 .appeal__arrows_first-theme {
   display: -webkit-box;
@@ -309,3 +313,6 @@
     margin-top: -2px; }
     .appeal__arrows_first-theme .appeal__img_first-theme:nth-child(2) {
       margin-top: -15px; }
+
+.appeal__text_first-theme .appeal__ellipsis-span_close {
+  display: none; }

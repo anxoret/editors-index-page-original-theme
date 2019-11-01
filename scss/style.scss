@@ -174,7 +174,6 @@
 .section-navigation__ul_first-theme {
     display: flex;
     flex-direction: row;
-
 }
 
 .content-wrapper_first-theme {
@@ -292,6 +291,11 @@
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
+
+    .appeal__arrows_up {
+        transform: rotate(180deg);
+    }
+
 }
 
 .appeal__arrows_first-theme {
@@ -310,6 +314,10 @@
             margin-top: -15px; 
         }
     }
+}
+
+.appeal__text_first-theme .appeal__ellipsis-span_close {
+    display: none;
 }
 
 
