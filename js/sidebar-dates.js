@@ -10,7 +10,9 @@ const fillSidebarWithDates = ((sidebarInDOM, monthName, startDay, endDay) => {
     
         let dateNameDiv = document.createElement("div");
         dateNameDiv.classList = "date__name date__name_first-theme";
-        dateNameDiv.textContent = `${i} ${monthName}`;
+        dateNameDiv.innerHTML = `<span class="date__day date__day_first-theme">${i}</span>
+        <span class="date__month date__month_first-theme">${monthName}</span>
+        ` ;
         dateDiv.append(dateNameDiv);
 
         let dateUl = document.createElement("ul");
@@ -37,8 +39,8 @@ const fillSidebarWithDates = ((sidebarInDOM, monthName, startDay, endDay) => {
 
             // let timeStr = `${startHour}:${startMinutes} - ${startHour}:${minutes + 59}`;
             let timeStr = `
-                <span class="date__start-hour-span">${startHour}<span>:<span class="date__start-minutes-span">${startMinutes}</span>
-                - <span class="date__end-hour-span">${startHour}</span>:<span class="date__end-minutes-span">${minutes + 59}</span>
+                <span class="date__start-hour-span date__start-hour-span_first-theme">${startHour}</span>:<span class="date__start-minutes-span date__start-minutes-span_first-theme">${startMinutes}</span>
+                - <span class="date__end-hour-span date__end-hour-span_first-theme">${startHour}</span>:<span class="date__end-minutes-span date__end-minutes-span_first-theme">${minutes + 59}</span>
             `;
             dateLi.innerHTML = timeStr;
             dateUl.append(dateLi);

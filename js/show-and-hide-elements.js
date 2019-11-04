@@ -24,7 +24,6 @@ datesNames.forEach((dateName, i) => {
     dateName.addEventListener("click", () => {
         let ul = dates[i].querySelector(".date__ul");
         showAndHideDateUl(ul, "date__ul_close");
-        
     });
 });
 

@@ -16,5 +16,7 @@ allAppealMarks.forEach(appealMark => {
             selectedAppealsNumber++;
             selectedAppealsNumberSpan.textContent = selectedAppealsNumber;
         }
+        
+        console.log("Клик!");
     });
 });
