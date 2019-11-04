@@ -311,15 +311,15 @@
     height: 20px;
     border: 1px solid black;
 
-    &:hover {
-        &::before {
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            content: "\2714";
-            font-size: 16px;
-        }
-    }
+    // &:hover {
+    //     &::before {
+    //         position: absolute;
+    //         top: 0;
+    //         bottom: 0;
+    //         content: "\2714";
+    //         font-size: 16px;
+    //     }
+    // }
 }
 
 .appeal__mark_marked {

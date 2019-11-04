@@ -50,7 +50,7 @@ const getRandomText = () => {
 };
 
 let appealsArray = [];
-appealsArray.length = 10;
+appealsArray.length = getRandomNumber(6, 15);
 
 let day = 9;
 let hour = 0;
@@ -70,7 +70,7 @@ for (let i = 0; i < appealsArray.length; i++) {
     appealsArray[i] = createAppealObject(date, status, text);
     day++;
     hour++;
-}
+};
 
 let appealsContainer = document.querySelector(".appeals-container");
 let appealsNumbersWithBigTexts = [];
@@ -101,7 +101,7 @@ appealsArray.forEach((appeal, i) => {
     let appealInteractions = document.createElement("div");
     appealInteractions.classList = "appeal__interactions appeal__interactions_first-theme";
     appealInteractions.innerHTML = `
-        <div class="appeal__mark appeal__mark_first-theme"></div>
+        <div title="Отметить обращение" class="appeal__mark appeal__mark_first-theme"></div>
         <div class="appeal__edit appeal__edit_first-theme">
             <img class="appeal__img appeal__img_first-theme" src="img/edit.png" alt="edit">
         </div>

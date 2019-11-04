@@ -35,8 +35,12 @@ const fillSidebarWithDates = ((sidebarInDOM, monthName, startDay, endDay) => {
                 startMinutes = "0" + startMinutes;
             }
 
-            let timeStr = `${startHour}:${startMinutes} - ${startHour}:${minutes + 59}`;
-            dateLi.textContent = timeStr;
+            // let timeStr = `${startHour}:${startMinutes} - ${startHour}:${minutes + 59}`;
+            let timeStr = `
+                <span class="date__start-hour-span">${startHour}<span>:<span class="date__start-minutes-span">${startMinutes}</span>
+                - <span class="date__end-hour-span">${startHour}</span>:<span class="date__end-minutes-span">${minutes + 59}</span>
+            `;
+            dateLi.innerHTML = timeStr;
             dateUl.append(dateLi);
 
             hour++;
