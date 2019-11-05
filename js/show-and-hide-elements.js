@@ -27,10 +27,10 @@ datesNames.forEach((dateName, i) => {
     });
 });
 
-let sectionsNavBtn = document.querySelector(".sections-navigation__button_first-theme");
+let sectionsNavBtn = document.querySelector(".sections__button_first-theme");
 sectionsNavBtn.addEventListener("click", () => {
-    let ul = document.querySelector(".sections-navigation__ul");
-    ul.classList.toggle("sections-navigation__ul_close");
+    let ul = document.querySelector(".sections__ul");
+    ul.classList.toggle("sections__ul_close");
 });
 
 

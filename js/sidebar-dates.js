@@ -37,11 +37,10 @@ const fillSidebarWithDates = ((sidebarInDOM, monthName, startDay, endDay) => {
                 startMinutes = "0" + startMinutes;
             }
 
-            // let timeStr = `${startHour}:${startMinutes} - ${startHour}:${minutes + 59}`;
             let timeStr = `
                 <span class="date__start-hour-span date__start-hour-span_first-theme">${startHour}</span>:<span class="date__start-minutes-span date__start-minutes-span_first-theme">${startMinutes}</span>
                 - <span class="date__end-hour-span date__end-hour-span_first-theme">${startHour}</span>:<span class="date__end-minutes-span date__end-minutes-span_first-theme">${minutes + 59}</span>
-                <span class="date__appeal-refresh-span date__appeal-refresh-span_first-theme date__appeal-refresh-span_close">&#8635</span>
+                <span class="date__appeal-refresh-span date__appeal-refresh-span_first-theme date__appeal-refresh-span_close">&#8635;</span>
             `;
             dateLi.innerHTML = timeStr;
             dateUl.append(dateLi);
@@ -63,7 +62,15 @@ lastDateTimePeriods.classList.remove("date__ul_close");
 let numberOfDatesLi = lastDateTimePeriods.querySelectorAll(".date__li").length;
 let dateLiSelected = lastDateTimePeriods.querySelectorAll(".date__li")[numberOfDatesLi - 1];
 dateLiSelected.classList.add("date__li_selected");
-// dateLiSelected.querySelector(".date__appeal-refresh-span").classList.toggle("date__appeal-refresh-span_close");
-// dateLiSelected.querySelector(".date__appeal-refresh");
+dateLiSelected.querySelector(".date__appeal-refresh-span").classList.toggle("date__appeal-refresh-span_close");
 
 datesSidebar.scrollTop = datesSidebar.scrollHeight;
+
+// appeals refresh onclick event
+let allDateAppealRefreshSpan = document.querySelectorAll(".date__appeal-refresh-span");
+allDateAppealRefreshSpan.forEach(dateAppealRefreshSpan => {
+    dateAppealRefreshSpan.addEventListener("click", () => {
+        console.log("Необходимо создать функцию подгрузки новых обращений.");
+    });
+});
+

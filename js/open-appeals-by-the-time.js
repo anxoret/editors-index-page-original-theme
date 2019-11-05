@@ -50,7 +50,9 @@ arrayOfDatesLi.forEach(dateLi => {
         dateLiSelected = document.querySelector(".date__li_selected");
         dateLiSelected.classList.remove("date__li_selected");
         dateLi.classList.add("date__li_selected");
+        dateLiSelected.querySelector(".date__appeal-refresh-span").classList.toggle("date__appeal-refresh-span_close");
         dateLiSelected = dateLi;
+        dateLiSelected.querySelector(".date__appeal-refresh-span").classList.toggle("date__appeal-refresh-span_close");
     });
 });
 

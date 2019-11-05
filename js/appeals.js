@@ -283,6 +283,7 @@ const showAppealsInDOM = (appealsArray) => {
                     <img class="appeal__img appeal__img_first-theme" src="img/expand_more.png" alt="open-all-text">
                 </div>
             `;
+            // &raquo;
             wrapper.append(appealOpenAllText);
     
             appealsNumbersWithBigTexts.push(i);
