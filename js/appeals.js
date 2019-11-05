@@ -142,14 +142,6 @@ const createAppealObject = (yearOfCreation, monthOfCreation, dayOfCreation, hour
     return appeal;
 };
 
-const createArrayOfAppeals = (yearOfCreation, monthOfCreation, dayOfCreation, hourOfCreation) => {
-    let appealsArray = [...Array(getRandomNumber(6, 15))].map(() => 
-        createAppealObject(yearOfCreation, dayOfCreation, monthOfCreation, hourOfCreation)
-    );
-
-    return appealsArray;
-};
-
 const compareNumericBySeconds = (a, b) => {
     if (a.secondsOfCreation > b.secondsOfCreation) return 1;
     if (a.secondsOfCreation == b.secondsOfCreation) return 0;
@@ -167,6 +159,28 @@ const sortArrayOfAppealsByTime = (appealsArray) => {
 };
 
 
+const createArrayOfAppeals = (yearOfCreation, monthOfCreation, dayOfCreation, hourOfCreation) => {
+    let appealsArray = [...Array(getRandomNumber(6, 15))].map(() => 
+        createAppealObject(yearOfCreation, dayOfCreation, monthOfCreation, hourOfCreation)
+    );
+
+    sortArrayOfAppealsByTime(appealsArray);
+    // console.info(appealsArray);
+    return appealsArray;
+};
+
+
+// let array = [
+//     {minutesOfCreation: 100, secondsOfCreation: 2},
+//     {minutesOfCreation: 100, secondsOfCreation: 40},
+//     {minutesOfCreation: 1, secondsOfCreation: 0},
+//     {minutesOfCreation: 100, secondsOfCreation: 1},
+//     {minutesOfCreation: 19, secondsOfCreation: 1},
+//     {minutesOfCreation: 2, secondsOfCreation: 10}
+// ];
+
+// sortArrayOfAppealsByTime(array);
+// console.log(array);
 
 let appealsContainer = document.querySelector(".appeals-container");
 let appealsNumbersWithBigTexts = [];
@@ -190,8 +204,8 @@ const showAppealsInDOM = (appealsArray) => {
         let day = appeal.dayOfCreation;
         let month = appeal.monthOfCreation;
         let hour = appeal.hourOfCreation;
-        let minutes = getRandomNumber(0, 59);
-        let seconds = getRandomNumber(0, 59);
+        let minutes = appeal.minutesOfCreation;
+        let seconds = appeal.secondsOfCreation;
 
         year = year.slice(2, 4);
 

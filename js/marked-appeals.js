@@ -1,6 +1,5 @@
 // Adding count of marked appeals to html page
 let allAppealMarks = document.querySelectorAll(".appeal__mark");
-console.log(allAppealMarks);
 
 let selectedAppealsNumber = 0;
 let selectedAppealsNumberSpan = document.querySelector(".selected-appeals__number");
