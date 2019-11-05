@@ -244,7 +244,7 @@ const showAppealsInDOM = (appealsArray) => {
         let appealInteractions = document.createElement("div");
         appealInteractions.classList = "appeal__interactions appeal__interactions_first-theme";
         appealInteractions.innerHTML = `
-            <div title="Отметить" class="appeal__mark appeal__mark_first-theme"></div>
+            <div title="Выбрать" class="appeal__mark appeal__mark_first-theme"></div>
             <div title="Редактировать" class="appeal__edit appeal__edit_first-theme">
                 <img class="appeal__img appeal__img_first-theme" src="img/edit.png" alt="edit">
             </div>

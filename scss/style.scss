@@ -226,19 +226,31 @@
         // background-color: olivedrab;
         text-decoration: underline;
 
-        &::after {
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            margin-left: 5px;
-            content: "\27F3";
-            // width: 20px;
-        }
+        // &::after {
+        //     position: absolute;
+        //     top: 0;
+        //     bottom: 0;
+        //     margin-left: 5px;
+        //     content: "\27F3";
+        //     // width: 20px;
+        // }
     }
 }
 
 .date__li_selected {
+    // &::after {
+    //     position: absolute;
+    //     top: 0;
+    //     bottom: 0;
+    //     margin-left: 5px;
+    //     content: "\27F3";
+    //     // width: 20px;
+    // }
     background-color: lighten(black, 60%);
+}
+
+.date__appeal-refresh-span_close {
+    display: none;
 }
 
 .main-content_first-theme {

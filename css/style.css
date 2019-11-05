@@ -248,15 +248,12 @@
   position: relative; }
   .date__li_first-theme:hover {
     text-decoration: underline; }
-    .date__li_first-theme:hover::after {
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      margin-left: 5px;
-      content: "\27F3"; }
 
 .date__li_selected {
   background-color: #999999; }
+
+.date__appeal-refresh-span_close {
+  display: none; }
 
 .main-content_first-theme {
   width: 824px; }
