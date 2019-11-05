@@ -34,3 +34,4 @@ sectionsNavBtn.addEventListener("click", () => {
 });
 
 
+

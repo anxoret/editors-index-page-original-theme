@@ -18,13 +18,18 @@ const openTheDateAppeals = (dateLi) => {
     let mainContentMonth = document.querySelector(".main-content__month");
     mainContentMonth.textContent = getMonthNameByNumber(dateMonth);
     let mainContentTimeSpan = document.querySelector(".main-content__time-span");
-    mainContentTimeSpan.textContent = `${startHour}:00 - ${startHour}:59`;
+    mainContentTimeSpan.textContent = `${startHour}:00-${startHour}:59`;
 };
 
 let arrayOfDatesLi = document.querySelectorAll(".date__li");
 arrayOfDatesLi.forEach(dateLi => {
     dateLi.addEventListener("click", () => {
         openTheDateAppeals(dateLi);
+        console.log(dateLiSelected);
+        dateLiSelected = document.querySelector(".date__li_selected");
+        dateLiSelected.classList.remove("date__li_selected");
+        dateLi.classList.add("date__li_selected");
+        dateLiSelected = dateLi;
     });
 });
 
@@ -32,3 +37,20 @@ arrayOfDatesLi.forEach(dateLi => {
 let allDatesLi = document.querySelectorAll(".date__li");
 let lastDateLi = allDatesLi[allDatesLi.length - 1];
 openTheDateAppeals(lastDateLi);
+
+
+// open and close all appeal text
+let appealsInDOM = document.querySelectorAll(".appeal");
+
+appealsNumbersWithBigTexts.forEach( (appealNumber, i) => {
+    let appealArrows = appealsInDOM[appealNumber].querySelector(".appeal__arrows");
+        appealArrows.addEventListener("click", () => {
+            let appealRestText = document.querySelectorAll(".appeal__rest-text-span")[i];
+            appealRestText.classList.toggle("appeal__rest-text-span_close");
+
+            let appealEllipsisSpan = document.querySelectorAll(".appeal__ellipsis-span")[i];
+            appealEllipsisSpan.classList.toggle("appeal__ellipsis-span_close");
+
+            appealArrows.classList.toggle("appeal__arrows_up");
+        });
+});

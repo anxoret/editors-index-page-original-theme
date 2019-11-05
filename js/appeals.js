@@ -166,9 +166,7 @@ const sortArrayOfAppealsByTime = (appealsArray) => {
     return appealsArray.sort(compareNumericByMinutes);
 };
 
-// let appealsArray = createArrayOfAppeals(4, 11, 15);
-// appealsArray = sortArrayOfAppealsByTime(appealsArray);
-// console.info(appealsArray);
+
 
 let appealsContainer = document.querySelector(".appeals-container");
 let appealsNumbersWithBigTexts = [];
@@ -285,19 +283,4 @@ const showAppealsInDOM = (appealsArray) => {
 
 // let appealsArray = createArrayOfAppeals(2019, 4, 11, 15);
 // showAppealsInDOM(sortArrayOfAppealsByTime(appealsArray));
-
-let appealsInDOM = document.querySelectorAll(".appeal");
-
-appealsNumbersWithBigTexts.forEach( (appealNumber, i) => {
-    let appealArrows = appealsInDOM[appealNumber].querySelector(".appeal__arrows");
-        appealArrows.addEventListener("click", () => {
-            let appealRestText = document.querySelectorAll(".appeal__rest-text-span")[i];
-            appealRestText.classList.toggle("appeal__rest-text-span_close");
-
-            let appealEllipsisSpan = document.querySelectorAll(".appeal__ellipsis-span")[i];
-            appealEllipsisSpan.classList.toggle("appeal__ellipsis-span_close");
-
-            appealArrows.classList.toggle("appeal__arrows_up");
-        });
-});
 
