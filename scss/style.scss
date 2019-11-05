@@ -4,8 +4,7 @@
     margin: 0;
     padding: 0;
     font-size: 16px;
-    // font-family: sans-serif;
-    // font-family: Verdana, sans-serif;
+    font-family: serif;
     // color: $textColor;
 }
 
@@ -101,6 +100,7 @@
 }
 
 .search__button_first-theme {
+    margin: 5px;
     height: 20px;
 }
 
@@ -119,8 +119,8 @@
     display: flex;
     margin: 0;
     padding: 0;
+    justify-content: flex-end;
     align-items: flex-end;
-
 }
 
 .nav__li_first-theme,
@@ -164,10 +164,11 @@
 .sections-navigation__button_first-theme {
     display: flex;
     padding: 2px;
+    margin: 4px 10px;
+    width: 150px;
     flex-direction: column;
     align-items: center;
     height: $buttonHeight;
-    width: 150px;
 }
 
 .sections-navigation_first-theme .sections-navigation__ul_close,
@@ -203,13 +204,14 @@
 }
 
 .date__name_first-theme {
+    margin: 0 auto;
     padding: 5px 10px;
     // background-color: peachpuff;
     border: 1px solid black;
 }
 
 .date__ul_first-theme {
-    padding: 5px 10px;
+    margin: 5px 11px;
 }
 
 .date__ul_close {
@@ -244,6 +246,7 @@
 }
 
 .main-content__h2_first-theme {
+    margin: 10px;
     font-size: 26px;
     text-align: center;
 
@@ -257,7 +260,7 @@
 }
 
 .appeals-container_first-theme {
-    height: calc(100vh - 90px - 125px);
+    height: calc(100vh - 90px - 125px - 20px);
     overflow-x: hidden;
     overflow-y: overlay;
 }
@@ -284,8 +287,14 @@
     // text-align: right;
 }
 
+.appeal__status_first-theme {
+    margin: 0 5px;
+    font-style: italic;
+}
+
 .appeal__information_first-theme {
     display: inline-block;
+    margin: 5px;
     // position: absolute;
     // width: 650px;
 }
@@ -295,6 +304,7 @@
     position: relative;
     display: inline-block;
     float: right;
+    margin: 5px;
     // position: absolute;
     // width: 120px;
     // right: 0;
@@ -354,6 +364,7 @@
     display: flex;
     width: 20px;
     height: 20px;
+    margin: 0 5px 5px;
     flex-direction: column;
     border: 1px solid black;
 
@@ -366,6 +377,10 @@
             margin-top: -15px; 
         }
     }
+}
+
+.appeal__text_first-theme {
+    margin: 0 5px 5px;
 }
 
 .appeal__text_first-theme .appeal__ellipsis-span_close {

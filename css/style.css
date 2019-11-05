@@ -1,7 +1,8 @@
 * {
   margin: 0;
   padding: 0;
-  font-size: 16px; }
+  font-size: 16px;
+  font-family: serif; }
 
 .wrapper_first-theme {
   min-width: 1024px;
@@ -114,6 +115,7 @@
   justify-content: flex-end; }
 
 .search__button_first-theme {
+  margin: 5px;
   height: 20px; }
 
 .nav__img_first-theme,
@@ -131,6 +133,9 @@
   display: flex;
   margin: 0;
   padding: 0;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
   -webkit-box-align: end;
   -ms-flex-align: end;
   align-items: flex-end; }
@@ -182,6 +187,8 @@
   display: -ms-flexbox;
   display: flex;
   padding: 2px;
+  margin: 4px 10px;
+  width: 150px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
@@ -189,8 +196,7 @@
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  height: 40px;
-  width: 150px; }
+  height: 40px; }
 
 .sections-navigation_first-theme .sections-navigation__ul_close,
 .appeal__rest-text-span_close {
@@ -227,11 +233,12 @@
   margin: 5px 10px; }
 
 .date__name_first-theme {
+  margin: 0 auto;
   padding: 5px 10px;
   border: 1px solid black; }
 
 .date__ul_first-theme {
-  padding: 5px 10px; }
+  margin: 5px 11px; }
 
 .date__ul_close {
   display: none; }
@@ -255,6 +262,7 @@
   width: 824px; }
 
 .main-content__h2_first-theme {
+  margin: 10px;
   font-size: 26px;
   text-align: center; }
   .main-content__h2_first-theme .main-content__date-span_first-theme,
@@ -264,7 +272,7 @@
     font-size: 26px; }
 
 .appeals-container_first-theme {
-  height: calc(100vh - 90px - 125px);
+  height: calc(100vh - 90px - 125px - 20px);
   overflow-x: hidden;
   overflow-y: overlay; }
 
@@ -280,13 +288,19 @@
   position: relative;
   width: 770px; }
 
+.appeal__status_first-theme {
+  margin: 0 5px;
+  font-style: italic; }
+
 .appeal__information_first-theme {
-  display: inline-block; }
+  display: inline-block;
+  margin: 5px; }
 
 .appeal__interactions_first-theme {
   position: relative;
   display: inline-block;
-  float: right; }
+  float: right;
+  margin: 5px; }
 
 .appeal__img_first-theme {
   border: 1px solid black; }
@@ -332,6 +346,7 @@
   display: flex;
   width: 20px;
   height: 20px;
+  margin: 0 5px 5px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
@@ -343,6 +358,9 @@
     margin-top: -2px; }
     .appeal__arrows_first-theme .appeal__img_first-theme:nth-child(2) {
       margin-top: -15px; }
+
+.appeal__text_first-theme {
+  margin: 0 5px 5px; }
 
 .appeal__text_first-theme .appeal__ellipsis-span_close {
   display: none; }

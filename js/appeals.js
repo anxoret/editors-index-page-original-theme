@@ -244,11 +244,11 @@ const showAppealsInDOM = (appealsArray) => {
         let appealInteractions = document.createElement("div");
         appealInteractions.classList = "appeal__interactions appeal__interactions_first-theme";
         appealInteractions.innerHTML = `
-            <div title="Отметить обращение" class="appeal__mark appeal__mark_first-theme"></div>
-            <div class="appeal__edit appeal__edit_first-theme">
+            <div title="Отметить" class="appeal__mark appeal__mark_first-theme"></div>
+            <div title="Редактировать" class="appeal__edit appeal__edit_first-theme">
                 <img class="appeal__img appeal__img_first-theme" src="img/edit.png" alt="edit">
             </div>
-            <div class="appeal__print appeal__print_first-theme">
+            <div title="Печать" class="appeal__print appeal__print_first-theme">
                 <img class="appeal__img appeal__img_first-theme" src="img/print.png" alt="print">
             </div>
         `;
