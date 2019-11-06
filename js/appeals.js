@@ -280,10 +280,11 @@ const showAppealsInDOM = (appealsArray) => {
             appealOpenAllText.innerHTML = `
                 <div class="appeal__arrows appeal__arrows_first-theme">
                     <img class="appeal__img appeal__img_first-theme" src="img/expand_more.png" alt="open-all-text">
-                    <img class="appeal__img appeal__img_first-theme" src="img/expand_more.png" alt="open-all-text">
+                    <img class="appeal__img appeal__img_first-theme" src="img/expand_more.png" alt="open-all-text"></img>
                 </div>
             `;
-            // &raquo;
+            // &raquo; 
+            
             wrapper.append(appealOpenAllText);
     
             appealsNumbersWithBigTexts.push(i);
