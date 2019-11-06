@@ -1,23 +1,112 @@
-
 @import "variables";
+@import url('https://fonts.googleapis.com/css?family=PT+Sans|Rubik|Ubuntu:300i,400,400i,700&display=swap&subset=cyrillic');
 
-* {
+*, 
+*:after, 
+*:before {
     margin: 0;
     padding: 0;
-    font-size: 16px;
-    font-family: serif;
+    font-size: 14px;
+    font-family: 'PT Sans', sans-serif;
+    box-sizing: border-box;
     color: $textColor;
+    transition: .5s ease-in-out; /* добавим плавность переходов для всех элементов страницы*/
 }
 
+::-webkit-scrollbar-button {
+        background-image:url('');
+        background-repeat:no-repeat;
+        width:6px;
+        height:0px
+    }
+    
+    ::-webkit-scrollbar-track {
+        background-color:#32312e;
+        // background-color: lighten($blueColor, 90%);
+        box-shadow:0px 0px 3px #000 inset;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+        -webkit-border-radius: 5px;
+        border-radius: 5px;
+        background-color:#ffcb17;
+        // background-color: $blueColor;
+        box-shadow:0px 1px 1px #fff inset;
+        background-image:url(/img/three-lines.png);
+        background-size: 11px;
+        background-position:center;
+        background-repeat:no-repeat;
+    }
+    
+    ::-webkit-resizer{
+        background-image:url('');
+        background-repeat:no-repeat;
+        width:7px;
+        height:0px
+    }
+    
+    ::-webkit-scrollbar{
+        width: 11px;
+    }
+
+// /* 1 - вертикальный скроллбар */
+// ::-webkit-scrollbar { 
+//     // width: 22px; 
+//     width: 12px;
+// }
+// /* 1 - горизонтальный скроллбар */
+// ::-webkit-scrollbar:horizontal { 
+//     // height: 22px; 
+// }
+// /* 2 - кнопка */
+// ::-webkit-scrollbar-button {
+//     background: #008000; 
+// }
+// /* 3 - трек */
+// // Ползунок в неактивном состоянии будет выглядеть как сплошной прямоугольник серого цвета (без границы)
+// ::-webkit-scrollbar-track {
+//     // background: #008000;
+//     border-width:0;
+
+//     // При наведении курсора на ползунок, делаем его темнее и добавляем границу.
+//     &:hover {
+//         border-left: solid 1px #aaa;
+//         background-color: #eee;
+//     }
+// }
+// /* 4 – видимая часть трека */
+// ::-webkit-scrollbar-track-piece { 
+//     // background: #32CD32;  
+// }
+// /* 5 - ползунок */
+// // оформлением полосы прокрутки (светлосерый фон, серая граница, делаем границу чуть толще с левой стороны)
+// ::-webkit-scrollbar-thumb {
+//     // background: #008000; 
+//     // border-radius: 10px; 
+//     // -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+//     border-width:1px 1px 1px 2px;
+//     border-color: #777;
+//     background-color: #aaa;
+
+//     // При наведении курсора (:hover) на полосу прокрутки делаем её более тёмной:
+//     &:hover {
+//         border-width: 1px 1px 1px 2px;
+//         border-color: #555;
+//         background-color: #777;
+//     }
+// }
+
 .wrapper_first-theme {
-    min-width: 1024px;
-    max-width: 1024px;
     margin: 10px auto;
+    // padding: 0 15px;
+    min-width: 1000px;
+    max-width: 1920px;
+    width: 100%;
 }
 
 .header_first-theme {
     // position: fixed;
-    width: 1024px;
+    width: 100%;
     // height: 90px;
     border: 1px solid $textColor;
     // background-color: lightseagreen;
@@ -32,7 +121,7 @@
     border-bottom: 1px solid $textColor;
 
     .header__h1_first-theme {
-        margin: 5px 10px;
+        margin: 5px 15px;
         padding: 0;
         font-size: 36px;
     }
@@ -146,6 +235,8 @@
 }
 
 .nav__li_first-theme {
+    margin-right: 15px;
+
     &:last-child {
         position: relative;
         width: 20px;
@@ -177,8 +268,9 @@
 .sections_first-theme {
     position: relative;
     display: flex;
+    margin: 0 15px;
     flex-direction: row;
-    justify-content: space-between;
+    // justify-content: space-between;
 }
 
 .sections__ul_first-theme {
@@ -194,7 +286,6 @@
 .sections__button_first-theme {
     display: flex;
     // padding: 2px;
-    margin: 5px 0 5px 5px;
     width: 155px;
     flex-direction: column;
     align-items: center;
@@ -206,29 +297,35 @@
     display: none;
 }
 
+.section-navigation__nav_first-theme {
+    margin-left: 15px;
+}
+
 .section-navigation__ul_first-theme {
     display: flex;
     position: relative;
     flex-direction: row;
-    margin: 5px;
+    margin: 0 15px 0 0;
 
-    &::before {
-        display: block;
-        position: absolute;
-        top: -10px;
-        right: -10px;
-        width: 40px;
-        height: 40px;
-        content: "";
-        background-image: url(/img/expand_more2.png);
-        transform: rotate(270deg);
-        // height: 15px;
-    }
+    // &::before {
+    //     display: block;
+    //     position: absolute;
+    //     top: -10px;
+    //     right: -10px;
+    //     width: 40px;
+    //     height: 40px;
+    //     content: "";
+    //     background-image: url(/img/expand_more2.png);
+    //     transform: rotate(270deg);
+    // //     // height: 15px;
+    // }
 }
 
 .content-wrapper_first-theme {
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
 .dates-sidebar_first-theme {

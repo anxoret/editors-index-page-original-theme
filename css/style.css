@@ -1,17 +1,59 @@
-* {
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=PT+Sans|Rubik|Ubuntu:300i,400,400i,700&display=swap&subset=cyrillic");
+*,
+*:after,
+*:before {
   margin: 0;
   padding: 0;
-  font-size: 16px;
-  font-family: serif;
-  color: black; }
+  font-size: 14px;
+  font-family: 'PT Sans', sans-serif;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  color: black;
+  -webkit-transition: .5s ease-in-out;
+  -o-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  /* добавим плавность переходов для всех элементов страницы*/ }
+
+::-webkit-scrollbar-button {
+  background-image: url("");
+  background-repeat: no-repeat;
+  width: 6px;
+  height: 0px; }
+
+::-webkit-scrollbar-track {
+  background-color: #32312e;
+  -webkit-box-shadow: 0px 0px 3px #000 inset;
+  box-shadow: 0px 0px 3px #000 inset; }
+
+::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  background-color: #ffcb17;
+  -webkit-box-shadow: 0px 1px 1px #fff inset;
+  box-shadow: 0px 1px 1px #fff inset;
+  background-image: url(/img/three-lines.png);
+  background-size: 11px;
+  background-position: center;
+  background-repeat: no-repeat; }
+
+::-webkit-resizer {
+  background-image: url("");
+  background-repeat: no-repeat;
+  width: 7px;
+  height: 0px; }
+
+::-webkit-scrollbar {
+  width: 11px; }
 
 .wrapper_first-theme {
-  min-width: 1024px;
-  max-width: 1024px;
-  margin: 10px auto; }
+  margin: 10px auto;
+  min-width: 1000px;
+  max-width: 1920px;
+  width: 100%; }
 
 .header_first-theme {
-  width: 1024px;
+  width: 100%;
   border: 1px solid black; }
 
 .header__global-navigation_first-theme {
@@ -29,7 +71,7 @@
   justify-content: space-between;
   border-bottom: 1px solid black; }
   .header__global-navigation_first-theme .header__h1_first-theme {
-    margin: 5px 10px;
+    margin: 5px 15px;
     padding: 0;
     font-size: 36px; }
   .header__global-navigation_first-theme .header__nav_first-theme,
@@ -155,15 +197,16 @@
   .section-navigation__li_first-theme:last-child {
     border: none; }
 
-.nav__li_first-theme:last-child {
-  position: relative;
-  width: 20px;
-  height: 20px;
-  border: 1px solid black; }
-
-.nav__li_first-theme .nav__img_first-theme {
-  position: absolute;
-  right: 0; }
+.nav__li_first-theme {
+  margin-right: 15px; }
+  .nav__li_first-theme:last-child {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    border: 1px solid black; }
+  .nav__li_first-theme .nav__img_first-theme {
+    position: absolute;
+    right: 0; }
 
 .nav__link_first-theme {
   font-size: 16px; }
@@ -182,13 +225,11 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin: 0 15px;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
   -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between; }
+  flex-direction: row; }
 
 .sections__ul_first-theme {
   position: absolute;
@@ -208,7 +249,6 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 5px 0 5px 5px;
   width: 155px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -222,6 +262,9 @@
 .appeal__rest-text-span_close {
   display: none; }
 
+.section-navigation__nav_first-theme {
+  margin-left: 15px; }
+
 .section-navigation__ul_first-theme {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -231,19 +274,7 @@
   -webkit-box-direction: normal;
   -ms-flex-direction: row;
   flex-direction: row;
-  margin: 5px; }
-  .section-navigation__ul_first-theme::before {
-    display: block;
-    position: absolute;
-    top: -10px;
-    right: -10px;
-    width: 40px;
-    height: 40px;
-    content: "";
-    background-image: url(/img/expand_more2.png);
-    -webkit-transform: rotate(270deg);
-    -ms-transform: rotate(270deg);
-    transform: rotate(270deg); }
+  margin: 0 15px 0 0; }
 
 .content-wrapper_first-theme {
   display: -webkit-box;
@@ -252,7 +283,13 @@
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
   -ms-flex-direction: row;
-  flex-direction: row; }
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
 
 .dates-sidebar_first-theme {
   display: block;
