@@ -9,44 +9,48 @@
     font-size: 14px;
     font-family: 'PT Sans', sans-serif;
     box-sizing: border-box;
-    color: $textColor;
+    color: $primaryTextColor;
     transition: .5s ease-in-out; /* добавим плавность переходов для всех элементов страницы*/
 }
 
+body {
+    background-color: white;
+}
+
 ::-webkit-scrollbar-button {
-        background-image:url('');
-        background-repeat:no-repeat;
-        width:6px;
-        height:0px
+        background-image: url('');
+        background-repeat: no-repeat;
+        width: 6px;
+        height :0px
     }
     
     ::-webkit-scrollbar-track {
-        background-color:#32312e;
-        // background-color: lighten($blueColor, 90%);
-        box-shadow:0px 0px 3px #000 inset;
+        background-color: $darkPrimaryColor;
+        // background-color: lighten(red, 90%);
+        box-shadow: 0px 0px 3px #000 inset;
     }
     
     ::-webkit-scrollbar-thumb {
         -webkit-border-radius: 5px;
         border-radius: 5px;
-        background-color:#ffcb17;
-        // background-color: $blueColor;
-        box-shadow:0px 1px 1px #fff inset;
-        background-image:url(/img/three-lines.png);
-        background-size: 11px;
-        background-position:center;
-        background-repeat:no-repeat;
+        background-color: #ffcb17;
+        // background-color: $primaryColor;
+        box-shadow: 0px 1px 1px #fff inset;
+        background-image: url(/img/three-lines.png);
+        background-size: $scrollbarWidth;
+        background-position: center;
+        background-repeat: no-repeat;
     }
     
     ::-webkit-resizer{
-        background-image:url('');
-        background-repeat:no-repeat;
-        width:7px;
-        height:0px
+        background-image: url('');
+        background-repeat: no-repeat;
+        width: 7px;
+        height: 0px
     }
     
     ::-webkit-scrollbar{
-        width: 11px;
+        width: $scrollbarWidth;
     }
 
 // /* 1 - вертикальный скроллбар */
@@ -105,12 +109,13 @@
 }
 
 .header_first-theme {
-    // position: fixed;
-    width: 100%;
+    margin: 10px;
+    // width: 100%;
     line-height: 55px;
-    border: 1px solid $textColor;
-    // background-color: lightseagreen;
-    // z-index: 9999;
+    // border: 2px solid $darkPrimaryColor;
+    border-radius: 5px;
+    background-color: $primaryColor;
+    // box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
 
 .header__global-navigation_first-theme {
@@ -119,12 +124,13 @@
     flex-wrap: nowrap;
     align-items: center;
     justify-content: space-between;
-    border-bottom: 1px solid $textColor;
+    border-bottom: 2px solid $darkPrimaryColor;
 
     .header__h1_first-theme {
         margin: 0 10px;
         padding: 0;
         font-size: 36px;
+        color: $textIconsColor; 
     }
 
     .header__nav_first-theme,
@@ -144,13 +150,13 @@
     width: 770px;
     height: 125px;
     // background-color: red;
-    // border: 1px solid $textColor;
+    // border: 1px solid $primaryTextColor;
 }
 
 .search_first-theme {
     padding: 5px;
-    border: 1px solid $textColor;
-    // background-color: lightpink;
+    border: 1px solid $primaryTextColor;
+    border-radius: 5px;
 }
 
 .search__form_first-theme {
@@ -233,11 +239,15 @@
     // padding: 4px;
     vertical-align: middle;
     line-height: 2;
-    border-right: 1px solid $textColor; 
-    // border: 1px solid $textColor; 
+    border-right: 2px solid $darkPrimaryColor; 
+    // border: 1px solid $primaryTextColor; 
 
     &:last-child {
         border: none;
+    }
+
+    &:hover {
+        background-color: $darkPrimaryColor;
     }
 }
 
@@ -248,7 +258,7 @@
         // width: 200px;
         width: 20px;
         height: 20px;
-        // border: 1px solid $textColor;
+        // border: 1px solid $primaryTextColor;
         // background-color: red;
     }
 
@@ -258,10 +268,12 @@
 .nav__link_first-theme {
     position: relative;
     font-size: 16px;
+    color: $textIconsColor;
 
     .nav__img_first-theme {
         position: absolute;
-        border: 1px solid $textColor;
+        border: 1px solid $textIconsColor;
+        border-radius: 5px;
     }
 }
 
@@ -284,6 +296,10 @@
     }
 }
 
+.section-navigation__link_first-theme {
+    color: $textIconsColor;
+}
+
 .section-navigation__link_open-section {
     text-decoration: underline;
 }
@@ -298,27 +314,68 @@
     // background-color: #4e4f54;
 }
 
+.sections__button_first-theme {
+    display: flex;
+    // margin: 5px 10px 5px 2px;
+    // margin-left: 2px;
+    // margin-right: 10px;
+    margin: 5px 10px 10px 0;
+    padding: 5px;
+    width: $buttonWidth;
+    flex-direction: column;
+    align-items: center;
+    // height: $buttonHeight;
+    user-select: none;
+    background-color: $primaryColor;
+    border: $textIconsColor 1px solid;
+    box-shadow: 0px 2px 0 white, 2px 4px 6px #eee;
+    // background-color: lighten($primaryColor, 5%);
+    // border-top: lighten($primaryColor, 10%) 3px solid;
+    // border-right: lighten($primaryColor, 15%) 3px solid;
+    // border-bottom: darken($primaryColor, 5%) 5px solid;
+    // border-left: lighten($primaryColor, 5%) 3px solid;
+    // background-color: $buttonColor;
+    // border-bottom: darken($buttonColor, 5%) 5px solid;
+    // border-left: lighten($buttonColor, 5%) 3px solid;
+    // border-right: lighten($buttonColor, 5%) 3px solid;
+    // border-radius: 5px;
+    // color: $textIconsColor;
+    transition: none;
+
+    //padding: 10px;
+    // font-size: 12px;
+    // font-weight: 800;
+
+    &:hover {
+        // opacity: 0.9;
+        // background-color: #D5B853;
+    }
+
+    &:active {
+        // background-color: darken($buttonColor, 5%);
+        // border-bottom: lighten($buttonColor, 5%) 2px solid;
+        // border-left: lighten($buttonColor, 5%) 3px solid;
+        // border-right: lighten($buttonColor, 5%) 3px solid;
+        // border-radius: 5px;
+        // color: $textIconsColor;
+        // margin-top: 3px;
+    }
+
+}
+
+.sections__link_first-theme {
+    color: $textIconsColor;
+}
+
 .sections__ul_first-theme {
     position: absolute;
     display: flex;
     margin-top: $buttonHeight;
     flex-direction: column;  
-    background-color: mediumaquamarine;
-    width: 165px;
+    background-color: $buttonColor;
+    width: $buttonWidth;
     line-height: 21px;
     z-index: 9999;
-}
-
-.sections__button_first-theme {
-    display: flex;
-    margin-right: 10px;
-    // padding: 2px;
-    width: 165px;
-    flex-direction: column;
-    align-items: center;
-    height: $buttonHeight;
-
-
 }
 
 .sections_first-theme .sections__ul_close,
@@ -361,26 +418,27 @@
 .dates-sidebar_first-theme {
     display: block;
     float: left;
-    width: 200px;
+    margin: 0 10px;
+    width: $buttonWidth;
     height: calc(100vh - 90px - 20px); // - header height - global margin
     // padding: 5px;
     // overflow-y: scroll;
     overflow-x: hidden;
     overflow-y: overlay;
     // background-color: palevioletred;
-    border: 1px solid $textColor;
+    border: 1px solid $primaryTextColor;
 }
 
 .date_first-theme {
-    width: 165px;
-    margin: 5px 4px 5px 15px;
+    width: $buttonWidth - 20px - $scrollbarWidth;
+    margin: 5px auto;
 }
 
 .date__name_first-theme {
     margin: 0 auto;
-    padding: 5px 10px;
+    padding: 5px 11px;
     // background-color: peachpuff;
-    border: 1px solid $textColor;
+    border: 1px solid $primaryTextColor;
 }
 
 .date__ul_first-theme {
@@ -419,7 +477,7 @@
     //     content: "\27F3";
     //     // width: 20px;
     // }
-    background-color: lighten($textColor, 60%);
+    background-color: lighten($primaryTextColor, 60%);
 }
 
 .date__appeal-refresh-span_close {
@@ -460,7 +518,8 @@
     // padding: 5px;
     width: 770px;
     // height: 140px;
-    border: 1px solid $textColor;
+    border: 1px solid $primaryTextColor;
+    border-radius: 5px;
 }
 
 .appeal__wrapper_first-theme {
@@ -498,7 +557,8 @@
 }
 
 .appeal__img_first-theme {
-    border: 1px solid $textColor;
+    border: 1px solid $primaryTextColor;
+    border-radius: 5px;
 }
 .appeal__mark_first-theme {
     position: relative;
@@ -506,7 +566,8 @@
     margin: 0 2px;
     width: 20px;
     height: 20px;
-    border: 1px solid $textColor;
+    border: 1px solid $primaryTextColor;
+    border-radius: 5px;
 }
 
 .appeal__mark_marked {
@@ -544,7 +605,8 @@
     margin: 0 5px 5px;
     flex-direction: column;
     align-items: center;
-    border: 1px solid $textColor;
+    border: 1px solid $primaryTextColor;
+    border-radius: 5px;
     transition: none;
 
     .appeal__img_first-theme {

@@ -1,3 +1,14 @@
-$blueColor: #0d47a1;
-$textColor: darken($blueColor, 90%);
+// $primaryColor: #3F51B5;
+// $darkPrimaryColor: #303F9F;
+$primaryColor: #1c4370;
+$darkPrimaryColor: darken($primaryColor, 5%);
+$lightPrimaryText: #C5CAE9;
+$primaryTextColor: darken($primaryColor, 20%);
+$textIconsColor: lighten($primaryColor, 80%);
+$accentColor: #FF5252;
+$secondaryText: #757575;
+$dividerColor: #BDBDBD;
+$scrollbarWidth: 11px;
 $buttonHeight: 55px;
+$buttonWidth: 165px;
+$buttonColor: lighten($primaryColor, 55%);
