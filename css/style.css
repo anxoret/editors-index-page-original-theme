@@ -30,7 +30,8 @@ body {
 ::-webkit-scrollbar-track {
   background-color: #17375c;
   -webkit-box-shadow: 0px 0px 3px #000 inset;
-  box-shadow: 0px 0px 3px #000 inset; }
+  box-shadow: 0px 0px 3px #000 inset;
+  border-radius: 5px; }
 
 ::-webkit-scrollbar-thumb {
   -webkit-border-radius: 5px;
@@ -362,11 +363,13 @@ body {
   width: 165px;
   overflow-x: hidden;
   overflow-y: overlay;
-  border: 1px solid #08121e; }
+  border-radius: 5px;
+  background-color: #17375c; }
 
 .date_first-theme {
+  margin: 5px auto;
   width: 134px;
-  margin: 5px auto; }
+  background-color: white; }
 
 .date__name_first-theme {
   margin: 0 auto;
