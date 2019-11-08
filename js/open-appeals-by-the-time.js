@@ -61,7 +61,6 @@ let allDatesLi = document.querySelectorAll(".date__li");
 let lastDateLi = allDatesLi[allDatesLi.length - 1];
 openTheDateAppeals(lastDateLi);
 
-// delete main scrolling of the page
 const getElementAbsoluteHeight = (element) => {
     element = (typeof element === "string") ? document.querySelector(element) : element;
 
@@ -72,16 +71,31 @@ const getElementAbsoluteHeight = (element) => {
     return Math.ceil(element.offsetHeight + topAndButtomMargins);
 };
 
+const getElementAbsoluteWidth = (element) => {
+    element = (typeof element === "string") ? document.querySelector(element) : element;
+
+    let elementStyles = window.getComputedStyle(element);
+    let leftAndRightMargins = parseFloat(elementStyles["marginLeft"]) 
+        + parseFloat(elementStyles["marginRight"]);
+    
+    return Math.ceil(element.offsetWidth + leftAndRightMargins);
+};
+
+// make .dates-sidebar width like absolute width of .sections__button 
+let sectionsButton = document.querySelector(".sections__button");
+datesSidebar.style.width = (getElementAbsoluteWidth(sectionsButton) + 20) + "px";
+
+// give to .main-content width remaining from .dates-sidebar 
+let mainContent =  document.querySelector(".main-content");
+mainContent.style.width = `calc(100vw - ${getElementAbsoluteWidth(datesSidebar)}px)`;
+
+// delete main scrolling of the page
 let header = document.querySelector(".header");
 let headerAbsoluteHeight = getElementAbsoluteHeight(header);
 
 datesSidebar.style.height = `calc(100vh - ${headerAbsoluteHeight}px - 10px)`;
-
-let mainContent =  document.querySelector(".main-content");
 mainContent.style.height = `calc(100vh - ${headerAbsoluteHeight}px)`;
 
-// search-information
-// appeals-container
 let searchInformation = document.querySelector(".search-information");
 
 appealsContainer.style.height = (getElementAbsoluteHeight(mainContent) 

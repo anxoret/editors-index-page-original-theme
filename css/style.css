@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css?family=PT+Sans|Rubik|Ubuntu:300i,400,400i,700&display=swap&subset=cyrillic");
+@import url("https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700&display=swap&subset=cyrillic");
 *,
 *:after,
 *:before {
@@ -350,19 +350,16 @@ body {
   -webkit-box-direction: normal;
   -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center; }
 
 .dates-sidebar_first-theme {
-  display: block;
-  float: left;
-  margin: 0 10px 10px 0;
+  margin: 0 10px 10px 10px;
   width: 165px;
-  height: calc(100vh - 90px - 20px);
   overflow-x: hidden;
   overflow-y: overlay;
   border: 1px solid #08121e; }
@@ -393,9 +390,6 @@ body {
 
 .date__appeal-refresh-span_close {
   display: none; }
-
-.main-content_first-theme {
-  width: 824px; }
 
 .main-content__h2_first-theme {
   margin: 10px;
@@ -487,30 +481,23 @@ body {
     transition: none; }
 
 .appeal__arrows_first-theme {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  margin: 0 5px 5px 5px;
+  position: relative;
   width: 20px;
   height: 20px;
-  margin: 0 5px 5px;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  border: 1px solid #08121e;
   border-radius: 5px;
+  border: 1px solid #08121e;
   -webkit-transition: none;
   -o-transition: none;
   transition: none; }
   .appeal__arrows_first-theme .appeal__img_first-theme {
-    margin: 0;
+    display: block;
+    margin: 0 auto;
+    width: 13px;
     border: none;
-    margin-top: -3px; }
+    margin-top: 3px; }
     .appeal__arrows_first-theme .appeal__img_first-theme:nth-child(2) {
-      margin-top: -15px; }
+      margin-top: -3px; }
 
 .appeal__text_first-theme {
   margin: 0 5px 5px;

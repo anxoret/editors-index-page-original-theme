@@ -279,8 +279,8 @@ const showAppealsInDOM = (appealsArray) => {
             appealOpenAllText.classList = "appeal__open-all-text appeal__open-all-text_first-theme";
             appealOpenAllText.innerHTML = `
                 <div class="appeal__arrows appeal__arrows_first-theme">
-                    <img class="appeal__img appeal__img_first-theme" src="img/expand_more.png" alt="open-all-text">
-                    <img class="appeal__img appeal__img_first-theme" src="img/expand_more.png" alt="open-all-text"></img>
+                    <img class="appeal__img appeal__img_first-theme" src="img/expand-more.png" alt="open-all-text">
+                    <img class="appeal__img appeal__img_first-theme" src="img/expand-more.png" alt="open-all-text"></img>
                 </div>
             `;
             // &raquo; 
