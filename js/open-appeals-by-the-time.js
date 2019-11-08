@@ -60,3 +60,29 @@ arrayOfDatesLi.forEach(dateLi => {
 let allDatesLi = document.querySelectorAll(".date__li");
 let lastDateLi = allDatesLi[allDatesLi.length - 1];
 openTheDateAppeals(lastDateLi);
+
+// delete main scrolling of the page
+const getElementAbsoluteHeight = (element) => {
+    element = (typeof element === "string") ? document.querySelector(element) : element;
+
+    let elementStyles = window.getComputedStyle(element);
+    let topAndButtomMargins = parseFloat(elementStyles["marginTop"]) 
+        + parseFloat(elementStyles["marginBottom"]);
+    
+    return Math.ceil(element.offsetHeight + topAndButtomMargins);
+};
+
+let header = document.querySelector(".header");
+let headerAbsoluteHeight = getElementAbsoluteHeight(header);
+
+datesSidebar.style.height = `calc(100vh - ${headerAbsoluteHeight}px - 10px)`;
+
+let mainContent =  document.querySelector(".main-content");
+mainContent.style.height = `calc(100vh - ${headerAbsoluteHeight}px)`;
+
+// search-information
+// appeals-container
+let searchInformation = document.querySelector(".search-information");
+
+appealsContainer.style.height = (getElementAbsoluteHeight(mainContent) 
+    - getElementAbsoluteHeight(searchInformation) - 20) + "px";

@@ -105,7 +105,7 @@ body {
 // }
 
 .wrapper_first-theme {
-    margin: 10px auto;
+    margin: 0px auto;
     // padding: 0 15px;
     min-width: 1000px;
     max-width: 1920px;
@@ -151,9 +151,9 @@ body {
 }
 
 .search-information_first-theme {
-    margin: 0 auto;
+    margin: 10px auto;
     width: 770px;
-    height: 125px;
+    // height: 125px;
     // background-color: red;
     // border: 1px solid $primaryTextColor;
 }
@@ -419,7 +419,7 @@ body {
 .dates-sidebar_first-theme {
     display: block;
     float: left;
-    margin: 0 10px;
+    margin: 0 10px 10px 0;
     width: $buttonWidth;
     height: calc(100vh - 90px - 20px); // - header height - global margin
     // padding: 5px;
@@ -504,7 +504,8 @@ body {
 }
 
 .appeals-container_first-theme {
-    height: calc(100vh - 90px - 125px - 20px);
+    // height: calc(100vh - 90px - 125px - 20px);
+    margin: 10px 0;
     overflow-x: hidden;
     overflow-y: overlay;
 }
