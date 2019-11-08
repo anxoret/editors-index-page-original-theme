@@ -512,7 +512,8 @@ body {
 
 .appeals-container_first-theme {
     // height: calc(100vh - 90px - 125px - 20px);
-    margin: 10px 0;
+    margin: 10px auto;
+    width: 812px;
     overflow-x: hidden;
     overflow-y: overlay;
 }
