@@ -220,6 +220,10 @@ body {
 .sections__img_first-theme {
     margin: 2px;
     width: 10px;
+    
+    // .sections__img_rotate180 {
+    //     transform: rotate(180px);
+    // }
 }
 
 .nav__ul_first-theme {
@@ -363,13 +367,16 @@ body {
 }
 
 .sections__ul_first-theme {
-    position: absolute;
     display: flex;
-    margin-top: $buttonHeight;
+    position: absolute;
+    top: $buttonHeight;
+    margin-top: 15px;
     flex-direction: column;  
-    background-color: $buttonColor;
+    background-color: darken($primaryColor, 0%);
     width: $buttonWidth;
-    // line-height: 21px;
+    line-height: 21px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
     z-index: 9999;
 }
 
