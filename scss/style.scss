@@ -253,6 +253,16 @@ body {
     border-right: 2px solid $borderColor; 
     // border: 1px solid $primaryTextColor; 
 
+    &:first-child {
+        &::before {
+            content: ">";
+            color: $textIconsColor;
+            margin-right: 5px;
+            // content: url(/img/open-menu.png);
+            // height: 16px;
+        }
+    }
+
     &:last-child {
         border: none;
     }
@@ -295,9 +305,11 @@ body {
     text-decoration: none;
 }
 
-// .sections__link_first-theme {
-//     p ;
-// }
+.sections__link_first-theme {
+    // text-transform: uppercase;
+    // font-weight: bold;
+    color: $textIconsColor;
+}
 
 .sections__li_first-theme {
     margin: 0 5px 5px; 
@@ -333,14 +345,17 @@ body {
     width: $buttonWidth;
     height: $buttonHeight;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    align-content: center;
     user-select: none;
     // background-color: lighten($primaryColor, 12%);
     // background-image: linear-gradient(to right bottom, #10243b, #132c48, #153355, #193b62, #1c4370);    border: $textIconsColor 1px solid;
     background-image: linear-gradient(to right bottom, #183658, #1a3d64, #1d4471, #204c7d, #23538a);
+    // background-color: $buttonColor;
     border-radius: 5px;
     box-shadow: 0px 2px 0 white, 2px 4px 6px #eee;
+    color: $textIconsColor;
+    // color: $primaryTextColor;
     transition: none;
     cursor: pointer;
 
@@ -362,10 +377,6 @@ body {
         outline: none !important;
     }
 
-}
-
-.sections__link_first-theme {
-    color: $textIconsColor;
 }
 
 .sections__ul_first-theme {
@@ -432,6 +443,7 @@ body {
     // border: 1px solid $primaryTextColor;
     border-radius: 5px;
     background-color: $darkPrimaryColor;
+    // background-color: lighten($primaryColor, 20%);
 }
 
 .date_first-theme {
@@ -445,7 +457,22 @@ body {
     padding: 5px 11px;
     border: 1px solid $primaryTextColor;
     border-radius: 5px;
-    background-color: $buttonColor;
+    // background-color: $buttonColor;
+    background-color: lighten($buttonColor, 20%);
+
+    &:hover {
+        background-color: $buttonColor;
+
+        .date__day_first-theme,
+        .date__month_first-theme {
+            // color: $textIconsColor;
+
+            // &::before {
+            //     color: $textIconsColor;
+            // }
+        }
+        // color: $textIconsColor;
+    }
 }
 
 .date__name_arrow-right {
@@ -463,8 +490,22 @@ body {
 }
 
 .date__ul_first-theme {
-    // margin: 5px 11px;
-    margin: 5px 17px 5px 24px;
+    margin: 5px auto;
+    // padding: 0 12px 0 0;
+    // margin: 5px 17px 5px 24px;
+    background-color: $buttonColor;
+    border-radius: 5px;
+    .date__li_first-theme {
+        // color: $textIconsColor;
+    }
+
+    .date__start-hour-span_first-theme, 
+    .date__start-minutes-span_first-theme,
+    .date__end-hour-span_first-theme, 
+    .date__end-minutes-span_first-theme,
+    .date__appeal-refresh-span_first-theme {
+        // color: $textIconsColor;
+    }
 }
 
 .date__ul_close {
@@ -472,8 +513,9 @@ body {
 }
 
 .date__li_first-theme {
-    list-style-type: none;
     position: relative;
+    list-style-type: none;
+    margin: 0 17px 0 24px;
 
     &:hover {
         // background-color: olivedrab;

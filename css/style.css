@@ -218,6 +218,10 @@ body {
   vertical-align: middle;
   line-height: 2;
   border-right: 2px solid #214f84; }
+  .section-navigation__li_first-theme:first-child::before {
+    content: ">";
+    color: white;
+    margin-right: 5px; }
   .section-navigation__li_first-theme:last-child {
     border: none; }
   .section-navigation__li_first-theme:hover {
@@ -243,6 +247,9 @@ body {
 .section-navigation__link_first-theme,
 .search__link_first-theme {
   text-decoration: none; }
+
+.sections__link_first-theme {
+  color: white; }
 
 .sections__li_first-theme {
   margin: 0 5px 5px; }
@@ -281,11 +288,12 @@ body {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -ms-flex-line-pack: center;
-  align-content: center;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -297,6 +305,7 @@ body {
   border-radius: 5px;
   -webkit-box-shadow: 0px 2px 0 white, 2px 4px 6px #eee;
   box-shadow: 0px 2px 0 white, 2px 4px 6px #eee;
+  color: white;
   -webkit-transition: none;
   -o-transition: none;
   transition: none;
@@ -313,9 +322,6 @@ body {
     -webkit-box-shadow: none;
     box-shadow: none;
     outline: none !important; }
-
-.sections__link_first-theme {
-  color: white; }
 
 .sections__ul_first-theme {
   display: -webkit-box;
@@ -376,6 +382,8 @@ body {
   border: 1px solid #08121e;
   border-radius: 5px;
   background-color: white; }
+  .date__name_first-theme:hover {
+    background-color: #ccdef2; }
 
 .date__name_arrow-right::before {
   content: ">";
@@ -386,14 +394,17 @@ body {
   margin-right: 5px; }
 
 .date__ul_first-theme {
-  margin: 5px 17px 5px 24px; }
+  margin: 5px auto;
+  background-color: #ccdef2;
+  border-radius: 5px; }
 
 .date__ul_close {
   display: none; }
 
 .date__li_first-theme {
+  position: relative;
   list-style-type: none;
-  position: relative; }
+  margin: 0 17px 0 24px; }
   .date__li_first-theme:hover {
     text-decoration: underline; }
 
