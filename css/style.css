@@ -383,15 +383,32 @@ body {
   border-radius: 5px;
   background-color: white; }
   .date__name_first-theme:hover {
-    background-color: #ccdef2; }
+    background-color: #518ed4;
+    color: white; }
+    .date__name_first-theme:hover .date__day_first-theme,
+    .date__name_first-theme:hover .date__month_first-theme {
+      color: white; }
+      .date__name_first-theme:hover .date__day_first-theme::before,
+      .date__name_first-theme:hover .date__month_first-theme::before {
+        color: white; }
 
 .date__name_arrow-right::before {
   content: ">";
   margin-right: 5px; }
 
-.date__name_arrow-down::before {
-  content: "v";
-  margin-right: 5px; }
+.date__name_arrow-down {
+  background-color: #518ed4;
+  color: white; }
+  .date__name_arrow-down .date__day_first-theme,
+  .date__name_arrow-down .date__month_first-theme {
+    color: white; }
+    .date__name_arrow-down .date__day_first-theme::before,
+    .date__name_arrow-down .date__month_first-theme::before {
+      color: white; }
+  .date__name_arrow-down::before {
+    content: "v";
+    margin-right: 5px;
+    color: white; }
 
 .date__ul_first-theme {
   margin: 5px auto;
@@ -409,7 +426,14 @@ body {
     text-decoration: underline; }
 
 .date__li_selected {
-  background-color: #7aa8de; }
+  background-color: #518ed4;
+  color: white; }
+  .date__li_selected .date__start-hour-span_first-theme,
+  .date__li_selected .date__start-minutes-span_first-theme,
+  .date__li_selected .date__end-hour-span_first-theme,
+  .date__li_selected .date__end-minutes-span_first-theme,
+  .date__li_selected .date__appeal-refresh-span_first-theme {
+    color: white; }
 
 .date__appeal-refresh-span_close {
   display: none; }

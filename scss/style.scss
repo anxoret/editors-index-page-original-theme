@@ -461,17 +461,17 @@ body {
     background-color: lighten($buttonColor, 20%);
 
     &:hover {
-        background-color: $buttonColor;
+        background-color: darken($buttonColor, 30%);
 
         .date__day_first-theme,
         .date__month_first-theme {
-            // color: $textIconsColor;
+            color: $textIconsColor;
 
-            // &::before {
-            //     color: $textIconsColor;
-            // }
+            &::before {
+                color: $textIconsColor;
+            }
         }
-        // color: $textIconsColor;
+        color: $textIconsColor;
     }
 }
 
@@ -483,9 +483,23 @@ body {
 }
 
 .date__name_arrow-down {
+    // background-color: $buttonColor;
+    background-color: darken($buttonColor, 30%);
+    color: $textIconsColor;
+
+    .date__day_first-theme,
+        .date__month_first-theme {
+            color: $textIconsColor;
+
+            &::before {
+                color: $textIconsColor;
+            }
+    }
+
     &::before {
         content: "v";
         margin-right: 5px;
+        color: $textIconsColor;
     } 
 }
 
@@ -541,7 +555,17 @@ body {
     //     content: "\27F3";
     //     // width: 20px;
     // }
-    background-color: lighten($primaryTextColor, 60%);
+    // background-color: lighten($primaryTextColor, 60%);
+    background-color: darken($buttonColor, 30%);
+    color: $textIconsColor;
+    
+    .date__start-hour-span_first-theme,
+    .date__start-minutes-span_first-theme,
+    .date__end-hour-span_first-theme,
+    .date__end-minutes-span_first-theme,
+    .date__appeal-refresh-span_first-theme {
+        color: $textIconsColor;
+    }
 }
 
 .date__appeal-refresh-span_close {

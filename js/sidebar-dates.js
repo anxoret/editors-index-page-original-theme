@@ -67,7 +67,7 @@ let dateLiSelected = lastDateTimePeriods.querySelectorAll(".date__li")[numberOfD
 dateLiSelected.classList.add("date__li_selected");
 dateLiSelected.querySelector(".date__appeal-refresh-span").classList.toggle("date__appeal-refresh-span_close");
 
-datesSidebar.scrollTop = datesSidebar.scrollHeight;
+// datesSidebar.scrollTop = datesSidebar.scrollHeight;
 
 // appeals refresh onclick event
 let allDateAppealRefreshSpan = document.querySelectorAll(".date__appeal-refresh-span");

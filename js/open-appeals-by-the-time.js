@@ -102,8 +102,10 @@ let headerAbsoluteHeight = getElementAbsoluteHeight(header);
 
 datesSidebar.style.height = `calc(100vh - ${headerAbsoluteHeight}px - 10px)`;
 mainContent.style.height = `calc(100vh - ${headerAbsoluteHeight}px)`;
+datesSidebar.scrollTop = datesSidebar.scrollHeight;
 
 let searchInformation = document.querySelector(".search-information");
 
 appealsContainer.style.height = (getElementAbsoluteHeight(mainContent) 
     - getElementAbsoluteHeight(searchInformation) - 20) + "px";
+
