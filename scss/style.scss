@@ -19,7 +19,7 @@
 }
 
 body {
-    background-color: white;
+    background-color: #F6F9FF;
 }
 
 ::-webkit-scrollbar-button {
@@ -39,9 +39,10 @@ body {
     ::-webkit-scrollbar-thumb {
         -webkit-border-radius: 5px;
         border-radius: 5px;
-        background-color: #ffcb17;
-        // background-color: $primaryColor;
-        box-shadow: 0px 1px 1px #fff inset;
+        // background-color: #ffcb17;
+        background-color: $scrollBarThumbColor;
+        // box-shadow: 0px 1px 1px #fff inset;
+        box-shadow: 0px 1px 1px $accentColor inset;
         background-image: url(/img/three-lines.png);
         background-size: $scrollbarWidth;
         background-position: center;
@@ -257,7 +258,7 @@ body {
         &::before {
             content: ">";
             color: $textIconsColor;
-            margin-right: 5px;
+            margin-right: 10px;
             // content: url(/img/open-menu.png);
             // height: 16px;
         }
@@ -313,10 +314,15 @@ body {
 
 .sections__li_first-theme {
     margin: 0 5px 5px; 
+    border-bottom: 2px solid $borderColor;
     
     &:first-child {
         margin-top: 5px;
     }
+
+    &:last-child {
+        border: none
+    } 
 }
 
 .section-navigation__link_first-theme {
@@ -367,7 +373,9 @@ body {
 
     &:hover {
         border-radius: 5px;
-        background-color: lighten($primaryColor, 18%);
+        // background-color: lighten($primaryColor, 18%);
+        // box-shadow: 0px 2px 0 white, 2px 4px 6px #eee inset;
+        box-shadow:  inset;
     }
 
     &:focus {
@@ -397,6 +405,7 @@ body {
     width: $buttonWidth;
     line-height: 21px;
     border: 2px solid $buttonColor;
+    // border: 2px solid $borderColor;
     border-radius: 5px;
     // box-shadow: 0 0 10px rgba(0,0,0,0.5);
     box-shadow: 10px 10px 10px rgba(0,0,0,0.4);
@@ -476,11 +485,12 @@ body {
     padding: 5px 11px;
     border: 1px solid $primaryTextColor;
     border-radius: 5px;
-    // background-color: $buttonColor;
-    background-color: lighten($buttonColor, 20%);
+    background-color: $buttonColor;
+    // background-color: lighten($buttonColor, 20%);
 
     &:hover {
-        background-color: darken($buttonColor, 30%);
+        background-color: $accentColor;
+        // background-color: lighten($buttonColor, 20%);
 
         .date__day_first-theme,
         .date__month_first-theme {
@@ -497,13 +507,13 @@ body {
 .date__name_arrow-right {
     &::before {
         content: ">";
-        margin-right: 5px;
+        margin-right: 10px;
     } 
 }
 
 .date__name_arrow-down {
     // background-color: $buttonColor;
-    background-color: darken($buttonColor, 30%);
+    background-color: $accentColor;
     color: $textIconsColor;
 
     .date__day_first-theme,
@@ -518,7 +528,7 @@ body {
 
     &::before {
         content: "v";
-        margin-right: 5px;
+        margin-right: 10px;
         color: $textIconsColor;
         transition: none;
     } 
@@ -539,7 +549,7 @@ body {
 .date__li_first-theme {
     position: relative;
     list-style-type: none;
-    // margin: 0 17px 0 24px;
+    margin-left: 30px;
     // text-align: center;
 
     &:hover {
@@ -557,12 +567,16 @@ body {
     //     // width: 20px;
     // }
     // background-color: lighten($primaryTextColor, 60%);
-    // background-color: darken($buttonColor, 30%);
+    // background-color: $accentColor;
     
     .date__time-span_first-theme {
         color: $textIconsColor;
-        background-color: darken($buttonColor, 30%);
+        background-color: $accentColor;
     }
+    // .date__appeal-refresh-span_first-theme {
+    //     background-color: $buttonColor;
+    //     // color: $primaryTextColor;
+    // } 
 
     .date__start-hour-span_first-theme,
     .date__start-minutes-span_first-theme,
