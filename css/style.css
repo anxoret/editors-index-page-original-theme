@@ -337,9 +337,10 @@ body {
   background-color: #1c4370;
   width: 165px;
   line-height: 21px;
+  border: 2px solid #ccdef2;
   border-radius: 5px;
-  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
   z-index: 9999; }
 
 .sections_first-theme .sections__ul_close,

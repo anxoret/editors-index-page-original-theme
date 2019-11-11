@@ -388,8 +388,10 @@ body {
     background-color: darken($primaryColor, 0%);
     width: $buttonWidth;
     line-height: 21px;
+    border: 2px solid $buttonColor;
     border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    // box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    box-shadow: 10px 10px 10px rgba(0,0,0,0.5);
     z-index: 9999;
 }
 
