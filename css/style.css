@@ -359,7 +359,7 @@ body {
   align-items: center; }
 
 .dates-sidebar_first-theme {
-  margin: 0 10px 10px 10px;
+  margin: 0 0 10px 10px;
   width: 165px;
   overflow-x: hidden;
   overflow-y: overlay;
@@ -368,16 +368,25 @@ body {
 
 .date_first-theme {
   margin: 5px auto;
-  width: 134px;
-  background-color: white; }
+  width: 134px; }
 
 .date__name_first-theme {
   margin: 0 auto;
   padding: 5px 11px;
-  border: 1px solid #08121e; }
+  border: 1px solid #08121e;
+  border-radius: 5px;
+  background-color: white; }
+
+.date__name_arrow-right::before {
+  content: ">";
+  margin-right: 5px; }
+
+.date__name_arrow-down::before {
+  content: "v";
+  margin-right: 5px; }
 
 .date__ul_first-theme {
-  margin: 5px 11px; }
+  margin: 5px 17px 5px 24px; }
 
 .date__ul_close {
   display: none; }

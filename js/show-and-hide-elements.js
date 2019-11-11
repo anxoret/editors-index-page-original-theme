@@ -19,11 +19,23 @@ const showAndHideDateUl = (element, className) => {
 
 let dates = document.querySelectorAll(".date");
 let datesNames = document.querySelectorAll(".date__name");
+let dateArrow = document.querySelectorAll(".date__arrow");
 
 datesNames.forEach((dateName, i) => {
     dateName.addEventListener("click", () => {
         let ul = dates[i].querySelector(".date__ul");
         showAndHideDateUl(ul, "date__ul_close");
+        // dateName.classList.toggle("date__name_arrow-right");
+
+        if (dateName.classList.contains("date__name_arrow-right")) {
+            dateName.classList.remove("date__name_arrow-right");
+            dateName.classList.add("date__name_arrow-down");
+        } else {
+            dateName.classList.remove("date__name_arrow-down");
+            dateName.classList.add("date__name_arrow-right");
+        }
+        // dateName.classList.toggle("date-name_arrow-down");
+        // dateArrow[i].classList.toggle("date__arrow_down");
     });
 });
 

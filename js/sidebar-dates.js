@@ -9,10 +9,13 @@ const fillSidebarWithDates = ((sidebarInDOM, monthName, startDay, endDay) => {
         sidebarInDOM.append(dateDiv);
     
         let dateNameDiv = document.createElement("div");
-        dateNameDiv.classList = "date__name date__name_first-theme";
+        dateNameDiv.classList = "date__name date__name_first-theme date__name_arrow-right";
         dateNameDiv.innerHTML = `<span class="date__day date__day_first-theme">${i}</span>
         <span class="date__month date__month_first-theme">${monthName}</span>
         ` ;
+        // dateNameDiv.innerHTML = `<span class="date__arrow date__arrow_first-theme">&#x25b7;</span><span class="date__day date__day_first-theme">${i}</span>
+        // <span class="date__month date__month_first-theme">${monthName}</span>
+        // ` ;
         dateDiv.append(dateNameDiv);
 
         let dateUl = document.createElement("ul");

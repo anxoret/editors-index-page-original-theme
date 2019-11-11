@@ -421,7 +421,8 @@ body {
 .dates-sidebar_first-theme {
     // display: block;
     // float: left;
-    margin: 0 10px 10px 10px;
+    // margin: 0 10px 10px 10px;
+    margin: 0 0 10px 10px;
     width: $buttonWidth;
     // height: calc(100vh - 90px - 20px); // - header height - global margin
     // padding: 5px;
@@ -436,24 +437,34 @@ body {
 .date_first-theme {
     margin: 5px auto;
     width: $buttonWidth - 20px - $scrollbarWidth;
-    background-color: $buttonColor;
+    // background-color: $buttonColor;
 }
 
 .date__name_first-theme {
     margin: 0 auto;
     padding: 5px 11px;
-    // font-weight: bold;
     border: 1px solid $primaryTextColor;
-    // background-color: $darkPrimaryColor;
+    border-radius: 5px;
+    background-color: $buttonColor;
+}
 
-    // .date__day_first-theme,
-    // .date__month_first-theme {
-    //     // color: $textIconsColor;
-    // }
+.date__name_arrow-right {
+    &::before {
+        content: ">";
+        margin-right: 5px;
+    } 
+}
+
+.date__name_arrow-down {
+    &::before {
+        content: "v";
+        margin-right: 5px;
+    } 
 }
 
 .date__ul_first-theme {
-    margin: 5px 11px;
+    // margin: 5px 11px;
+    margin: 5px 17px 5px 24px;
 }
 
 .date__ul_close {
