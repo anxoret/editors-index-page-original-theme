@@ -330,7 +330,7 @@ body {
 .sections_first-theme {
     position: relative;
     display: flex;
-    margin: 0 10px;
+    // margin: 0 10px;
     flex-direction: row;
     align-items: center;
     // justify-content: space-between;
@@ -338,9 +338,14 @@ body {
     // background-color: #4e4f54;
 }
 
+.section__button-wrapper_first-theme {
+    width: 196px;
+}
+
 .sections__button_first-theme {
     display: flex;
-    margin: 6px 0 12px;
+    // margin: 6px 0 12px;
+    margin: 6px auto 12px;
     padding: 5px;
     width: $buttonWidth;
     height: $buttonHeight;
@@ -384,7 +389,7 @@ body {
     position: absolute;
     top: $buttonHeight;
     margin-top: 15px;
-    flex-direction: column;  
+    flex-direction: column;
     background-color: darken($primaryColor, 0%);
     width: $buttonWidth;
     line-height: 21px;
@@ -436,7 +441,8 @@ body {
     // float: left;
     // margin: 0 10px 10px 10px;
     margin: 0 0 10px 10px;
-    width: $buttonWidth;
+    width: 196px;
+    // width: $buttonWidth + 10px + 4px; // 
     // height: calc(100vh - 90px - 20px); // - header height - global margin
     // padding: 5px;
     // overflow-y: scroll;
@@ -530,7 +536,7 @@ body {
 .date__li_first-theme {
     position: relative;
     list-style-type: none;
-    margin: 0 17px 0 24px;
+    // margin: 0 17px 0 24px;
     // text-align: center;
 
     &:hover {
@@ -548,9 +554,13 @@ body {
     //     // width: 20px;
     // }
     // background-color: lighten($primaryTextColor, 60%);
-    background-color: darken($buttonColor, 30%);
-    color: $textIconsColor;
+    // background-color: darken($buttonColor, 30%);
     
+    .date__time-span_first-theme {
+        color: $textIconsColor;
+        background-color: darken($buttonColor, 30%);
+    }
+
     .date__start-hour-span_first-theme,
     .date__start-minutes-span_first-theme,
     .date__end-hour-span_first-theme,

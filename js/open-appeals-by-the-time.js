@@ -89,8 +89,15 @@ const getElementAbsoluteWidth = (element) => {
 };
 
 // make .dates-sidebar width like absolute width of .sections__button 
+// let sectionsButton = document.querySelector(".sections__button");
+// datesSidebar.style.width = (getElementAbsoluteWidth(sectionsButton) + 20) + "px";
+
 let sectionsButton = document.querySelector(".sections__button");
-datesSidebar.style.width = (getElementAbsoluteWidth(sectionsButton) + 20) + "px";
+let dates = document.querySelectorAll(".date");
+
+dates.forEach(date => {
+    date.style.width =  + sectionsButton.offsetWidth + "px";
+});
 
 // give to .main-content width remaining from .dates-sidebar 
 let mainContent =  document.querySelector(".main-content");

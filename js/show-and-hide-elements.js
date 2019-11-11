@@ -16,7 +16,7 @@ const showAndHideDateUl = (element, className) => {
 
 };
 
-let dates = document.querySelectorAll(".date");
+// let dates = document.querySelectorAll(".date");
 let datesNames = document.querySelectorAll(".date__name");
 let dateArrow = document.querySelectorAll(".date__arrow");
 

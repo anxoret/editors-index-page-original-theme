@@ -41,9 +41,9 @@ const fillSidebarWithDates = ((sidebarInDOM, monthName, startDay, endDay) => {
             }
 
             let timeStr = `
-                <span class="date__start-hour-span date__start-hour-span_first-theme">${startHour}</span>:<span class="date__start-minutes-span date__start-minutes-span_first-theme">${startMinutes}</span>
+                <span class="date__time-span date__time-span_first-theme"><span class="date__start-hour-span date__start-hour-span_first-theme">${startHour}</span>:<span class="date__start-minutes-span date__start-minutes-span_first-theme">${startMinutes}</span>
                 - <span class="date__end-hour-span date__end-hour-span_first-theme">${startHour}</span>:<span class="date__end-minutes-span date__end-minutes-span_first-theme">${minutes + 59}</span>
-                <span class="date__appeal-refresh-span date__appeal-refresh-span_first-theme date__appeal-refresh-span_close">&#8635;</span>
+                <span class="date__appeal-refresh-span date__appeal-refresh-span_first-theme date__appeal-refresh-span_close">&#8635;</span></span>
             `;
             dateLi.innerHTML = timeStr;
             dateUl.append(dateLi);
