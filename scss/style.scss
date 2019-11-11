@@ -328,7 +328,7 @@ body {
 }
 
 .sections_first-theme {
-    position: relative;
+    // position: relative;
     display: flex;
     // margin: 0 10px;
     flex-direction: row;
@@ -340,6 +340,7 @@ body {
 
 .section__button-wrapper_first-theme {
     width: 196px;
+    position: relative;
 }
 
 .sections__button_first-theme {
@@ -388,7 +389,9 @@ body {
     display: flex;
     position: absolute;
     top: $buttonHeight;
-    margin-top: 15px;
+    left: 0;
+    right: 0;
+    margin: 15px auto 0;
     flex-direction: column;
     background-color: darken($primaryColor, 0%);
     width: $buttonWidth;
@@ -396,7 +399,7 @@ body {
     border: 2px solid $buttonColor;
     border-radius: 5px;
     // box-shadow: 0 0 10px rgba(0,0,0,0.5);
-    box-shadow: 10px 10px 10px rgba(0,0,0,0.5);
+    box-shadow: 10px 10px 10px rgba(0,0,0,0.4);
     z-index: 9999;
 }
 
@@ -406,7 +409,7 @@ body {
 }
 
 .section-navigation__nav_first-theme {
-    margin: 0 10px;
+    margin: 0 10px 0 0;
 }
 
 .section-navigation__ul_first-theme {
