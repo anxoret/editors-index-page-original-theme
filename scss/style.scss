@@ -11,7 +11,7 @@
     font-family: 'PT Sans', sans-serif;
     box-sizing: border-box;
     color: $primaryTextColor;
-    transition: .5s ease-in-out; /* добавим плавность переходов для всех элементов страницы*/
+    transition: .3s ease-in-out; /* добавим плавность переходов для всех элементов страницы*/
 }
 
 * {
@@ -450,6 +450,14 @@ body {
     margin: 5px auto;
     width: $buttonWidth - 20px - $scrollbarWidth;
     // background-color: $buttonColor;
+
+    &:first-child {
+        margin-top: 10px;
+    } 
+
+    &:last-child {
+        margin-bottom: 10px;
+    } 
 }
 
 .date__name_first-theme {
@@ -493,6 +501,7 @@ body {
 
             &::before {
                 color: $textIconsColor;
+                transition: none;
             }
     }
 
@@ -500,26 +509,16 @@ body {
         content: "v";
         margin-right: 5px;
         color: $textIconsColor;
+        transition: none;
     } 
 }
 
 .date__ul_first-theme {
     margin: 5px auto;
-    // padding: 0 12px 0 0;
+    padding: 5px 0;
     // margin: 5px 17px 5px 24px;
     background-color: $buttonColor;
     border-radius: 5px;
-    .date__li_first-theme {
-        // color: $textIconsColor;
-    }
-
-    .date__start-hour-span_first-theme, 
-    .date__start-minutes-span_first-theme,
-    .date__end-hour-span_first-theme, 
-    .date__end-minutes-span_first-theme,
-    .date__appeal-refresh-span_first-theme {
-        // color: $textIconsColor;
-    }
 }
 
 .date__ul_close {
@@ -530,19 +529,10 @@ body {
     position: relative;
     list-style-type: none;
     margin: 0 17px 0 24px;
+    // text-align: center;
 
     &:hover {
-        // background-color: olivedrab;
         text-decoration: underline;
-
-        // &::after {
-        //     position: absolute;
-        //     top: 0;
-        //     bottom: 0;
-        //     margin-left: 5px;
-        //     content: "\27F3";
-        //     // width: 20px;
-        // }
     }
 }
 

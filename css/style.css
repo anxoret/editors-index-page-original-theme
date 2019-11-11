@@ -10,9 +10,9 @@
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   color: #08121e;
-  -webkit-transition: .5s ease-in-out;
-  -o-transition: .5s ease-in-out;
-  transition: .5s ease-in-out;
+  -webkit-transition: .3s ease-in-out;
+  -o-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
   /* добавим плавность переходов для всех элементов страницы*/ }
 
 * {
@@ -375,6 +375,10 @@ body {
 .date_first-theme {
   margin: 5px auto;
   width: 134px; }
+  .date_first-theme:first-child {
+    margin-top: 10px; }
+  .date_first-theme:last-child {
+    margin-bottom: 10px; }
 
 .date__name_first-theme {
   margin: 0 auto;
@@ -404,14 +408,21 @@ body {
     color: white; }
     .date__name_arrow-down .date__day_first-theme::before,
     .date__name_arrow-down .date__month_first-theme::before {
-      color: white; }
+      color: white;
+      -webkit-transition: none;
+      -o-transition: none;
+      transition: none; }
   .date__name_arrow-down::before {
     content: "v";
     margin-right: 5px;
-    color: white; }
+    color: white;
+    -webkit-transition: none;
+    -o-transition: none;
+    transition: none; }
 
 .date__ul_first-theme {
   margin: 5px auto;
+  padding: 5px 0;
   background-color: #ccdef2;
   border-radius: 5px; }
 
