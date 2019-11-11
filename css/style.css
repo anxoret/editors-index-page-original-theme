@@ -108,8 +108,9 @@ body {
 
 .search_first-theme {
   padding: 5px;
-  border: 1px solid #08121e;
-  border-radius: 5px; }
+  border: 2px solid #17375c;
+  border-radius: 5px;
+  background-color: #E0F1FF; }
 
 .search__form_first-theme {
   display: -webkit-box;
@@ -316,9 +317,7 @@ body {
   transition: none;
   cursor: pointer; }
   .sections__button_first-theme:hover {
-    border-radius: 5px;
-    -webkit-box-shadow: inset;
-    box-shadow: inset; }
+    border-radius: 5px; }
   .sections__button_first-theme:focus {
     outline: none !important; }
   .sections__button_first-theme:active {
@@ -378,6 +377,7 @@ body {
   width: 196px;
   overflow-x: hidden;
   overflow-y: overlay;
+  border: 2px solid #17375c;
   border-radius: 5px;
   background-color: #17375c; }
 

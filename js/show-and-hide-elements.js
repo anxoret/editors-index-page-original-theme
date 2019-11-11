@@ -60,11 +60,31 @@ datesNames.forEach((dateName, i) => {
     });
 });
 
+let sectionsUl = document.querySelector(".sections__ul");
+// console.info(sectionsUl);
+
 let sectionsNavBtn = document.querySelector(".sections__button_first-theme");
 sectionsNavBtn.addEventListener("click", () => {
     let ul = document.querySelector(".sections__ul");
     ul.classList.toggle("sections__ul_close");
 });
 
+let wrapper = document.querySelector(".wrapper");
+const closeElement = (event) => {
+    if (!(sectionsUl.classList.contains("sections__ul_close")) && (event.target !== sectionsUl)) {
+        sectionsUl.classList.remove("sections__ul_close");
+    }
+};
 
+// wrapper.addEventListener("click", closeElement(event));
 
+// wrapper.onclick = function(event) {
+//     if (!(sectionsUl.classList.contains("sections__ul_close")) 
+//             && (event.target !== sectionsUl)
+//             && (event.target !== sectionsNavBtn) 
+//         ) {
+//         sectionsUl.classList.add("sections__ul_close");
+//         console.log("Click!");
+//     }
+//     // console.log("Click!");
+// };
