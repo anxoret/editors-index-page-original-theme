@@ -249,7 +249,8 @@ body {
 .search__link_first-theme {
   text-decoration: none; }
 
-.sections__link_first-theme {
+.sections__link_first-theme,
+.sections__current-section__first-theme {
   color: white; }
 
 .sections__li_first-theme {
