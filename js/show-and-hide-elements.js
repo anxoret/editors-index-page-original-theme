@@ -55,22 +55,45 @@ let sectionsImg = sectionsNavBtn.querySelector(".sections__img");
 let wrapper = document.querySelector(".wrapper");
 wrapper.onclick = function(event) {
 
-    if (event.target == sectionsNavBtn 
-            || event.target == sectionsCurrentSection
-            || event.target == sectionsImg    
-        ) {
-        sectionsUl.classList.toggle("sections__ul_close");
-    }
+    console.log(event.target);
 
-    if (!(sectionsUl.classList.contains("sections__ul_close")) 
-            && event.target !== sectionsUl
-            && event.target !== sectionsNavBtn 
-            && event.target !== sectionsCurrentSection
-            && event.target !== sectionsImg 
+    // if (    (event.target == sectionsNavBtn 
+    //             || event.target == sectionsCurrentSection 
+    //             || event.target == sectionsImg 
+    //         )   
+    //         && (sectionsUl.classList.contains("sections__ul_close"))
+    //         && (event.target !== sectionsUl) 
+    //     ) {
+    //     sectionsUl.classList.remove("sections__ul_close");
+    // }
+
+    // if (!(sectionsUl.classList.contains("sections__ul_close")) 
+    //         && event.target !== sectionsUl
+    //         && event.target !== sectionsNavBtn 
+    //         && event.target !== sectionsCurrentSection
+    //         && event.target !== sectionsImg 
+    //     ) {
+    //     sectionsUl.classList.add("sections__ul_close");
+    //     console.log("Click!");
+    // } 
+
+    if (event.target !== sectionsUl 
+        && !(event.target.classList.contains("sections__link"))
+        && !(event.target.classList.contains("sections__li"))
+    ) {
+
+        if (sectionsUl.classList.contains("sections__ul_close")
+            && (event.target == sectionsNavBtn 
+                    || event.target == sectionsCurrentSection 
+                    || event.target == sectionsImg
+                ) 
         ) {
-        sectionsUl.classList.toggle("sections__ul_close");
-        console.log("Click!");
-    } 
+            sectionsUl.classList.remove("sections__ul_close");
+        } else {
+            sectionsUl.classList.add("sections__ul_close");
+        } 
+
+    }
 
 };
 
