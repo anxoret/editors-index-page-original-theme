@@ -55,27 +55,7 @@ let sectionsImg = sectionsNavBtn.querySelector(".sections__img");
 let wrapper = document.querySelector(".wrapper");
 wrapper.onclick = function(event) {
 
-    console.log(event.target);
-
-    // if (    (event.target == sectionsNavBtn 
-    //             || event.target == sectionsCurrentSection 
-    //             || event.target == sectionsImg 
-    //         )   
-    //         && (sectionsUl.classList.contains("sections__ul_close"))
-    //         && (event.target !== sectionsUl) 
-    //     ) {
-    //     sectionsUl.classList.remove("sections__ul_close");
-    // }
-
-    // if (!(sectionsUl.classList.contains("sections__ul_close")) 
-    //         && event.target !== sectionsUl
-    //         && event.target !== sectionsNavBtn 
-    //         && event.target !== sectionsCurrentSection
-    //         && event.target !== sectionsImg 
-    //     ) {
-    //     sectionsUl.classList.add("sections__ul_close");
-    //     console.log("Click!");
-    // } 
+    // console.log(event.target);
 
     if (event.target !== sectionsUl 
         && !(event.target.classList.contains("sections__link"))
