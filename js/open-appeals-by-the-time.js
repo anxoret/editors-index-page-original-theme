@@ -66,12 +66,33 @@ let lastDateName = lastDate.querySelector(".date__name");
 lastDateName.classList.remove("date__name_arrow-right");
 lastDateName.classList.add("date__name_arrow-down");
 
-const getElementAbsoluteHeight = (element) => {
+const getTopAndButtomMarginsSum = (element) => {
     element = (typeof element === "string") ? document.querySelector(element) : element;
 
     let elementStyles = window.getComputedStyle(element);
     let topAndButtomMargins = parseFloat(elementStyles["marginTop"]) 
         + parseFloat(elementStyles["marginBottom"]);
+
+    return topAndButtomMargins;
+};
+
+const getLeftAndRightMarginsSum = (element) => {
+    element = (typeof element === "string") ? document.querySelector(element) : element;
+
+    let elementStyles = window.getComputedStyle(element);
+    let leftAndRightMargins = parseFloat(elementStyles["marginLeft"]) 
+    + parseFloat(elementStyles["marginRight"]);
+
+    return leftAndRightMargins;
+};
+
+const getElementAbsoluteHeight = (element) => {
+    element = (typeof element === "string") ? document.querySelector(element) : element;
+
+    // let elementStyles = window.getComputedStyle(element);
+    // let topAndButtomMargins = parseFloat(elementStyles["marginTop"]) 
+    //     + parseFloat(elementStyles["marginBottom"]);
+    let topAndButtomMargins = getTopAndButtomMarginsSum(element);
     
     return Math.ceil(element.offsetHeight + topAndButtomMargins);
 };
@@ -79,34 +100,44 @@ const getElementAbsoluteHeight = (element) => {
 const getElementAbsoluteWidth = (element) => {
     element = (typeof element === "string") ? document.querySelector(element) : element;
 
-    let elementStyles = window.getComputedStyle(element);
-    let leftAndRightMargins = parseFloat(elementStyles["marginLeft"]) 
-        + parseFloat(elementStyles["marginRight"]);
+    // let elementStyles = window.getComputedStyle(element);
+    // let leftAndRightMargins = parseFloat(elementStyles["marginLeft"]) 
+    //     + parseFloat(elementStyles["marginRight"]);
     
+    let leftAndRightMargins = getLeftAndRightMarginsSum(element);
+
     return Math.ceil(element.offsetWidth + leftAndRightMargins);
 };
 
-let sectionsButton = document.querySelector(".sections__button");
-let dates = document.querySelectorAll(".date");
+const resizeElements = () => {
 
-dates.forEach(date => {
-    date.style.width =  + sectionsButton.offsetWidth + "px";
-});
+    let sectionsButton = document.querySelector(".sections__button");
+    let dates = document.querySelectorAll(".date");
 
-// give to .main-content width remaining from .dates-sidebar 
-let mainContent =  document.querySelector(".main-content");
-mainContent.style.width = `calc(100vw - ${getElementAbsoluteWidth(datesSidebar)}px)`;
+    dates.forEach(date => {
+        date.style.width =  + sectionsButton.offsetWidth + "px";
+    });
 
-// delete main scrolling of the page
-let header = document.querySelector(".header");
-let headerAbsoluteHeight = getElementAbsoluteHeight(header);
+    // give to .main-content width remaining from .dates-sidebar 
+    let mainContent =  document.querySelector(".main-content");
+    mainContent.style.width = `calc(100vw - ${getElementAbsoluteWidth(datesSidebar)}px)`;
 
-datesSidebar.style.height = `calc(100vh - ${headerAbsoluteHeight}px - 10px)`;
-mainContent.style.height = `calc(100vh - ${headerAbsoluteHeight}px)`;
+    // delete main scrolling of the page
+    let header = document.querySelector(".header");
+    let headerAbsoluteHeight = getElementAbsoluteHeight(header);
+
+    datesSidebar.style.height = `calc(100vh - ${headerAbsoluteHeight}px)`;
+    mainContent.style.height = `calc(100vh - ${headerAbsoluteHeight}px)`;
+
+    let searchInformation = document.querySelector(".search-information");
+
+    // appealsContainer.style.height = (getElementAbsoluteHeight(mainContent) 
+        // - getElementAbsoluteHeight(searchInformation) - 20) + "px";
+
+    appealsContainer.style.height = `calc(${getElementAbsoluteHeight(datesSidebar)}px - ${getElementAbsoluteHeight(searchInformation)}px)`;
+    // console.log(`${getElementAbsoluteHeight(mainContent) - getElementAbsoluteHeight(searchInformation)}`)
+};
+
 datesSidebar.scrollTop = datesSidebar.scrollHeight;
 
-let searchInformation = document.querySelector(".search-information");
-
-appealsContainer.style.height = (getElementAbsoluteHeight(mainContent) 
-    - getElementAbsoluteHeight(searchInformation) - 20) + "px";
-
+// resizeElements();

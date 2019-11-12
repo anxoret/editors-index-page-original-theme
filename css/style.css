@@ -5,7 +5,7 @@
 *:before {
   margin: 0;
   padding: 0;
-  font-size: 14px;
+  font-size: 16px;
   font-family: 'PT Sans', sans-serif;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -54,13 +54,15 @@ body {
   width: 11px; }
 
 .wrapper_first-theme {
-  margin: 0px auto;
+  margin: 10px auto;
   min-width: 1000px;
   max-width: 1920px;
-  width: 100%; }
+  width: 100%;
+  height: 100%;
+  background-color: lightseagreen; }
 
 .header_first-theme {
-  margin: 10px;
+  margin: 0 auto 10px;
   line-height: 55px;
   border-radius: 5px;
   background-image: -webkit-gradient(linear, right top, left bottom, from(#10243b), color-stop(#132c48), color-stop(#153355), color-stop(#193b62), to(#1c4370));
@@ -103,7 +105,7 @@ body {
     align-items: center; }
 
 .search-information_first-theme {
-  margin: 10px auto;
+  margin: 0 auto 10px;
   width: 770px; }
 
 .search_first-theme {
@@ -188,10 +190,6 @@ body {
 .appeal__img_first-theme {
   margin: 0 2px;
   width: 20px; }
-
-.sections__img_first-theme {
-  margin: 2px;
-  width: 10px; }
 
 .nav__ul_first-theme {
   display: -webkit-box;
@@ -287,14 +285,14 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 6px auto 12px;
+  margin: 10px auto;
   padding: 5px;
   width: 165px;
   height: 60px;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -ms-flex-direction: row;
+  flex-direction: row;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
@@ -329,6 +327,10 @@ body {
     box-shadow: none;
     outline: none !important; }
 
+.sections__img_first-theme {
+  display: block;
+  width: 10px; }
+
 .sections__ul_first-theme {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -362,6 +364,7 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin: 10px;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
   -ms-flex-direction: row;
@@ -374,7 +377,6 @@ body {
   align-items: center; }
 
 .dates-sidebar_first-theme {
-  margin: 0 0 10px 10px;
   width: 196px;
   overflow-x: hidden;
   overflow-y: overlay;
@@ -460,6 +462,10 @@ body {
 .date__appeal-refresh-span_close {
   display: none; }
 
+.main-content_first-theme {
+  margin: 0 auto;
+  background-color: lawngreen; }
+
 .main-content__h2_first-theme {
   margin: 10px;
   font-size: 26px;
@@ -471,10 +477,11 @@ body {
     font-size: 26px; }
 
 .appeals-container_first-theme {
-  margin: 10px auto;
+  margin: 0 auto;
   width: 812px;
   overflow-x: hidden;
-  overflow-y: overlay; }
+  overflow-y: overlay;
+  background-color: lightcoral; }
 
 .selected-appeals_first-theme {
   text-align: right; }
