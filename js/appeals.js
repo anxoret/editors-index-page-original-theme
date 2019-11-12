@@ -165,22 +165,9 @@ const createArrayOfAppeals = (yearOfCreation, monthOfCreation, dayOfCreation, ho
     );
 
     sortArrayOfAppealsByTime(appealsArray);
-    // console.info(appealsArray);
+
     return appealsArray;
 };
-
-
-// let array = [
-//     {minutesOfCreation: 100, secondsOfCreation: 2},
-//     {minutesOfCreation: 100, secondsOfCreation: 40},
-//     {minutesOfCreation: 1, secondsOfCreation: 0},
-//     {minutesOfCreation: 100, secondsOfCreation: 1},
-//     {minutesOfCreation: 19, secondsOfCreation: 1},
-//     {minutesOfCreation: 2, secondsOfCreation: 10}
-// ];
-
-// sortArrayOfAppealsByTime(array);
-// console.log(array);
 
 let appealsContainer = document.querySelector(".appeals-container");
 let appealsNumbersWithBigTexts = [];
@@ -283,7 +270,6 @@ const showAppealsInDOM = (appealsArray) => {
                     <img class="appeal__img appeal__img_first-theme" src="img/expand-more.png" alt="open-all-text"></img>
                 </div>
             `;
-            // &raquo; 
             
             wrapper.append(appealOpenAllText);
     
@@ -296,7 +282,4 @@ const showAppealsInDOM = (appealsArray) => {
         
     });
 };
-
-// let appealsArray = createArrayOfAppeals(2019, 4, 11, 15);
-// showAppealsInDOM(sortArrayOfAppealsByTime(appealsArray));
 

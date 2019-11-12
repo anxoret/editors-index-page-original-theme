@@ -43,44 +43,12 @@ datesNames.forEach((dateName, i) => {
     dateName.addEventListener("click", () => {
         let ul = dates[i].querySelector(".date__ul");
         showAndHideDateUl(ul, "date__ul_close");
-        // dateName.classList.toggle("date__name_arrow-right");
-
         dateHoverOnAndOff(dateName);
-        // if (dateName.classList.contains("date__name_arrow-right")) {
-        //     dateName.classList.remove("date__name_arrow-right");
-        //     dateName.classList.add("date__name_arrow-down");
-        // } else {
-        //     dateName.classList.remove("date__name_arrow-down");
-        //     dateName.classList.add("date__name_arrow-right");
-        // }
-
-
-        // dateName.classList.toggle("date-name_arrow-down");
-        // dateArrow[i].classList.toggle("date__arrow_down");
     });
 });
 
-
-// console.info(sectionsUl);
-
-// let sectionsNavBtn = document.querySelector(".sections__button");
-// sectionsNavBtn.addEventListener("click", () => {
-//     let ul = document.querySelector(".sections__ul");
-//     ul.classList.toggle("sections__ul_close");
-// });
-
-// let wrapper = document.querySelector(".wrapper");
-// const closeElement = (event) => {
-//     if (!(sectionsUl.classList.contains("sections__ul_close")) && (event.target !== sectionsUl)) {
-//         sectionsUl.classList.remove("sections__ul_close");
-//     }
-// };
-
-// wrapper.addEventListener("click", closeElement(event));
-
 let sectionsNavBtn = document.querySelector(".sections__button");
 let sectionsCurrentSection = sectionsNavBtn.querySelector(".sections__current-section");
-// console.log(sectionsCurrentSection);
 let sectionsUl = document.querySelector(".sections__ul");
 let sectionsImg = sectionsNavBtn.querySelector(".sections__img"); 
 

@@ -59,8 +59,6 @@ arrayOfDatesLi.forEach(dateLi => {
 // primary on page Editors index page we show latest date with its latest appeals  
 let allDates = document.querySelectorAll(".date");
 let lastDate = allDates[allDates.length - 1];
-// let allDatesLi = document.querySelectorAll(".date__li");
-// let lastDateLi = allDatesLi[allDatesLi.length - 1];
 let allLastDateLi = lastDate.querySelectorAll(".date__li");
 let lastDateLi = allLastDateLi[allLastDateLi.length - 1];
 openTheDateAppeals(lastDateLi);
@@ -87,10 +85,6 @@ const getElementAbsoluteWidth = (element) => {
     
     return Math.ceil(element.offsetWidth + leftAndRightMargins);
 };
-
-// make .dates-sidebar width like absolute width of .sections__button 
-// let sectionsButton = document.querySelector(".sections__button");
-// datesSidebar.style.width = (getElementAbsoluteWidth(sectionsButton) + 20) + "px";
 
 let sectionsButton = document.querySelector(".sections__button");
 let dates = document.querySelectorAll(".date");
