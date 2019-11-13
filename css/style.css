@@ -543,13 +543,13 @@ body {
 
 .appeal__information_first-theme {
   display: inline-block;
-  margin: 5px; }
+  margin: 5px 5px 0; }
 
 .appeal__interactions_first-theme {
   position: relative;
   display: inline-block;
   float: right;
-  margin: 5px; }
+  margin: 5px 5px 0; }
 
 .appeal__img_first-theme {
   border: 1px solid #08121e;
@@ -618,7 +618,7 @@ body {
       margin-top: -3px; }
 
 .appeal__text_first-theme {
-  margin: 0 5px 5px;
+  margin: 5px;
   line-height: 21px;
   text-transform: uppercase; }
 
