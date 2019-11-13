@@ -104,11 +104,10 @@ body {
     align-items: center; }
 
 .search-information_first-theme {
-  margin: 0 auto;
-  width: 770px; }
+  margin: 0;
+  width: 812px; }
 
 .search_first-theme {
-  padding: 5px;
   border: 2px solid #17375c;
   border-radius: 5px;
   background-color: #E0F1FF; }
@@ -140,7 +139,8 @@ body {
   flex-direction: column;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
-  justify-content: center; }
+  justify-content: center;
+  margin: 10px; }
 
 .search__switch-button_first-theme {
   display: -webkit-box;
@@ -154,19 +154,16 @@ body {
   -ms-flex-pack: start;
   justify-content: flex-start; }
 
-.radio_first-theme {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center; }
-  .radio_first-theme:first-child {
-    margin-right: 15px; }
+.search__by-appeal-number_first-theme {
+  margin: 10px; }
+
+.search__by-telephone-number_first-theme {
+  margin: 10px; }
+
+.search__button_first-theme {
+  margin: 10px;
+  width: 70px;
+  height: 23px; }
 
 .botonContainer,
 .switch-button_first-theme {
@@ -179,7 +176,7 @@ body {
   flex-direction: row;
   position: relative;
   margin: 5px auto;
-  width: 200px;
+  width: 205px;
   border-radius: 5px;
   border: 1px solid gray;
   height: 21px;
@@ -226,10 +223,6 @@ body {
   -webkit-box-pack: end;
   -ms-flex-pack: end;
   justify-content: flex-end; }
-
-.search__button_first-theme {
-  margin: 5px;
-  height: 20px; }
 
 .nav__img_first-theme,
 .appeal__img_first-theme {
@@ -423,6 +416,7 @@ body {
   align-items: center; }
 
 .dates-sidebar_first-theme {
+  margin-right: 10px;
   width: 196px;
   overflow-x: hidden;
   overflow-y: overlay;
@@ -528,14 +522,13 @@ body {
   text-align: right; }
 
 .appeal_first-theme {
-  margin: 10px auto;
-  width: 770px;
-  border: 1px solid #08121e;
-  border-radius: 5px; }
+  margin: 10px 0;
+  width: 800px; }
 
 .appeal__wrapper_first-theme {
   position: relative;
-  width: 770px; }
+  border: 1px solid #08121e;
+  border-radius: 5px; }
 
 .appeal__status_first-theme {
   margin: 0 5px;
@@ -543,13 +536,13 @@ body {
 
 .appeal__information_first-theme {
   display: inline-block;
-  margin: 5px 5px 0; }
+  margin: 10px 20px 0; }
 
 .appeal__interactions_first-theme {
   position: relative;
   display: inline-block;
   float: right;
-  margin: 5px 5px 0; }
+  margin: 10px 20px 0; }
 
 .appeal__img_first-theme {
   border: 1px solid #08121e;
@@ -599,7 +592,7 @@ body {
     transition: none; }
 
 .appeal__arrows_first-theme {
-  margin: 0 5px 5px 5px;
+  margin: 0 20px 10px 10px;
   position: relative;
   width: 20px;
   height: 20px;
@@ -618,8 +611,8 @@ body {
       margin-top: -3px; }
 
 .appeal__text_first-theme {
-  margin: 5px;
-  line-height: 21px;
+  margin: 20px;
+  line-height: 24px;
   text-transform: uppercase; }
 
 .appeal__text_first-theme .appeal__ellipsis-span_close {
