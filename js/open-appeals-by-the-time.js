@@ -120,7 +120,7 @@ const resizeElements = () => {
 
     // give to .main-content width remaining from .dates-sidebar 
     let mainContent =  document.querySelector(".main-content");
-    mainContent.style.width = `calc(100vw - ${getElementAbsoluteWidth(datesSidebar)}px)`;
+    // mainContent.style.width = `calc(100vw - ${getElementAbsoluteWidth(datesSidebar)}px)`;
 
     // delete main scrolling of the page
     let header = document.querySelector(".header");

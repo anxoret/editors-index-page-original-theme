@@ -37,7 +37,8 @@
                                 Видеообращения из приложения
                             <!-- </a> -->
                         </span>
-                        <img class="sections__img sections__img_first-theme" src="img/open-menu.png" alt="open-menu">
+                        <!-- <img class="sections__img sections__img_first-theme" src="img/open-menu.png" alt="open-menu"> -->
+                        v
                     </button>
                     <ul class="sections__ul sections__ul_first-theme sections__ul_close">
                         <li class="sections__li sections__li_first-theme">
@@ -138,8 +139,8 @@
                     <div class="search search_first-theme">
                         <form class="search__form search__form_first-theme" action="" method="post">
                             <div class="search__by-text search__by-text_first-theme">
-                                <textarea class="search__textarea search__textarea_first-theme" rows="2" cols="25" name="text">Введите текст</textarea>
-                                <div class="search__wrapper">
+                                <textarea class="search__textarea search__textarea_first-theme" placeholder="Введите текст" rows="1" name="text"></textarea>
+                                <!-- <div class="search__switch-button search__switch-button_first-theme">
                                     <label class="search__radio radio radio_first-theme">
                                         <input class="radio__input radio__input_first-theme" type="radio" name="search" value="search-by-words" checked/>
                                         <div class="radio__text radio__text_first-theme">по словам</div>
@@ -148,13 +149,19 @@
                                         <input class="radio__input radio__input_first-theme" type="radio" name="search" value="search-by-phrase"/>
                                         <div class="radio__text radio__text_first-theme">по фразе</div>
                                     </label>
+                                </div> -->
+                                <div class="botonContainer">
+                                    <input id="radio1" type="radio" name="swich" checked/>
+                                    <label for="radio1">по словам</label>
+                                    <input id="radio2" type="radio" name="swich"/>
+                                    <label for="radio2">по фразе</label>
                                 </div>
                             </div>
                             <div class="search__by-appeal-number search__by-appeal-number_first-theme">
-                                <textarea class="search__textarea search__textarea_first-theme" rows="1" cols="25" name="text">Введите номер обращения</textarea>
+                                <textarea class="search__textarea search__textarea_first-theme" placeholder="Введите номер обращения" rows="1" cols="25" name="text"></textarea>
                             </div>
                             <div class="search__by-telephone-number search__by-telephone-number_first-theme">
-                                <textarea class="search__textarea search__textarea_first-theme" rows="1" cols="25" name="text">79999999999</textarea>
+                                <textarea class="search__textarea search__textarea_first-theme" placeholder="79999999999" rows="1" cols="25" name="text"></textarea>
                             </div>
                             <button class="search__button search__button_first-theme">Найти</button>
                         </form>

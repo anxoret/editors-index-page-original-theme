@@ -180,7 +180,10 @@ body {
 }
 
 .search__textarea_first-theme {
-    width: 210px;
+    width: 205px;
+    // outline: none;
+    resize: none;
+    border: 1px solid $darkPrimaryColor;
 }
 
 .search__by-text_first-theme {
@@ -189,7 +192,7 @@ body {
     justify-content: center;
 }
 
-.search__wrapper {
+.search__switch-button_first-theme {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -206,8 +209,51 @@ body {
 }
 
 .radio__input_first-theme {
-    margin: 5px 5px 5px 0; // подумать как лучше прописать
+    // margin: 5px 5px 5px 0; // подумать как лучше прописать
 }
+
+.botonContainer {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    margin: 5px auto;
+    width: 200px;
+    border-radius: 5px;
+    border:1px solid gray;
+    height: 21px;
+    // overflow: hidden;
+    background-color:white;
+     
+    input[type="radio"]{
+        display: none;
+    }
+
+    input[type="radio"] + label{
+        display: inline-block;
+        // width: 38.2%;
+        width: 50%;
+        margin: 0;
+        padding: 0;
+        font-size: 16px;
+        text-align: center;
+        height: 100%;
+        border-radius: 5px;
+        overflow: hidden;
+        line-height: 1;
+        text-overflow: ellipsis;
+        color: darken($textIconsColor, 45%);
+        cursor: pointer;
+        
+      
+    }
+
+     input[type="radio"]:checked + label{
+        color: darken($textIconsColor, 5%);
+        background-color: $darkPrimaryColor;
+        // width: 50%;
+    }
+
+  }
 
 .search__p_first-theme {
     display: flex;
@@ -310,6 +356,10 @@ body {
     color: $textIconsColor;
 }
 
+.sections__current-section__first-theme {
+    margin-right: 2px;
+}
+
 .sections__li_first-theme {
     margin: 0 5px 5px; 
     border-bottom: 2px solid $borderColor;
@@ -393,7 +443,7 @@ body {
 }
 
 .sections__img_first-theme {
-    display: block;
+    // display: block;
     // margin-right: 2px;
     width: 10px;
 }
@@ -450,7 +500,7 @@ body {
     display: flex;
     // margin: 10px;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
 }
 
@@ -459,6 +509,7 @@ body {
     // float: left;
     // margin: 0 10px 10px 10px;
     // margin-left: 10px;
+    // margin-right: 10px;
     width: 196px;
     // width: $buttonWidth + 10px + 4px; // 
     // height: calc(100vh - 90px - 20px); // - header height - global margin
@@ -599,7 +650,7 @@ body {
 
 .main-content_first-theme {
     // width: 824px;
-    margin: 0 auto;
+    // margin: 0 auto;
     // margin: 0 auto 10px;
     // background-color: lawngreen;
 }

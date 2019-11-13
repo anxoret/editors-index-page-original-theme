@@ -126,7 +126,9 @@ body {
   justify-content: space-between; }
 
 .search__textarea_first-theme {
-  width: 210px; }
+  width: 205px;
+  resize: none;
+  border: 1px solid #17375c; }
 
 .search__by-text_first-theme {
   display: -webkit-box;
@@ -140,7 +142,7 @@ body {
   -ms-flex-pack: center;
   justify-content: center; }
 
-.search__wrapper {
+.search__switch-button_first-theme {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -166,8 +168,41 @@ body {
   .radio_first-theme:first-child {
     margin-right: 15px; }
 
-.radio__input_first-theme {
-  margin: 5px 5px 5px 0; }
+.botonContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  position: relative;
+  margin: 5px auto;
+  width: 200px;
+  border-radius: 5px;
+  border: 1px solid gray;
+  height: 21px;
+  background-color: white; }
+  .botonContainer input[type="radio"] {
+    display: none; }
+  .botonContainer input[type="radio"] + label {
+    display: inline-block;
+    width: 50%;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    text-align: center;
+    height: 100%;
+    border-radius: 5px;
+    overflow: hidden;
+    line-height: 1;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    color: #8c8c8c;
+    cursor: pointer; }
+  .botonContainer input[type="radio"]:checked + label {
+    color: #f2f2f2;
+    background-color: #17375c; }
 
 .search__p_first-theme {
   display: -webkit-box;
@@ -250,6 +285,9 @@ body {
 .sections__current-section__first-theme {
   color: white; }
 
+.sections__current-section__first-theme {
+  margin-right: 2px; }
+
 .sections__li_first-theme {
   margin: 0 5px 5px;
   border-bottom: 2px solid #214f84; }
@@ -327,7 +365,6 @@ body {
     outline: none !important; }
 
 .sections__img_first-theme {
-  display: block;
   width: 10px; }
 
 .sections__ul_first-theme {
@@ -367,9 +404,9 @@ body {
   -webkit-box-direction: normal;
   -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center; }
@@ -459,9 +496,6 @@ body {
 
 .date__appeal-refresh-span_close {
   display: none; }
-
-.main-content_first-theme {
-  margin: 0 auto; }
 
 .main-content__h2_first-theme {
   margin: 10px;
