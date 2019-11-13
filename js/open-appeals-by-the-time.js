@@ -134,10 +134,10 @@ const resizeElements = () => {
     // appealsContainer.style.height = (getElementAbsoluteHeight(mainContent) 
         // - getElementAbsoluteHeight(searchInformation) - 20) + "px";
 
-    appealsContainer.style.height = `calc(${getElementAbsoluteHeight(datesSidebar)}px - ${getElementAbsoluteHeight(searchInformation)}px)`;
+    appealsContainer.style.height = `calc(${getElementAbsoluteHeight(datesSidebar)}px - ${getElementAbsoluteHeight(searchInformation)}px - 10px)`;
     // console.log(`${getElementAbsoluteHeight(mainContent) - getElementAbsoluteHeight(searchInformation)}`)
 };
 
-datesSidebar.scrollTop = datesSidebar.scrollHeight;
+// datesSidebar.scrollTop = datesSidebar.scrollHeight;
 
 // resizeElements();

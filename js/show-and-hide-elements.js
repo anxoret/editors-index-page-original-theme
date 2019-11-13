@@ -55,8 +55,6 @@ let sectionsImg = sectionsNavBtn.querySelector(".sections__img");
 let wrapper = document.querySelector(".wrapper");
 wrapper.onclick = function(event) {
 
-    // console.log(event.target);
-
     if (event.target !== sectionsUl 
         && !(event.target.classList.contains("sections__link"))
         && !(event.target.classList.contains("sections__li"))
