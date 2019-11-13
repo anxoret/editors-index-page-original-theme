@@ -168,7 +168,8 @@ body {
   .radio_first-theme:first-child {
     margin-right: 15px; }
 
-.botonContainer {
+.botonContainer,
+.switch-button_first-theme {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -182,10 +183,17 @@ body {
   border-radius: 5px;
   border: 1px solid gray;
   height: 21px;
+  overflow: hidden;
   background-color: white; }
-  .botonContainer input[type="radio"] {
+  .botonContainer input[type="radio"],
+  .botonContainer .switch-button__input_first-theme,
+  .switch-button_first-theme input[type="radio"],
+  .switch-button_first-theme .switch-button__input_first-theme {
     display: none; }
-  .botonContainer input[type="radio"] + label {
+  .botonContainer input[type="radio"] + label,
+  .botonContainer .switch-button__label_first-theme,
+  .switch-button_first-theme input[type="radio"] + label,
+  .switch-button_first-theme .switch-button__label_first-theme {
     display: inline-block;
     width: 50%;
     margin: 0;
@@ -200,7 +208,10 @@ body {
     text-overflow: ellipsis;
     color: #8c8c8c;
     cursor: pointer; }
-  .botonContainer input[type="radio"]:checked + label {
+  .botonContainer input[type="radio"]:checked + label,
+  .botonContainer .switch-button__label_first-theme:checked .switch-button__label_first-theme,
+  .switch-button_first-theme input[type="radio"]:checked + label,
+  .switch-button_first-theme .switch-button__label_first-theme:checked .switch-button__label_first-theme {
     color: #f2f2f2;
     background-color: #17375c; }
 

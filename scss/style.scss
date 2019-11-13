@@ -212,7 +212,8 @@ body {
     // margin: 5px 5px 5px 0; // подумать как лучше прописать
 }
 
-.botonContainer {
+.botonContainer,
+.switch-button_first-theme {
     display: flex;
     flex-direction: row;
     position: relative;
@@ -221,16 +222,17 @@ body {
     border-radius: 5px;
     border:1px solid gray;
     height: 21px;
-    // overflow: hidden;
+    overflow: hidden;
     background-color:white;
      
-    input[type="radio"]{
+    input[type="radio"],
+    .switch-button__input_first-theme {
         display: none;
     }
 
-    input[type="radio"] + label{
+    input[type="radio"] + label,
+    .switch-button__label_first-theme {
         display: inline-block;
-        // width: 38.2%;
         width: 50%;
         margin: 0;
         padding: 0;
@@ -243,11 +245,10 @@ body {
         text-overflow: ellipsis;
         color: darken($textIconsColor, 45%);
         cursor: pointer;
-        
-      
     }
 
-     input[type="radio"]:checked + label{
+     input[type="radio"]:checked + label,
+     .switch-button__label_first-theme:checked .switch-button__label_first-theme {
         color: darken($textIconsColor, 5%);
         background-color: $darkPrimaryColor;
         // width: 50%;
