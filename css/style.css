@@ -63,7 +63,7 @@ body {
 .header_first-theme {
   margin: 0 auto 10px;
   line-height: 55px;
-  border-radius: 5px;
+  border-radius: 0 0 5px 5px;
   background-image: -webkit-gradient(linear, right top, left bottom, from(#10243b), color-stop(#132c48), color-stop(#153355), color-stop(#193b62), to(#1c4370));
   background-image: -webkit-linear-gradient(right top, #10243b, #132c48, #153355, #193b62, #1c4370);
   background-image: -o-linear-gradient(right top, #10243b, #132c48, #153355, #193b62, #1c4370);
@@ -87,7 +87,7 @@ body {
   justify-content: space-between;
   border-bottom: 2px solid #214f84; }
   .header__global-navigation_first-theme .header__h1_first-theme {
-    margin: 0 10px;
+    margin: 5px 15px;
     padding: 0;
     font-size: 36px;
     color: white; }
@@ -265,7 +265,7 @@ body {
     background-color: #17375c; }
 
 .nav__li_first-theme {
-  margin-right: 10px; }
+  margin: 0 15px; }
   .nav__li_first-theme:last-child {
     width: 20px;
     height: 20px; }
