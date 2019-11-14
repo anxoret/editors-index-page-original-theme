@@ -179,6 +179,7 @@ const createArrayOfAppeals = (yearOfCreation, monthOfCreation, dayOfCreation, ho
 };
 
 let appealsContainer = document.querySelector(".appeals-container");
+let numbersOfNotViewedAppeals = [];
 let appealsNumbersWithBigTexts = [];
 
 const showAppealsInDOM = (appealsArray) => {
@@ -267,6 +268,10 @@ const showAppealsInDOM = (appealsArray) => {
             restTextSpan.textContent = restText;
             appealText.append(restTextSpan);
     
+            let appealInteractions2 = document.createElement("div");
+            appealInteractions2.classList = "appeal-interactions2 appeal-interactions2_first-theme";
+            wrapper.append(appealInteractions2);
+
             let appealOpenAllText = document.createElement("div");
             appealOpenAllText.classList = "appeal__open-all-text appeal__open-all-text_first-theme";
             appealOpenAllText.innerHTML = `
@@ -276,9 +281,35 @@ const showAppealsInDOM = (appealsArray) => {
                 </div>
             `;
             
-            wrapper.append(appealOpenAllText);
+            appealInteractions2.append(appealOpenAllText);
     
             appealsNumbersWithBigTexts.push(i);
+
+            if (appeal.status == "") {
+                let notViewed = document.createElement("div");
+                notViewed.classList = "appeal__not-viewed appeal__not-viewed_first-theme appeal__not-viewed_margin-left";
+                notViewed.innerHTML = `
+                    <img class="appeal__img appeal__img_first-theme" src="img/not-viewed.png" alt="not-viewed">
+                `;
+                appealInteractions2.append(notViewed);
+
+                numbersOfNotViewedAppeals.push(i);
+            }
+        } else if (appeal.status == "") {
+            appealText.textContent = appeal.text;
+            wrapper.append(appealText);
+
+            let appealInteractions2 = document.createElement("div");
+            appealInteractions2.classList = "appeal-interactions2 appeal-interactions2_first-theme";
+
+            let notViewed = document.createElement("div");
+            notViewed.classList = "appeal__not-viewed appeal__not-viewed_first-theme appeal__not-viewed_margin-left";
+            notViewed.innerHTML = `
+                <img class="appeal__img appeal__img_first-theme" src="img/not-viewed.png" alt="not-viewed">
+            `;
+            appealInteractions2.append(notViewed);
+
+            numbersOfNotViewedAppeals.push(i);
         } else {
             appealText.textContent = appeal.text;
             wrapper.append(appealText);
