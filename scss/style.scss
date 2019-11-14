@@ -161,7 +161,7 @@ body {
     // margin: 0 20px;
     margin: 0;
     // width: 770px;
-    width: 812px;
+    width: 887px;
     // width: 70%;
     // height: 125px;
     // background-color: red;
@@ -508,8 +508,9 @@ body {
     // float: left;
     // margin: 0 10px 10px 10px;
     // margin-left: 10px;
-    margin-right: 10px;
-    width: 196px;
+    margin-right: 30px;
+    // width: 196px;
+    width: 240px;
     // width: $buttonWidth + 10px + 4px; // 
     // height: calc(100vh - 90px - 20px); // - header height - global margin
     // padding: 5px;
@@ -672,7 +673,7 @@ body {
     // height: calc(100vh - 90px - 125px - 20px);
     margin: 0 auto;
     // width: 812px;
-    width: 812px;
+    width: 887px;
     overflow-x: hidden;
     overflow-y: overlay;
     // background-color: lightseagreen;
@@ -686,7 +687,7 @@ body {
 .appeal_first-theme {
     margin: 10px 0;
     // padding: 5px;
-    width: 800px;
+    width: 845px;
     // height: 140px;
     // border: 1px solid $primaryTextColor;
     // border-radius: 5px;
@@ -711,7 +712,7 @@ body {
 
 .appeal__information_first-theme {
     display: inline-block;
-    margin: 10px 20px 0;
+    margin: 10px 30px 0;
     // position: absolute;
     // width: 650px;
 }
@@ -721,7 +722,7 @@ body {
     position: relative;
     display: inline-block;
     float: right;
-    margin: 10px 20px 0;
+    margin: 10px 30px 0;
     // position: absolute;
     // width: 120px;
     // right: 0;
@@ -769,6 +770,7 @@ body {
 
 .appeal__open-all-text_first-theme {
     display: flex;
+    margin: 0 30px 10px 10px;
     flex-direction: row;
     justify-content: flex-end;
 
@@ -779,7 +781,7 @@ body {
 }
 
 .appeal__arrows_first-theme {
-    margin: 0 20px 10px 10px;
+    // margin: 0 30px 10px 10px;
     position: relative;
     width: 20px;
     height: 20px;
@@ -801,7 +803,8 @@ body {
 }
 
 .appeal__text_first-theme {
-    margin: 20px;
+    // margin: 20px;
+    margin: 20px 30px;
     line-height: 24px;
     text-transform: uppercase;
 }
