@@ -96,9 +96,11 @@ const getRandomNumber = (min, max) => {
 const getRandomStatus = () => {
     let status1 = "Логин редактирует";
     let status2 = "Логин редактировал";
-    let status3 = "";
+    let status3 = "Логин просматривает";
+    let status4 = "Логин просматривал";
+    let status5 = "";
 
-    let randomStatusNumber = getRandomNumber(1, 3);
+    let randomStatusNumber = getRandomNumber(1, 5);
 
     switch (randomStatusNumber) {
         case 1:
@@ -109,6 +111,13 @@ const getRandomStatus = () => {
 
         case 3:
             return status3;
+
+        case 4:
+            return status4;
+
+        case 5:
+            return status5;
+    
 
         default:
             return new Error(`У рандомного номера ${randomStatusNumber} нет статуса`);
@@ -203,10 +212,6 @@ const showAppealsInDOM = (appealsArray) => {
         if (month < 10) {
             month = "0" + month;
         }
-    
-        // if (hour < 10) {
-        //     hour = "0" + hour;
-        // }
     
         if (minutes < 10) {
             minutes = "0" + minutes;

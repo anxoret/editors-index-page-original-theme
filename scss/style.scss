@@ -160,7 +160,7 @@ body {
 .search-information_first-theme {
     // margin: 0 auto 10px;
     // margin: 0 20px;
-    margin: 0;
+    margin: 0 0 10px 0;
     // width: 770px;
     width: 887px;
     // width: 70%;
@@ -216,7 +216,6 @@ body {
     height: 23px;
 }
 
-.botonContainer,
 .switch-button_first-theme {
     display: flex;
     flex-direction: row;
@@ -247,7 +246,8 @@ body {
         overflow: hidden;
         line-height: 1;
         text-overflow: ellipsis;
-        color: darken($textIconsColor, 45%);
+        // color: darken($textIconsColor, 45%);
+        color: $notActiveColor;
         cursor: pointer;
     }
 
@@ -683,6 +683,7 @@ body {
 
 .selected-appeals_first-theme {
     // position: fixed;
+    // margin-right: 10px;
     text-align: right;
 }
 
