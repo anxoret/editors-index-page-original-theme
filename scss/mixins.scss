@@ -1,0 +1,17 @@
+@mixin button {
+    display: flex;
+    margin: 0 auto;
+    padding: 5px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    background-image: $headerBackgroundImage;
+    border: 1px solid #2e7fb2;
+    border-radius: 5px;
+    box-shadow: 0px 2px 0 white, 2px 4px 6px #eee;
+    font-weight: bold;
+    color: $textIconsColor;
+    transition: none;
+    cursor: pointer;
+}
