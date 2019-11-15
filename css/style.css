@@ -98,8 +98,7 @@ body {
     align-items: center; }
 
 .search-information_first-theme {
-  margin: 0 0 10px 0;
-  width: 887px; }
+  margin: 0 30px 10px 0; }
 
 .search_first-theme {
   border: 2px solid #17375c;
@@ -213,7 +212,6 @@ body {
 
 .nav__img_first-theme,
 .appeal__img_first-theme {
-  margin: 0 2px;
   width: 20px; }
 
 .nav__ul_first-theme {
@@ -259,7 +257,7 @@ body {
 
 .nav__link_first-theme {
   position: relative;
-  font-size: 16px;
+  font-size: 18px;
   color: white; }
   .nav__link_first-theme .nav__img_first-theme {
     position: absolute;
@@ -486,7 +484,8 @@ body {
   display: none; }
 
 .main-content_first-theme {
-  margin: 0 auto; }
+  margin: 0 auto;
+  width: 70%; }
 
 .main-content__h2_first-theme {
   margin: 10px;
@@ -499,16 +498,19 @@ body {
     font-size: 26px; }
 
 .appeals-container_first-theme {
-  margin: 0 auto;
+  margin: 0 30px 0 0;
   overflow-x: hidden;
   overflow-y: overlay; }
 
 .selected-appeals_first-theme {
+  margin: 5px 0 15px 0;
   text-align: right; }
 
 .appeal_first-theme {
   margin: 10px 0;
-  width: 1000px; }
+  width: 97%; }
+  .appeal_first-theme:first-child {
+    margin-top: 0; }
 
 .appeal__wrapper_first-theme {
   position: relative;
