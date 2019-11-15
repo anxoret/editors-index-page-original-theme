@@ -287,11 +287,11 @@ const showAppealsInDOM = (appealsArray) => {
 
             if (appeal.status == "") {
                 let notViewed = document.createElement("div");
-                notViewed.classList = "appeal__not-viewed appeal__not-viewed_first-theme appeal__not-viewed_margin-left";
+                notViewed.classList = "appeal__not-viewed appeal__not-viewed_first-theme";
                 notViewed.innerHTML = `
                     <img class="appeal__img appeal__img_first-theme" src="img/not-viewed.png" alt="not-viewed">
                 `;
-                appealInteractions2.append(notViewed);
+                appealInformationDiv.append(notViewed);
 
                 numbersOfNotViewedAppeals.push(i);
             }
@@ -303,11 +303,11 @@ const showAppealsInDOM = (appealsArray) => {
             appealInteractions2.classList = "appeal-interactions2 appeal-interactions2_first-theme";
 
             let notViewed = document.createElement("div");
-            notViewed.classList = "appeal__not-viewed appeal__not-viewed_first-theme appeal__not-viewed_margin-left";
+            notViewed.classList = "appeal__not-viewed appeal__not-viewed_first-theme";
             notViewed.innerHTML = `
                 <img class="appeal__img appeal__img_first-theme" src="img/not-viewed.png" alt="not-viewed">
             `;
-            appealInteractions2.append(notViewed);
+            appealInformationDiv.append(notViewed);
 
             numbersOfNotViewedAppeals.push(i);
         } else {

@@ -98,7 +98,7 @@ body {
     align-items: center; }
 
 .search-information_first-theme {
-  margin: 0 30px 10px 0; }
+  margin: 0 0 10px 0; }
 
 .search_first-theme {
   border: 2px solid #17375c;
@@ -183,7 +183,7 @@ body {
     width: 50%;
     margin: 0;
     padding: 0;
-    font-size: 16px;
+    font-size: 18px;
     text-align: center;
     height: 100%;
     border-radius: 5px;
@@ -313,7 +313,7 @@ body {
   display: flex;
   margin: 0 auto;
   padding: 5px;
-  width: 210px;
+  width: 300px;
   height: 60px;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
@@ -366,7 +366,7 @@ body {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  width: 210px;
+  width: 300px;
   line-height: 21px;
   border: 2px solid #E0F1FF;
   border-radius: 5px;
@@ -399,7 +399,7 @@ body {
 
 .dates-sidebar_first-theme {
   margin-right: 30px;
-  width: 17%;
+  width: 22%;
   overflow-x: hidden;
   overflow-y: overlay;
   border-radius: 5px;
@@ -407,7 +407,7 @@ body {
 
 .date_first-theme {
   margin: 5px auto;
-  width: 179px; }
+  width: 269px; }
   .date_first-theme:first-child {
     margin-top: 10px; }
   .date_first-theme:last-child {
@@ -485,7 +485,7 @@ body {
 
 .main-content_first-theme {
   margin: 0 auto;
-  width: 70%; }
+  width: 75%; }
 
 .main-content__h2_first-theme {
   margin: 10px;
@@ -498,7 +498,7 @@ body {
     font-size: 26px; }
 
 .appeals-container_first-theme {
-  margin: 0 30px 0 0;
+  margin: 0;
   overflow-x: hidden;
   overflow-y: overlay; }
 
@@ -578,9 +578,6 @@ body {
   -ms-flex-pack: end;
   justify-content: flex-end; }
 
-.appeal__not-viewed_margin-left {
-  margin-left: 10px; }
-
 .appeal__open-all-text_first-theme .appeal__arrows_up {
   -webkit-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
@@ -589,7 +586,12 @@ body {
   -o-transition: none;
   transition: none; }
 
+.appeal__not-viewed_first-theme {
+  display: inline-block;
+  line-height: 20px; }
+
 .appeal__not-viewed_first-theme .appeal__img_first-theme {
+  vertical-align: middle;
   border: none; }
 
 .appeal__arrows_first-theme {
@@ -611,7 +613,7 @@ body {
       margin-top: -3px; }
 
 .appeal__text_first-theme {
-  margin: 20px 30px;
+  margin: 20px 29px;
   line-height: 24px;
   text-transform: uppercase; }
 
