@@ -237,12 +237,13 @@ const showAppealsInDOM = (appealsArray) => {
         let appealInteractions = document.createElement("div");
         appealInteractions.classList = "appeal__interactions appeal__interactions_first-theme";
         appealInteractions.innerHTML = `
-            <div title="Выбрать" class="appeal__mark appeal__mark_first-theme"></div>
+            <div title="Выбрать" class="appeal__mark appeal__mark_first-theme">
+            </div>
             <div title="Редактировать" class="appeal__edit appeal__edit_first-theme">
-                <img class="appeal__img appeal__img_first-theme" src="img/edit.png" alt="edit">
+                <img class="appeal__img appeal__img_first-theme" src="img/pen2.png" alt="pen">
             </div>
             <div title="Печать" class="appeal__print appeal__print_first-theme">
-                <img class="appeal__img appeal__img_first-theme" src="img/print.png" alt="print">
+                <img class="appeal__img appeal__img_first-theme" src="img/print2.png" alt="print">
             </div>
         `;
         wrapper.append(appealInteractions);
@@ -288,9 +289,9 @@ const showAppealsInDOM = (appealsArray) => {
             if (appeal.status == "") {
                 let notViewed = document.createElement("div");
                 notViewed.classList = "appeal__not-viewed appeal__not-viewed_first-theme";
-                notViewed.innerHTML = `
-                    <img class="appeal__img appeal__img_first-theme" src="img/not-viewed.png" alt="not-viewed">
-                `;
+                // notViewed.innerHTML = `
+                //     <img class="appeal__img appeal__img_first-theme" src="img/not-viewed.png" alt="not-viewed">
+                // `;
                 appealInformationDiv.append(notViewed);
 
                 numbersOfNotViewedAppeals.push(i);
@@ -304,9 +305,9 @@ const showAppealsInDOM = (appealsArray) => {
 
             let notViewed = document.createElement("div");
             notViewed.classList = "appeal__not-viewed appeal__not-viewed_first-theme";
-            notViewed.innerHTML = `
-                <img class="appeal__img appeal__img_first-theme" src="img/not-viewed.png" alt="not-viewed">
-            `;
+            // notViewed.innerHTML = `
+            //     <img class="appeal__img appeal__img_first-theme" src="img/not-viewed.png" alt="not-viewed">
+            // `;
             appealInformationDiv.append(notViewed);
 
             numbersOfNotViewedAppeals.push(i);

@@ -253,7 +253,7 @@ body {
 
 .nav__img_first-theme,
 .appeal__img_first-theme {
-  width: 20px; }
+  width: 30px; }
 
 .nav__ul_first-theme {
   display: -webkit-box;
@@ -590,10 +590,33 @@ body {
 
 .appeal__information_first-theme {
   display: inline-block;
-  margin: 10px 30px 0; }
+  margin: 10px 30px 0;
+  height: 30px;
+  line-height: 30px; }
   .appeal__information_first-theme .appeal__not-viewed_first-theme {
-    position: absolute;
-    top: 10px; }
+    position: relative;
+    width: 30px;
+    height: 30px; }
+    .appeal__information_first-theme .appeal__not-viewed_first-theme::before {
+      position: absolute;
+      top: 75%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      height: 30px;
+      width: 30px;
+      content: url(/img/not-viewed-little.png); }
+    .appeal__information_first-theme .appeal__not-viewed_first-theme:hover::before {
+      position: absolute;
+      top: 75%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      height: 30px;
+      width: 30px;
+      content: url(/img/viewed-little.png); }
 
 .appeal__interactions_first-theme {
   position: relative;
@@ -601,29 +624,33 @@ body {
   float: right;
   margin: 10px 30px 0; }
 
-.appeal__img_first-theme {
-  border: 1px solid #08121e;
-  border-radius: 5px; }
-
 .appeal__mark_first-theme {
   position: relative;
   display: inline-block;
   margin-right: 5px;
-  width: 20px;
-  height: 20px;
-  border: 1px solid #08121e;
-  border-radius: 5px; }
+  width: 30px;
+  height: 30px; }
+  .appeal__mark_first-theme::before {
+    position: absolute;
+    top: 60%;
+    left: 45%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 30px;
+    content: url(/img/unchecked-mark2-little.png); }
+  .appeal__mark_first-theme:hover::before {
+    content: url(/img/checked-mark2-little.png); }
 
 .appeal__mark_marked::before {
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 60%;
+  left: 45%;
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-  width: 50%;
-  content: "\2714";
-  color: green; }
+  width: 30px;
+  content: url(/img/checked-mark2-little.png); }
 
 .appeal__edit_first-theme {
   margin-right: 5px; }
@@ -654,8 +681,7 @@ body {
   transition: none; }
 
 .appeal__not-viewed_first-theme {
-  display: inline-block;
-  line-height: 20px; }
+  display: inline-block; }
 
 .appeal__not-viewed_first-theme .appeal__img_first-theme {
   vertical-align: middle;

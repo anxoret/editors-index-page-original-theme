@@ -1,4 +1,4 @@
-console.log(numbersOfNotViewedAppeals.length);
+// console.log(numbersOfNotViewedAppeals.length);
 
 let appeals = document.querySelectorAll(".appeal");
 
