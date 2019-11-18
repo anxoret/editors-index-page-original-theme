@@ -589,10 +589,12 @@ body {
 .date__name_arrow-right {
 
     &::before {
-        content: ">";
+        // content: ">";
+        content: "\25b6";
         font-weight: bold;
         color: #ef8c08;
         margin-right: 10px;
+        font-size: 15px;
     } 
 
 }
@@ -611,9 +613,11 @@ body {
     }
 
     &::before {
-        content: "v";
+        // content: "v";
+        content: "\25bc";
         margin-right: 10px;
         font-weight: bold;
+        font-size: 15px;
         color: #ef8c08;
         transition: none;
     } 
@@ -635,6 +639,7 @@ body {
     position: relative;
     list-style-type: none;
     margin-left: 30px;
+    margin-top: 15px;
     // text-align: center;
 
     &:hover {
@@ -821,6 +826,7 @@ body {
     display: inline-block;
     float: right;
     margin: 10px 30px 0;
+    height: 30px;
     // position: absolute;
     // width: 120px;
     // right: 0;
