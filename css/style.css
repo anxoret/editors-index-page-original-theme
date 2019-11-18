@@ -325,7 +325,7 @@ body {
 
 .sections__li_first-theme {
   margin: 0 5px 5px;
-  border-bottom: 2px solid #214f84; }
+  border-bottom: 2px solid #e7e7e7; }
   .sections__li_first-theme:first-child {
     margin-top: 5px; }
   .sections__li_first-theme:last-child {
