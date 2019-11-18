@@ -269,20 +269,31 @@ const showAppealsInDOM = (appealsArray) => {
             restTextSpan.textContent = restText;
             appealText.append(restTextSpan);
     
-            let appealInteractions2 = document.createElement("div");
-            appealInteractions2.classList = "appeal-interactions2 appeal-interactions2_first-theme";
-            wrapper.append(appealInteractions2);
+            // let appealInteractions2 = document.createElement("div");
+            // appealInteractions2.classList = "appeal-interactions2 appeal-interactions2_first-theme";
+            // wrapper.append(appealInteractions2);
 
-            let appealOpenAllText = document.createElement("div");
-            appealOpenAllText.classList = "appeal__open-all-text appeal__open-all-text_first-theme";
-            appealOpenAllText.innerHTML = `
-                <div class="appeal__arrows appeal__arrows_first-theme">
-                    <img class="appeal__img appeal__img_first-theme" src="img/expand-more.png" alt="open-all-text">
-                    <img class="appeal__img appeal__img_first-theme" src="img/expand-more.png" alt="open-all-text"></img>
-                </div>
-            `;
+            // let appealOpenAllText = document.createElement("div");
+            // appealOpenAllText.classList = "appeal__open-all-text appeal__open-all-text_first-theme";
+            // // appealOpenAllText.innerHTML = `
+            // //     <div class="appeal__arrows appeal__arrows_first-theme">
+            // //         <img class="appeal__img appeal__img_first-theme" src="img/expand-more.png" alt="open-all-text">
+            // //         <img class="appeal__img appeal__img_first-theme" src="img/expand-more.png" alt="open-all-text"></img>
+            // //     </div>
+            // // `;
+            // appealOpenAllText.innerHTML = `
+            //     <div class="appeal__arrows appeal__arrows_first-theme">
+            //         <img class="appeal__img appeal__img_first-theme" src="img/arrows-green.png" alt="open-all-text">
+            //     </div>
+            // `;
             
-            appealInteractions2.append(appealOpenAllText);
+            let appealArrows = document.createElement("div");
+            appealArrows.classList = "appeal__arrows appeal__arrows_first-theme";
+            appealArrows.innerHTML = `
+                <img class="appeal__img appeal__img_first-theme" src="img/arrows-green.png" alt="open-all-text">
+            `;
+
+            wrapper.append(appealArrows);
     
             appealsNumbersWithBigTexts.push(i);
 

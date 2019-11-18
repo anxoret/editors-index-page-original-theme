@@ -517,6 +517,8 @@ body {
   list-style-type: none;
   margin-left: 30px;
   margin-top: 15px; }
+  .date__li_first-theme:first-child {
+    margin-top: 5px; }
   .date__li_first-theme:hover {
     text-decoration: underline; }
   .date__li_first-theme .date__time-span_first-theme {
@@ -619,7 +621,7 @@ body {
       transform: translate(-50%, -50%);
       height: 30px;
       width: 30px;
-      content: url(/img/viewed-little.png); }
+      content: url(/img/viewed-changed2.png); }
 
 .appeal__interactions_first-theme {
   position: relative;
@@ -663,27 +665,6 @@ body {
 .appeal__print_first-theme {
   display: inline-block; }
 
-.appeal-interactions2_first-theme {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin: 0 30px 10px 10px;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-pack: end;
-  -ms-flex-pack: end;
-  justify-content: flex-end; }
-
-.appeal__open-all-text_first-theme .appeal__arrows_up {
-  -webkit-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  transform: rotate(180deg);
-  -webkit-transition: none;
-  -o-transition: none;
-  transition: none; }
-
 .appeal__not-viewed_first-theme {
   display: inline-block; }
 
@@ -692,22 +673,23 @@ body {
   border: none; }
 
 .appeal__arrows_first-theme {
+  margin: 0 30px 10px 30px;
   position: relative;
-  width: 20px;
-  height: 20px;
-  border-radius: 5px;
-  border: 1px solid #08121e;
-  -webkit-transition: none;
-  -o-transition: none;
-  transition: none; }
+  height: 30px; }
   .appeal__arrows_first-theme .appeal__img_first-theme {
-    display: block;
-    margin: 0 auto;
-    width: 13px;
-    border: none;
-    margin-top: 3px; }
-    .appeal__arrows_first-theme .appeal__img_first-theme:nth-child(2) {
-      margin-top: -3px; }
+    position: absolute;
+    right: 0;
+    width: 20px;
+    -webkit-transition: none;
+    -o-transition: none;
+    transition: none; }
+  .appeal__arrows_first-theme .appeal__arrows_up {
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+    -webkit-transition: none;
+    -o-transition: none;
+    transition: none; }
 
 .appeal__text_first-theme {
   margin: 20px 29px;
