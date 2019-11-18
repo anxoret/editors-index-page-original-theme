@@ -90,7 +90,7 @@ body {
   .header__global-navigation_first-theme .header__h1_first-theme {
     margin: 5px 15px;
     padding: 0;
-    font-size: 36px;
+    font-size: 38px;
     color: white; }
   .header__global-navigation_first-theme .header__nav_first-theme,
   .header__global-navigation_first-theme .date-ul_first-theme {
@@ -105,10 +105,20 @@ body {
     align-items: center; }
 
 .search-information_first-theme {
-  margin: 0 0 10px 0; }
+  margin: 0; }
+
+.selected-appeals_first-theme {
+  margin-top: 5px;
+  padding-top: 5px;
+  padding-bottom: 15px;
+  text-align: right;
+  background-color: #f3fafd; }
 
 .selected-appeals__span_first-theme {
   font-weight: bold; }
+
+.selected-appeals__link_first-theme {
+  margin-right: 11px; }
 
 .search__form_first-theme {
   display: -webkit-box;
@@ -118,13 +128,20 @@ body {
   -webkit-box-direction: normal;
   -ms-flex-direction: row;
   flex-direction: row;
-  -ms-flex-pack: distribute;
-  justify-content: space-around; }
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
+  margin: 20px auto 20px; }
 
 .search__textarea_first-theme {
   width: 230px;
+  outline: none;
   resize: none;
-  border: 1px solid #17375c; }
+  border-radius: 5px; }
+  .search__textarea_first-theme:hover {
+    border: 1px solid #00ca02; }
+  .search__textarea_first-theme:focus {
+    border: 1px solid #00ca02; }
 
 .search__by-text_first-theme {
   display: -webkit-box;
@@ -138,18 +155,6 @@ body {
   -ms-flex-pack: center;
   justify-content: center;
   margin: 10px; }
-
-.search__switch-button_first-theme {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  justify-content: flex-start; }
 
 .search__by-appeal-number_first-theme {
   margin: 10px; }
@@ -199,13 +204,13 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
+  margin: 5px auto;
+  width: 230px;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
   -ms-flex-direction: row;
   flex-direction: row;
-  position: relative;
-  margin: 5px auto;
-  width: 205px;
   border-radius: 5px;
   border: 1px solid gray;
   height: 21px;
@@ -236,8 +241,7 @@ body {
     background-image: -webkit-gradient(linear, left bottom, left top, from(#1491d8), color-stop(#259be0), color-stop(#33a4e7), color-stop(#3faeef), to(#4bb8f6));
     background-image: -webkit-linear-gradient(bottom, #1491d8, #259be0, #33a4e7, #3faeef, #4bb8f6);
     background-image: -o-linear-gradient(bottom, #1491d8, #259be0, #33a4e7, #3faeef, #4bb8f6);
-    background-image: linear-gradient(to top, #1491d8, #259be0, #33a4e7, #3faeef, #4bb8f6);
-    border: 1px solid #2e7fb2; }
+    background-image: linear-gradient(to top, #1491d8, #259be0, #33a4e7, #3faeef, #4bb8f6); }
 
 .search__p_first-theme {
   display: -webkit-box;
@@ -293,8 +297,8 @@ body {
 .nav__li_first-theme {
   margin: 0 15px; }
   .nav__li_first-theme:last-child {
-    width: 20px;
-    height: 20px; }
+    width: 30px;
+    height: 30px; }
 
 .nav__link_first-theme {
   position: relative;
@@ -554,25 +558,22 @@ body {
   margin: 0 auto;
   width: 75%; }
 
+.main-content__h2_first-theme,
+.main-content__date-span_first-theme,
+.main-content__day__first-theme,
+.main-content__month__first-theme,
+.main-content__time-span_first-theme {
+  font-size: 30px; }
+
 .main-content__h2_first-theme {
   margin: 10px;
-  font-size: 26px;
   text-align: center; }
-  .main-content__h2_first-theme .main-content__date-span_first-theme,
-  .main-content__h2_first-theme .main-content__time-span_first-theme,
-  .main-content__h2_first-theme .main-content__day__first-theme,
-  .main-content__h2_first-theme .main-content__month__first-theme {
-    font-size: 26px; }
 
 .appeals-container_first-theme {
   margin: 0;
   overflow-x: hidden;
   overflow-y: overlay;
   background-color: #f3fafd; }
-
-.selected-appeals_first-theme {
-  margin: 5px 0 15px 0;
-  text-align: right; }
 
 .appeal_first-theme {
   margin: 0;
