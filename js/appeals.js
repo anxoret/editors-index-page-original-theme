@@ -290,7 +290,7 @@ const showAppealsInDOM = (appealsArray) => {
             let appealArrows = document.createElement("div");
             appealArrows.classList = "appeal__arrows appeal__arrows_first-theme";
             appealArrows.innerHTML = `
-                <img class="appeal__img appeal__img_first-theme" src="img/arrows-green.png" alt="open-all-text">
+                <img title="Открыть весь текст" class="appeal__img appeal__img_first-theme" src="img/arrows-green.png" alt="open-all-text">
             `;
 
             wrapper.append(appealArrows);
@@ -300,6 +300,7 @@ const showAppealsInDOM = (appealsArray) => {
             if (appeal.status == "") {
                 let notViewed = document.createElement("div");
                 notViewed.classList = "appeal__not-viewed appeal__not-viewed_first-theme";
+                notViewed.setAttribute("title", "Отметить просмотренным");
                 // notViewed.innerHTML = `
                 //     <img class="appeal__img appeal__img_first-theme" src="img/not-viewed.png" alt="not-viewed">
                 // `;
@@ -316,6 +317,7 @@ const showAppealsInDOM = (appealsArray) => {
 
             let notViewed = document.createElement("div");
             notViewed.classList = "appeal__not-viewed appeal__not-viewed_first-theme";
+            notViewed.setAttribute("title", "Отметить просмотренным");
             // notViewed.innerHTML = `
             //     <img class="appeal__img appeal__img_first-theme" src="img/not-viewed.png" alt="not-viewed">
             // `;
