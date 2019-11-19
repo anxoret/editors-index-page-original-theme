@@ -1,6 +1,6 @@
 "use strict" 
 
-let openUl = lastDateTimePeriods;
+let openUl = lastDateTimePeriods; // 59 sidebar-dates.js
 const showAndHideDateUl = (element, className) => {
     if (openUl == element) {
         element.classList.add(className);
@@ -20,7 +20,7 @@ let dates = document.querySelectorAll(".date");
 let datesNames = document.querySelectorAll(".date__name");
 let dateArrow = document.querySelectorAll(".date__arrow");
 
-let hoverDateName = lastDateName;
+let hoverDateName = lastDateName; // 10 primary-page-view.js
 const dateHoverOnAndOff = (element) => {
     if (hoverDateName == element) {
         element.classList.remove("date__name_arrow-down");
@@ -50,7 +50,6 @@ datesNames.forEach((dateName, i) => {
 let sectionsNavBtn = document.querySelector(".sections__button");
 let sectionsCurrentSection = sectionsNavBtn.querySelector(".sections__current-section");
 let sectionsUl = document.querySelector(".sections__ul");
-let sectionsImg = sectionsNavBtn.querySelector(".sections__img"); 
 
 let wrapper = document.querySelector(".wrapper");
 wrapper.onclick = function(event) {
@@ -61,10 +60,7 @@ wrapper.onclick = function(event) {
     ) {
 
         if (sectionsUl.classList.contains("sections__ul_close")
-            && (event.target == sectionsNavBtn 
-                    || event.target == sectionsCurrentSection 
-                    || event.target == sectionsImg
-                ) 
+            && (event.target == sectionsNavBtn || event.target == sectionsCurrentSection) 
         ) {
             sectionsUl.classList.remove("sections__ul_close");
         } else {

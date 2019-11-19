@@ -174,12 +174,10 @@ body {
     overflow: hidden;
     background-color:white;
      
-    input[type="radio"],
     .switch-button__input_first-theme {
         display: none;
     }
 
-    input[type="radio"] + label,
     .switch-button__label_first-theme {
         display: inline-block;
         width: 50%;
@@ -201,8 +199,7 @@ body {
         }
     }
 
-     input[type="radio"]:checked + label,
-     .switch-button__label_first-theme:checked .switch-button__label_first-theme {
+    .switch-button__input_first-theme[type="radio"]:checked + .switch-button__label_first-theme {
         color: darken($textIconsColor, 5%);
         background-image: $headerBackgroundImage;
 
@@ -402,15 +399,21 @@ body {
     } 
 }
 
-.date__name_first-theme { /*Исправить padding на норм вертикальное оцентрирование*/
+.date__name_first-theme { 
+    display: flex;
     margin: 0 auto;
     height: $buttonHeight;
-    padding: 10px 11px;
+    flex-direction: row;
+    align-items: center;
     border: 2px solid #d9d9da;
     font-weight: bold;
     color: darken(#4bb8f6, 20%);
     border-radius: 5px;
     background-image: $dateNameBackgroundImage;
+    
+    .date__month_first-theme {
+        margin-left: 5px;
+    }
 
     .date__day_first-theme,
     .date__month_first-theme {
@@ -442,7 +445,7 @@ body {
         content: "\25b6";
         font-weight: bold;
         color: #ef8c08;
-        margin-right: 10px;
+        margin: 0 10px;
         font-size: 15px;
     } 
 
@@ -462,7 +465,7 @@ body {
 
     &::before {
         content: "\25bc";
-        margin-right: 10px;
+        margin: 0 10px;
         font-weight: bold;
         font-size: 15px;
         color: #ef8c08;
@@ -484,7 +487,7 @@ body {
 .date__li_first-theme {
     position: relative;
     list-style-type: none;
-    margin-left: 30px;
+    margin-left: 40px;
     margin-top: 15px;
 
     &:first-child {
@@ -702,12 +705,6 @@ body {
 
 .appeal__text_first-theme .appeal__ellipsis-span_close {
     display: none;
-}
-
-@media (max-width: 1000px) {
-    .section-navigation__nav_first-theme {
-        margin: 0 0 0 9px;
-    }
 }
 
 
