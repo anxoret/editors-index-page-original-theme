@@ -182,10 +182,6 @@ body {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  background-image: -webkit-gradient(linear, left bottom, left top, from(#1491d8), color-stop(#259be0), color-stop(#33a4e7), color-stop(#3faeef), to(#4bb8f6));
-  background-image: -webkit-linear-gradient(bottom, #1491d8, #259be0, #33a4e7, #3faeef, #4bb8f6);
-  background-image: -o-linear-gradient(bottom, #1491d8, #259be0, #33a4e7, #3faeef, #4bb8f6);
-  background-image: linear-gradient(to top, #1491d8, #259be0, #33a4e7, #3faeef, #4bb8f6);
   outline: none;
   border: 1px solid #2e7fb2;
   border-radius: 5px;
@@ -193,6 +189,10 @@ body {
   box-shadow: 0px 2px 0 white, 2px 4px 6px #eee;
   font-weight: bold;
   color: white;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#1491d8), color-stop(#259be0), color-stop(#33a4e7), color-stop(#3faeef), to(#4bb8f6));
+  background-image: -webkit-linear-gradient(bottom, #1491d8, #259be0, #33a4e7, #3faeef, #4bb8f6);
+  background-image: -o-linear-gradient(bottom, #1491d8, #259be0, #33a4e7, #3faeef, #4bb8f6);
+  background-image: linear-gradient(to top, #1491d8, #259be0, #33a4e7, #3faeef, #4bb8f6);
   -webkit-transition: none;
   -o-transition: none;
   transition: none;
@@ -396,10 +396,6 @@ body {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  background-image: -webkit-gradient(linear, left bottom, left top, from(#1491d8), color-stop(#259be0), color-stop(#33a4e7), color-stop(#3faeef), to(#4bb8f6));
-  background-image: -webkit-linear-gradient(bottom, #1491d8, #259be0, #33a4e7, #3faeef, #4bb8f6);
-  background-image: -o-linear-gradient(bottom, #1491d8, #259be0, #33a4e7, #3faeef, #4bb8f6);
-  background-image: linear-gradient(to top, #1491d8, #259be0, #33a4e7, #3faeef, #4bb8f6);
   outline: none;
   border: 1px solid #2e7fb2;
   border-radius: 5px;
@@ -407,6 +403,10 @@ body {
   box-shadow: 0px 2px 0 white, 2px 4px 6px #eee;
   font-weight: bold;
   color: white;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#1491d8), color-stop(#259be0), color-stop(#33a4e7), color-stop(#3faeef), to(#4bb8f6));
+  background-image: -webkit-linear-gradient(bottom, #1491d8, #259be0, #33a4e7, #3faeef, #4bb8f6);
+  background-image: -o-linear-gradient(bottom, #1491d8, #259be0, #33a4e7, #3faeef, #4bb8f6);
+  background-image: linear-gradient(to top, #1491d8, #259be0, #33a4e7, #3faeef, #4bb8f6);
   -webkit-transition: none;
   -o-transition: none;
   transition: none;

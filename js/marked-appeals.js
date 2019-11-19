@@ -1,6 +1,6 @@
 "use strict" 
 
-// Adding count of marked appeals to html page
+// Adding counter of marked appeals to html page
 
 const giveAppealsOpportunityToGetMarked = () => {
     let allAppealMarks = document.querySelectorAll(".appeal__mark");

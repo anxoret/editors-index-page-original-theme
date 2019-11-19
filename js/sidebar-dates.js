@@ -7,7 +7,7 @@ const fillSidebarWithDates = ((sidebarInDOM, monthName, startDay, endDay) => {
         let dateDiv = document.createElement("div");
         dateDiv.classList = "date date_first-theme";
         sidebarInDOM.append(dateDiv);
-    
+
         let dateNameDiv = document.createElement("div");
         dateNameDiv.classList = "date__name date__name_first-theme date__name_arrow-right";
         dateNameDiv.innerHTML = `<span class="date__day date__day_first-theme">${i}</span>
@@ -23,13 +23,13 @@ const fillSidebarWithDates = ((sidebarInDOM, monthName, startDay, endDay) => {
         let hour = 0;
         let minutes = 0;
 
-        while(allHours > 0) {
+        while (allHours > 0) {
             let dateLi = document.createElement("li");
             dateLi.classList = "date__li date__li_first-theme";
 
             let startHour = hour;
             if (startHour < 10) {
-                startHour = "0" + startHour;  
+                startHour = "0" + startHour;
             }
 
             let startMinutes = minutes;
@@ -63,8 +63,6 @@ let numberOfDatesLi = lastDateTimePeriods.querySelectorAll(".date__li").length;
 let dateLiSelected = lastDateTimePeriods.querySelectorAll(".date__li")[numberOfDatesLi - 1];
 dateLiSelected.classList.add("date__li_selected");
 dateLiSelected.querySelector(".date__appeal-refresh-span").classList.toggle("date__appeal-refresh-span_close");
-
-// datesSidebar.scrollTop = datesSidebar.scrollHeight;
 
 // appeals refresh onclick event
 let allDateAppealRefreshSpan = document.querySelectorAll(".date__appeal-refresh-span");

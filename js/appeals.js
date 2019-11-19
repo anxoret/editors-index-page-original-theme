@@ -1,6 +1,6 @@
 "use strict" 
 
-const getMonthNameByName = (monthName) => {
+const getMonthNumberByName = (monthName) => {
     switch (monthName) {
         case "января":
             return 1;
@@ -268,24 +268,6 @@ const showAppealsInDOM = (appealsArray) => {
             restTextSpan.classList = "appeal__rest-text-span appeal__rest-text-span_first-theme appeal__rest-text-span_close";
             restTextSpan.textContent = restText;
             appealText.append(restTextSpan);
-    
-            // let appealInteractions2 = document.createElement("div");
-            // appealInteractions2.classList = "appeal-interactions2 appeal-interactions2_first-theme";
-            // wrapper.append(appealInteractions2);
-
-            // let appealOpenAllText = document.createElement("div");
-            // appealOpenAllText.classList = "appeal__open-all-text appeal__open-all-text_first-theme";
-            // // appealOpenAllText.innerHTML = `
-            // //     <div class="appeal__arrows appeal__arrows_first-theme">
-            // //         <img class="appeal__img appeal__img_first-theme" src="img/expand-more.png" alt="open-all-text">
-            // //         <img class="appeal__img appeal__img_first-theme" src="img/expand-more.png" alt="open-all-text"></img>
-            // //     </div>
-            // // `;
-            // appealOpenAllText.innerHTML = `
-            //     <div class="appeal__arrows appeal__arrows_first-theme">
-            //         <img class="appeal__img appeal__img_first-theme" src="img/arrows-green.png" alt="open-all-text">
-            //     </div>
-            // `;
             
             let appealArrows = document.createElement("div");
             appealArrows.classList = "appeal__arrows appeal__arrows_first-theme";
@@ -301,9 +283,6 @@ const showAppealsInDOM = (appealsArray) => {
                 let notViewed = document.createElement("div");
                 notViewed.classList = "appeal__not-viewed appeal__not-viewed_first-theme";
                 notViewed.setAttribute("title", "Отметить просмотренным");
-                // notViewed.innerHTML = `
-                //     <img class="appeal__img appeal__img_first-theme" src="img/not-viewed.png" alt="not-viewed">
-                // `;
                 appealInformationDiv.append(notViewed);
 
                 numbersOfNotViewedAppeals.push(i);
@@ -312,15 +291,9 @@ const showAppealsInDOM = (appealsArray) => {
             appealText.textContent = appeal.text;
             wrapper.append(appealText);
 
-            let appealInteractions2 = document.createElement("div");
-            appealInteractions2.classList = "appeal-interactions2 appeal-interactions2_first-theme";
-
             let notViewed = document.createElement("div");
             notViewed.classList = "appeal__not-viewed appeal__not-viewed_first-theme";
             notViewed.setAttribute("title", "Отметить просмотренным");
-            // notViewed.innerHTML = `
-            //     <img class="appeal__img appeal__img_first-theme" src="img/not-viewed.png" alt="not-viewed">
-            // `;
             appealInformationDiv.append(notViewed);
 
             numbersOfNotViewedAppeals.push(i);
@@ -328,8 +301,7 @@ const showAppealsInDOM = (appealsArray) => {
             appealText.textContent = appeal.text;
             wrapper.append(appealText);
         }
-    
-        
+           
     });
 };
 
