@@ -11,7 +11,7 @@ const openTheDateAppeals = (dateLi) => {
     appealsContainer.innerHTML = "";
 
     let appealsArray = createArrayOfAppeals((new Date()).getFullYear(), dateDay, dateMonth, startHour);
-    appealsNumbersWithBigTexts = [];    
+    appealsNumbersWithBigTexts = [];
     showAppealsInDOM(appealsArray);
 
     let mainContentDay = document.querySelector(".main-content__day");

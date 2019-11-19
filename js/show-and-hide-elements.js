@@ -1,4 +1,4 @@
-"use strict" 
+"use strict"
 
 let openUl = lastDateTimePeriods; // 59 sidebar-dates.js
 const showAndHideDateUl = (element, className) => {
@@ -37,7 +37,7 @@ const dateHoverOnAndOff = (element) => {
         element.classList.add("date__name_arrow-down");
         hoverDateName = element
     }
-}
+};
 
 datesNames.forEach((dateName, i) => {
     dateName.addEventListener("click", () => {
@@ -52,20 +52,20 @@ let sectionsCurrentSection = sectionsNavBtn.querySelector(".sections__current-se
 let sectionsUl = document.querySelector(".sections__ul");
 
 let wrapper = document.querySelector(".wrapper");
-wrapper.onclick = function(event) {
+wrapper.onclick = function (event) {
 
-    if (event.target !== sectionsUl 
+    if (event.target !== sectionsUl
         && !(event.target.classList.contains("sections__link"))
         && !(event.target.classList.contains("sections__li"))
     ) {
 
         if (sectionsUl.classList.contains("sections__ul_close")
-            && (event.target == sectionsNavBtn || event.target == sectionsCurrentSection) 
+            && (event.target == sectionsNavBtn || event.target == sectionsCurrentSection)
         ) {
             sectionsUl.classList.remove("sections__ul_close");
         } else {
             sectionsUl.classList.add("sections__ul_close");
-        } 
+        }
 
     }
 

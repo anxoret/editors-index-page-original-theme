@@ -1,4 +1,4 @@
-"use strict" 
+"use strict"
 
 // Adding counter of marked appeals to html page
 
@@ -20,7 +20,7 @@ const giveAppealsOpportunityToGetMarked = () => {
                 selectedAppealsNumber++;
                 selectedAppealsNumberSpan.textContent = selectedAppealsNumber;
             }
-            
+
         });
     });
 };

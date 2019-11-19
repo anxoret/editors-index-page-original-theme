@@ -4,7 +4,7 @@ const getTopAndButtomMarginsSum = (element) => {
     element = (typeof element === "string") ? document.querySelector(element) : element;
 
     let elementStyles = window.getComputedStyle(element);
-    let topAndButtomMargins = parseFloat(elementStyles["marginTop"]) 
+    let topAndButtomMargins = parseFloat(elementStyles["marginTop"])
         + parseFloat(elementStyles["marginBottom"]);
 
     return topAndButtomMargins;
@@ -14,8 +14,8 @@ const getLeftAndRightMarginsSum = (element) => {
     element = (typeof element === "string") ? document.querySelector(element) : element;
 
     let elementStyles = window.getComputedStyle(element);
-    let leftAndRightMargins = parseFloat(elementStyles["marginLeft"]) 
-    + parseFloat(elementStyles["marginRight"]);
+    let leftAndRightMargins = parseFloat(elementStyles["marginLeft"])
+        + parseFloat(elementStyles["marginRight"]);
 
     return leftAndRightMargins;
 };
@@ -24,13 +24,13 @@ const getElementAbsoluteHeight = (element) => {
     element = (typeof element === "string") ? document.querySelector(element) : element;
 
     let topAndButtomMargins = getTopAndButtomMarginsSum(element);
-    
+
     return Math.ceil(element.offsetHeight + topAndButtomMargins);
 };
 
 const getElementAbsoluteWidth = (element) => {
     element = (typeof element === "string") ? document.querySelector(element) : element;
-    
+
     let leftAndRightMargins = getLeftAndRightMarginsSum(element);
 
     return Math.ceil(element.offsetWidth + leftAndRightMargins);
@@ -42,7 +42,7 @@ const resizeElements = () => {
     let dates = document.querySelectorAll(".date");
 
     dates.forEach(date => {
-        date.style.width =  sectionsButton.offsetWidth + "px";
+        date.style.width = sectionsButton.offsetWidth + "px";
     });
 
     // delete main vertical scrolling of the page
@@ -51,11 +51,11 @@ const resizeElements = () => {
 
     datesSidebar.style.height = `calc(100vh - ${headerAbsoluteHeight}px)`;
 
-    let mainContent =  document.querySelector(".main-content");
+    let mainContent = document.querySelector(".main-content");
     mainContent.style.height = `calc(100vh - ${headerAbsoluteHeight}px)`;
 
-    let sectionButtonWrapper =  document.querySelector(".section__button-wrapper");
-    sectionButtonWrapper.style.width = `${getElementAbsoluteWidth(datesSidebar) 
+    let sectionButtonWrapper = document.querySelector(".section__button-wrapper");
+    sectionButtonWrapper.style.width = `${getElementAbsoluteWidth(datesSidebar)
         - getLeftAndRightMarginsSum(datesSidebar) - getLeftAndRightMarginsSum(sectionButtonWrapper)}px`;
 
     let searchInformation = document.querySelector(".search-information");

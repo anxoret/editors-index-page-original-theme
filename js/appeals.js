@@ -1,10 +1,10 @@
-"use strict" 
+"use strict"
 
 const getMonthNumberByName = (monthName) => {
     switch (monthName) {
         case "января":
             return 1;
-        
+
         case "февраля":
             return 2;
 
@@ -16,25 +16,25 @@ const getMonthNumberByName = (monthName) => {
 
         case "мая":
             return 5;
-        
+
         case "июня":
             return 6;
-        
+
         case "июля":
             return 7;
-        
+
         case "августа":
             return 8;
-        
+
         case "сентября":
             return 9;
-        
+
         case "октября":
             return 10;
-        
+
         case "ноября":
             return 11;
-        
+
         case "декабря":
             return 12;
 
@@ -48,7 +48,7 @@ const getMonthNameByNumber = (monthNumber) => {
     switch (monthNumber) {
         case 1:
             return "января";
-        
+
         case 2:
             return "февраля";
 
@@ -60,25 +60,25 @@ const getMonthNameByNumber = (monthNumber) => {
 
         case 5:
             return "мая";
-        
+
         case 6:
             return "июня";
-        
+
         case 7:
             return "июля";
-        
+
         case 8:
             return "августа";
-        
+
         case 9:
             return "сентября";
-        
+
         case 10:
             return "октября";
-        
+
         case 11:
             return "ноября";
-        
+
         case 12:
             return "декабря";
 
@@ -117,7 +117,7 @@ const getRandomStatus = () => {
 
         case 5:
             return status5;
-    
+
 
         default:
             return new Error(`У рандомного номера ${randomStatusNumber} нет статуса`);
@@ -169,7 +169,7 @@ const sortArrayOfAppealsByTime = (appealsArray) => {
 
 
 const createArrayOfAppeals = (yearOfCreation, monthOfCreation, dayOfCreation, hourOfCreation) => {
-    let appealsArray = [...Array(getRandomNumber(6, 15))].map(() => 
+    let appealsArray = [...Array(getRandomNumber(6, 15))].map(() =>
         createAppealObject(yearOfCreation, dayOfCreation, monthOfCreation, hourOfCreation)
     );
 
@@ -188,11 +188,11 @@ const showAppealsInDOM = (appealsArray) => {
         let article = document.createElement("article");
         article.classList = "appeal appeal_first-theme";
         appealsContainer.append(article);
-    
+
         let wrapper = document.createElement("div");
         wrapper.classList = "appeal__wrapper appeal__wrapper_first-theme";
         article.append(wrapper);
-    
+
         let appealInformationDiv = document.createElement("div");
         appealInformationDiv.classList = "appeal__information appeal__information_first-theme";
         wrapper.append(appealInformationDiv);
@@ -209,15 +209,15 @@ const showAppealsInDOM = (appealsArray) => {
         if (day < 10) {
             day = "0" + day;
         }
-    
+
         if (month < 10) {
             month = "0" + month;
         }
-    
+
         if (minutes < 10) {
             minutes = "0" + minutes;
         }
-    
+
         if (seconds < 10) {
             seconds = "0" + seconds;
         }
@@ -228,12 +228,12 @@ const showAppealsInDOM = (appealsArray) => {
         appealDate.classList = "appeal__date appeal__date_first-theme";
         appealDate.innerHTML = timeStr;
         appealInformationDiv.append(appealDate);
-    
+
         let appealStatus = document.createElement("span");
         appealStatus.classList = "appeal__status appeal__status_first-theme";
         appealStatus.textContent = appeal.status;
         appealInformationDiv.append(appealStatus);
-    
+
         let appealInteractions = document.createElement("div");
         appealInteractions.classList = "appeal__interactions appeal__interactions_first-theme";
         appealInteractions.innerHTML = `
@@ -247,28 +247,28 @@ const showAppealsInDOM = (appealsArray) => {
             </div>
         `;
         wrapper.append(appealInteractions);
-    
+
         let appealText = document.createElement("div");
         appealText.classList = "appeal__text appeal__text_first-theme";
-    
+
         if (appeal.text.length > 600) {
             let allText = appeal.text;
             let cuttenText = allText.slice(0, 601);
             let restText = allText.slice(601);
-    
+
             appealText.textContent = cuttenText;
             wrapper.append(appealText);
-    
+
             let ellipsisSpan = document.createElement("span");
             ellipsisSpan.classList = "appeal__ellipsis-span appeal__ellipsis-span_first-theme";
             ellipsisSpan.textContent = "...";
             appealText.append(ellipsisSpan);
-    
+
             let restTextSpan = document.createElement("span");
             restTextSpan.classList = "appeal__rest-text-span appeal__rest-text-span_first-theme appeal__rest-text-span_close";
             restTextSpan.textContent = restText;
             appealText.append(restTextSpan);
-            
+
             let appealArrows = document.createElement("div");
             appealArrows.classList = "appeal__arrows appeal__arrows_first-theme";
             appealArrows.innerHTML = `
@@ -276,7 +276,7 @@ const showAppealsInDOM = (appealsArray) => {
             `;
 
             wrapper.append(appealArrows);
-    
+
             appealsNumbersWithBigTexts.push(i);
 
             if (appeal.status == "") {
@@ -301,14 +301,14 @@ const showAppealsInDOM = (appealsArray) => {
             appealText.textContent = appeal.text;
             wrapper.append(appealText);
         }
-           
+
     });
 };
 
 const openAndCloseAllAppealText = () => {
     let appealsInDOM = document.querySelectorAll(".appeal");
 
-    appealsNumbersWithBigTexts.forEach( (appealNumber, i) => {
+    appealsNumbersWithBigTexts.forEach((appealNumber, i) => {
         let appealImg = appealsInDOM[appealNumber].querySelector(".appeal__arrows .appeal__img");
         appealImg.addEventListener("click", () => {
             let appealRestText = document.querySelectorAll(".appeal__rest-text-span")[i];
