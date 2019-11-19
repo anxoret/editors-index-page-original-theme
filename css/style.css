@@ -561,10 +561,10 @@ body {
   margin-top: 15px; }
   .date__li_first-theme:first-child {
     margin-top: 5px; }
-  .date__li_first-theme:hover {
-    text-decoration: underline; }
   .date__li_first-theme .date__time-span_first-theme {
     text-decoration: underline; }
+    .date__li_first-theme .date__time-span_first-theme:hover {
+      text-decoration: underline; }
   .date__li_first-theme .date__start-hour-span_first-theme,
   .date__li_first-theme .date__start-minutes-span_first-theme,
   .date__li_first-theme .date__end-hour-span_first-theme,

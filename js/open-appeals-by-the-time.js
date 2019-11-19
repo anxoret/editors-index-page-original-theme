@@ -128,7 +128,7 @@ const resizeElements = () => {
     let searchInformation = document.querySelector(".search-information");
     let selectedAppeals = document.querySelector(".selected-appeals");
     appealsContainer.style.height = `calc(${getElementAbsoluteHeight(datesSidebar)}px 
-        - ${getElementAbsoluteHeight(searchInformation)}px - ${getElementAbsoluteHeight(selectedAppeals)}px + 25px)`;
+        - ${getElementAbsoluteHeight(searchInformation)}px - ${getElementAbsoluteHeight(selectedAppeals)}px + 25px + 10px)`;
 };
 
 // datesSidebar.scrollTop = datesSidebar.scrollHeight;
