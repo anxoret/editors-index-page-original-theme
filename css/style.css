@@ -426,7 +426,7 @@ body {
   display: -ms-flexbox;
   display: flex;
   position: absolute;
-  top: 35px;
+  top: 31px;
   left: 0;
   right: 0;
   margin: 15px auto 0;
@@ -438,7 +438,7 @@ body {
   line-height: 24px;
   border: 2px solid #E0F1FF;
   border-radius: 5px;
-  background-color: #1491d8;
+  background-color: #1387c9;
   -webkit-box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.4);
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.4);
   z-index: 9999; }
