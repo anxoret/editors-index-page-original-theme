@@ -1,6 +1,6 @@
 "use strict"
 
-let openUl = lastDateTimePeriods; // 59 sidebar-dates.js
+let openUl;
 const showAndHideDateUl = (element, className) => {
     if (openUl == element) {
         element.classList.add(className);
@@ -16,11 +16,11 @@ const showAndHideDateUl = (element, className) => {
 
 };
 
-let dates = document.querySelectorAll(".date");
-let datesNames = document.querySelectorAll(".date__name");
-let dateArrow = document.querySelectorAll(".date__arrow");
+let allDates = document.querySelectorAll(".date");
+let lastDate = allDates[allDates.length - 1];
+let lastDateName = lastDate.querySelector(".date__name");
 
-let hoverDateName = lastDateName; // 10 primary-page-view.js
+let hoverDateName = lastDateName;
 const dateHoverOnAndOff = (element) => {
     if (hoverDateName == element) {
         element.classList.remove("date__name_arrow-down");
@@ -39,6 +39,8 @@ const dateHoverOnAndOff = (element) => {
     }
 };
 
+let dates = document.querySelectorAll(".date");
+let datesNames = document.querySelectorAll(".date__name");
 datesNames.forEach((dateName, i) => {
     dateName.addEventListener("click", () => {
         let ul = dates[i].querySelector(".date__ul");

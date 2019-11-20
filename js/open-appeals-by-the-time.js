@@ -29,7 +29,7 @@ let arrayOfDatesLi = document.querySelectorAll(".date__li");
 arrayOfDatesLi.forEach(dateLi => {
     dateLi.addEventListener("click", () => {
         openTheDateAppeals(dateLi);
-        dateLiSelected = document.querySelector(".date__li_selected");
+        let dateLiSelected = document.querySelector(".date__li_selected");
         if (dateLiSelected) {
             dateLiSelected.classList.remove("date__li_selected");
             dateLiSelected.querySelector(".date__appeal-refresh-span").classList.toggle("date__appeal-refresh-span_close");

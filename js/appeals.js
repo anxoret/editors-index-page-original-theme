@@ -1,91 +1,29 @@
 "use strict"
 
-const getMonthNumberByName = (monthName) => {
-    switch (monthName) {
-        case "января":
-            return 1;
+let arrayOfMonths = [
+    "января", "февраля", "марта",
+    "апреля", "мая", "июня",
+    "июля", "августа", "сентября", 
+    "октября", "ноября", "декабря"
+];
 
-        case "февраля":
-            return 2;
+const getMonthNumberByName = (arrayOfMonths, monthName) => {
 
-        case "марта":
-            return 3;
+    let monthNumber;
 
-        case "апреля":
-            return 4;
+    arrayOfMonths.forEach( (month, number) => {
+        if (month == monthName) {
+            monthNumber = number + 1;
+        }
+    });
 
-        case "мая":
-            return 5;
-
-        case "июня":
-            return 6;
-
-        case "июля":
-            return 7;
-
-        case "августа":
-            return 8;
-
-        case "сентября":
-            return 9;
-
-        case "октября":
-            return 10;
-
-        case "ноября":
-            return 11;
-
-        case "декабря":
-            return 12;
-
-        default:
-            return new Error("Неправильное название месяца");
-    }
+    return monthNumber;
 
 };
 
-const getMonthNameByNumber = (monthNumber) => {
-    switch (monthNumber) {
-        case 1:
-            return "января";
-
-        case 2:
-            return "февраля";
-
-        case 3:
-            return "марта";
-
-        case 4:
-            return "апреля";
-
-        case 5:
-            return "мая";
-
-        case 6:
-            return "июня";
-
-        case 7:
-            return "июля";
-
-        case 8:
-            return "августа";
-
-        case 9:
-            return "сентября";
-
-        case 10:
-            return "октября";
-
-        case 11:
-            return "ноября";
-
-        case 12:
-            return "декабря";
-
-        default:
-            return new Error("Неправильный порядковый номер месяца");
-    }
-
+const getMonthNameByNumber = (arrayOfMonths, monthNumber) => {
+    let monthName = arrayOfMonths[monthNumber + 1];
+    return monthName;
 };
 
 const getRandomNumber = (min, max) => {
@@ -94,35 +32,18 @@ const getRandomNumber = (min, max) => {
 };
 
 const getRandomStatus = () => {
-    let status1 = "Логин редактирует";
-    let status2 = "Логин редактировал";
-    let status3 = "Логин просматривает";
-    let status4 = "Логин просматривал";
-    let status5 = "";
+    let arrayOfStatuses = [
+        "Логин редактирует", 
+        "Логин редактировал", 
+        "Логин просматривает", 
+        "Логин просматривал",
+        ""
+    ];
 
     let randomStatusNumber = getRandomNumber(1, 5);
+    let randomStatus = arrayOfStatuses[randomStatusNumber];
 
-    switch (randomStatusNumber) {
-        case 1:
-            return status1;
-
-        case 2:
-            return status2;
-
-        case 3:
-            return status3;
-
-        case 4:
-            return status4;
-
-        case 5:
-            return status5;
-
-
-        default:
-            return new Error(`У рандомного номера ${randomStatusNumber} нет статуса`);
-    }
-
+    return randomStatus;
 };
 
 const getRandomText = () => {
@@ -140,7 +61,7 @@ const createAppealObject = (yearOfCreation, monthOfCreation, dayOfCreation, hour
     let appeal = {};
 
     appeal.yearOfCreation = yearOfCreation;
-    appeal.monthOfCreation = getMonthNumberByName(monthOfCreation);
+    appeal.monthOfCreation = getMonthNumberByName(arrayOfMonths, monthOfCreation);
     appeal.dayOfCreation = dayOfCreation;
     appeal.hourOfCreation = hourOfCreation;
     appeal.minutesOfCreation = getRandomNumber(0, 59);
@@ -178,6 +99,21 @@ const createArrayOfAppeals = (yearOfCreation, monthOfCreation, dayOfCreation, ho
     return appealsArray;
 };
 
+const makeAppealInteractionsHtmlString = () => {
+    let htmlString = `
+        <div title="Выбрать" class="appeal__mark appeal__mark_first-theme">
+        </div>
+        <div title="Редактировать" class="appeal__edit appeal__edit_first-theme">
+            <img class="appeal__img appeal__img_first-theme" src="img/pen2.png" alt="pen">
+        </div>
+        <div title="Печать" class="appeal__print appeal__print_first-theme">
+            <img class="appeal__img appeal__img_first-theme" src="img/print2.png" alt="print">
+        </div>
+    `;
+
+    return htmlString;
+};
+
 let appealsContainer = document.querySelector(".appeals-container");
 let numbersOfNotViewedAppeals = [];
 let appealsNumbersWithBigTexts = [];
@@ -198,35 +134,19 @@ const showAppealsInDOM = (appealsArray) => {
         wrapper.append(appealInformationDiv);
 
         let year = appeal.yearOfCreation + "";
-        let day = appeal.dayOfCreation;
-        let month = appeal.monthOfCreation;
+        let day = add0InHead(appeal.dayOfCreation);
+        let month = add0InHead(appeal.monthOfCreation);
         let hour = appeal.hourOfCreation;
-        let minutes = appeal.minutesOfCreation;
-        let seconds = appeal.secondsOfCreation;
+        let minutes = add0InHead(appeal.minutesOfCreation);
+        let seconds = add0InHead(appeal.secondsOfCreation);
 
         year = year.slice(2, 4);
 
-        if (day < 10) {
-            day = "0" + day;
-        }
-
-        if (month < 10) {
-            month = "0" + month;
-        }
-
-        if (minutes < 10) {
-            minutes = "0" + minutes;
-        }
-
-        if (seconds < 10) {
-            seconds = "0" + seconds;
-        }
-
-        let timeStr = `${day}.${month}.${year} ${hour}:${minutes}:${seconds}`;
+        let timeString = `${day}.${month}.${year} ${hour}:${minutes}:${seconds}`;
 
         let appealDate = document.createElement("span");
         appealDate.classList = "appeal__date appeal__date_first-theme";
-        appealDate.innerHTML = timeStr;
+        appealDate.innerHTML = timeString;
         appealInformationDiv.append(appealDate);
 
         let appealStatus = document.createElement("span");
@@ -236,16 +156,7 @@ const showAppealsInDOM = (appealsArray) => {
 
         let appealInteractions = document.createElement("div");
         appealInteractions.classList = "appeal__interactions appeal__interactions_first-theme";
-        appealInteractions.innerHTML = `
-            <div title="Выбрать" class="appeal__mark appeal__mark_first-theme">
-            </div>
-            <div title="Редактировать" class="appeal__edit appeal__edit_first-theme">
-                <img class="appeal__img appeal__img_first-theme" src="img/pen2.png" alt="pen">
-            </div>
-            <div title="Печать" class="appeal__print appeal__print_first-theme">
-                <img class="appeal__img appeal__img_first-theme" src="img/print2.png" alt="print">
-            </div>
-        `;
+        appealInteractions.innerHTML = makeAppealInteractionsHtmlString();
         wrapper.append(appealInteractions);
 
         let appealText = document.createElement("div");

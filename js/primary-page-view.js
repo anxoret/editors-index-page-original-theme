@@ -1,12 +1,15 @@
 "use strict"
 
-// primary on page we show latest date with its latest appeals  
+// primary on page show latest date with its latest appeals  
 
-let allDates = document.querySelectorAll(".date");
-let lastDate = allDates[allDates.length - 1];
-let allLastDateLi = lastDate.querySelectorAll(".date__li");
-let lastDateLi = allLastDateLi[allLastDateLi.length - 1];
+let numberOfDateTimePeriods = document.querySelectorAll(".date__ul").length;
+let lastDateTimePeriods = document.querySelectorAll(".date__ul")[numberOfDateTimePeriods - 1];
+
+let numberOfDatesLi = lastDateTimePeriods.querySelectorAll(".date__li").length;
+let lastDateLi = lastDateTimePeriods.querySelectorAll(".date__li")[numberOfDatesLi - 1];
+
+showAndHideDateUl(lastDateTimePeriods, "date__ul_close");
+dateHoverOnAndOff(lastDateName);
 openTheDateAppeals(lastDateLi);
-let lastDateName = lastDate.querySelector(".date__name");
-lastDateName.classList.remove("date__name_arrow-right");
-lastDateName.classList.add("date__name_arrow-down");
+
+lastDateLi.classList.add("date__li_selected");

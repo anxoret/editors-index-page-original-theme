@@ -1,6 +1,6 @@
 "use strict"
 
-const getTopAndButtomMarginsSum = (element) => {
+const getTopButtomMarginsSum = (element) => {
     element = (typeof element === "string") ? document.querySelector(element) : element;
 
     let elementStyles = window.getComputedStyle(element);
@@ -10,7 +10,7 @@ const getTopAndButtomMarginsSum = (element) => {
     return topAndButtomMargins;
 };
 
-const getLeftAndRightMarginsSum = (element) => {
+const getLeftRightMarginsSum = (element) => {
     element = (typeof element === "string") ? document.querySelector(element) : element;
 
     let elementStyles = window.getComputedStyle(element);
@@ -23,7 +23,7 @@ const getLeftAndRightMarginsSum = (element) => {
 const getElementAbsoluteHeight = (element) => {
     element = (typeof element === "string") ? document.querySelector(element) : element;
 
-    let topAndButtomMargins = getTopAndButtomMarginsSum(element);
+    let topAndButtomMargins = getTopButtomMarginsSum(element);
 
     return Math.ceil(element.offsetHeight + topAndButtomMargins);
 };
@@ -31,7 +31,7 @@ const getElementAbsoluteHeight = (element) => {
 const getElementAbsoluteWidth = (element) => {
     element = (typeof element === "string") ? document.querySelector(element) : element;
 
-    let leftAndRightMargins = getLeftAndRightMarginsSum(element);
+    let leftAndRightMargins = getLeftRightMarginsSum(element);
 
     return Math.ceil(element.offsetWidth + leftAndRightMargins);
 };
@@ -50,16 +50,34 @@ const resizeElements = () => {
     let headerAbsoluteHeight = getElementAbsoluteHeight(header);
 
     datesSidebar.style.height = `calc(100vh - ${headerAbsoluteHeight}px)`;
-
+    let datesSidebarAbsoluteWidth = getElementAbsoluteWidth(datesSidebar);
+    let datesSidebarLeftRightMargins = getLeftRightMarginsSum(datesSidebar);
+    
     let mainContent = document.querySelector(".main-content");
     mainContent.style.height = `calc(100vh - ${headerAbsoluteHeight}px)`;
+    let mainContentAbsoluteHeight = getElementAbsoluteHeight(mainContent);
 
     let sectionButtonWrapper = document.querySelector(".section__button-wrapper");
-    sectionButtonWrapper.style.width = `${getElementAbsoluteWidth(datesSidebar)
-        - getLeftAndRightMarginsSum(datesSidebar) - getLeftAndRightMarginsSum(sectionButtonWrapper)}px`;
+    let sectionButtonWrapperLeftRightMargins = getLeftRightMarginsSum(sectionButtonWrapper);
+    sectionButtonWrapper.style.width = datesSidebarAbsoluteWidth 
+        - datesSidebarLeftRightMargins 
+        - sectionButtonWrapperLeftRightMargins 
+        + "px"
+    ;
 
     let searchInformation = document.querySelector(".search-information");
+    let searchInformationAbsoluteHeight = getElementAbsoluteHeight(searchInformation);
+
     let selectedAppeals = document.querySelector(".selected-appeals");
-    appealsContainer.style.height = `calc(${getElementAbsoluteHeight(datesSidebar)}px 
-        - ${getElementAbsoluteHeight(searchInformation)}px - ${getElementAbsoluteHeight(selectedAppeals)}px + 25px + 10px)`;
+    let selectedAppealsAbsoluteHeight = getElementAbsoluteHeight(selectedAppeals);
+    appealsContainer.style.height = mainContentAbsoluteHeight 
+        - searchInformationAbsoluteHeight 
+        - selectedAppealsAbsoluteHeight 
+        + 35 + "px"; // uncorrect height of appealsContainer
 };
+
+window.addEventListener("load", resizeElements);
+
+window.addEventListener("resize", () => {
+    setTimeout( () => resizeElements(), 1500)
+});
