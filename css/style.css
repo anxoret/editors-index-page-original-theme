@@ -40,7 +40,7 @@ body {
   background-color: #737373;
   -webkit-box-shadow: 0px 1px 1px #33aef5 inset;
   box-shadow: 0px 1px 1px #33aef5 inset;
-  background-image: url(/img/three-lines.png);
+  background-image: url(../img/three-lines.png);
   background-size: 11px;
   background-position: center;
   background-repeat: no-repeat; }
@@ -644,10 +644,10 @@ body {
     .appeal__information_first-theme .appeal__not-viewed_first-theme::before {
       position: absolute;
       top: -22px;
-      content: url(/img/not-viewed-little.png); }
+      content: url(../img/not-viewed-little.png); }
     .appeal__information_first-theme .appeal__not-viewed_first-theme:hover::before {
       top: -22px;
-      content: url(/img/viewed-changed2.png); }
+      content: url(../img/viewed-changed2.png); }
 
 .appeal__interactions_first-theme {
   position: relative;
@@ -669,9 +669,9 @@ body {
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     width: 30px;
-    content: url(/img/unchecked-mark2-little.png); }
+    content: url(../img/unchecked-mark2-little.png); }
   .appeal__mark_first-theme:hover::before {
-    content: url(/img/checked-mark2-little.png); }
+    content: url(../img/checked-mark2-little.png); }
 
 .appeal__mark_marked::before {
   position: absolute;
@@ -681,7 +681,7 @@ body {
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   width: 30px;
-  content: url(/img/checked-mark2-little.png); }
+  content: url(../img/checked-mark2-little.png); }
 
 .appeal__edit_first-theme {
   margin-right: 5px; }

@@ -1,3 +1,5 @@
+"use strict"
+
 let appeals = document.querySelectorAll(".appeal");
 
 numbersOfNotViewedAppeals.forEach( (number) => {

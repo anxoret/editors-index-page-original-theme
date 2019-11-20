@@ -40,7 +40,7 @@ const getRandomStatus = () => {
         ""
     ];
 
-    let randomStatusNumber = getRandomNumber(1, 5);
+    let randomStatusNumber = getRandomNumber(0, 4);
     let randomStatus = arrayOfStatuses[randomStatusNumber];
 
     return randomStatus;

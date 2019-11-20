@@ -40,7 +40,7 @@ body {
         border-radius: 5px;
         background-color: $scrollBarThumbColor;
         box-shadow: 0px 1px 1px $accentColor inset;
-        background-image: url(/img/three-lines.png);
+        background-image: url(../img/three-lines.png);
         background-size: $scrollbarWidth;
         background-position: center;
         background-repeat: no-repeat;
@@ -607,13 +607,13 @@ body {
         &::before {
             position: absolute;
             top: -22px;
-            content: url(/img/not-viewed-little.png);
+            content: url(../img/not-viewed-little.png);
         }
 
         &:hover {
             &::before {
                 top: -22px;
-                content: url(/img/viewed-changed2.png);
+                content: url(../img/viewed-changed2.png);
             }
         }
     }
@@ -639,12 +639,12 @@ body {
         left: 45%;
         transform: translate(-50%, -50%);
         width: 30px;
-        content: url(/img/unchecked-mark2-little.png);
+        content: url(../img/unchecked-mark2-little.png);
     }
 
     &:hover {
         &::before {
-            content: url(/img/checked-mark2-little.png);
+            content: url(../img/checked-mark2-little.png);
         }
     }
 }
@@ -656,7 +656,7 @@ body {
         left: 45%;
         transform: translate(-50%, -50%);
         width: 30px;
-        content: url(/img/checked-mark2-little.png);
+        content: url(../img/checked-mark2-little.png);
     }
 }
 
@@ -706,6 +706,3 @@ body {
 .appeal__text_first-theme .appeal__ellipsis-span_close {
     display: none;
 }
-
-
-
