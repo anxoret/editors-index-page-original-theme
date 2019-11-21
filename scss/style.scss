@@ -62,7 +62,7 @@ body {
     min-width: 1000px;
     max-width: 1920px;
     width: 80%;
-    background-color:#e4f0f5;
+    background-color: $globalBackgroundColor;
 }
 
 .header_first-theme {
@@ -237,19 +237,35 @@ body {
     display: inline-block;
 }
 
+.section-navigation__ul_first-theme {
+    display: flex;
+    flex-direction: row;
+    // align-items: center;
+}
+
 .section-navigation__li_first-theme {
-    margin-left: 3px;
-    padding-right: 8px;
+    // margin-left: 3px;
+    // padding-right: 8px;
+    margin-top: 5px;
     vertical-align: middle;
-    line-height: 2;
-    border-right: 2px solid lighten(#828080, 40%); 
+    padding: 0 10px;
+    // line-height: 2;
+    // line-height: 45px;
+    border-radius: 5px 5px 0 0;
+    // border-right: 2px solid lighten(#828080, 40%); 
 
     &:first-child {
-        &::before {
-            content: ">";
-            color: #828080;
-            margin-right: 10px;
-        }
+        background-color: $globalBackgroundColor;
+        border: 1px solid #d9d9da;
+        border-bottom: none;
+
+        // &::before {
+        //     content: ">";
+        //     color: #828080;
+        //     margin-right: 10px;
+        //     font-weight: bold;
+        //     background-color: white;
+        // }
     }
 
     &:last-child {
@@ -327,7 +343,8 @@ body {
 }
 
 .section-navigation__link_open-section {
-    text-decoration: underline;
+    // text-decoration: underline;
+    // color: darken(#828080, 10%);
 }
 
 .sections_first-theme {
@@ -335,17 +352,20 @@ body {
     flex-direction: row;
     align-items: center;
     background-color: white;
+    // background-color: #f0f0f0;
 }
 
 .section__button-wrapper_first-theme {
     position: relative;
-    margin: 10px 15px;
+    // margin: 10px 15px;
+    // background-color: $globalBackgroundColor;
 }
 
 .sections__button_first-theme {
     @include button;
     width: $buttonWidth;
     height: $buttonHeight;
+    margin: 0px auto;
 }
 
 .sections__img_first-theme {
@@ -483,7 +503,7 @@ body {
 .date__ul_first-theme {
     margin: 5px auto;
     padding: 5px 0;
-    background-color: #f0f0f0;
+    background-color: lighten(#f0f0f0, 2%);
     border-radius: 5px;
 }
 

@@ -37,6 +37,19 @@ const getElementAbsoluteWidth = (element) => {
 };
 
 const resizeElements = () => {
+    let sections = document.querySelector(".sections_first-theme");
+    // let openSectionLink = document.querySelector(".section-navigation__link_open-section");
+    // let openSectionLi = openSectionLink.parentElement;
+    let arrayOfSectionLi = document.querySelectorAll(".section-navigation__li");
+    let sectionsAbsoluteHeight = getElementAbsoluteHeight(sections);
+    // arrayOfSectionLi.style.height = sectionsAbsoluteHeight + "px";
+
+    for (let sectionLi of arrayOfSectionLi) {
+        sectionLi.style.height = sectionsAbsoluteHeight + "px";
+    }
+
+    
+    // console.log(openSectionLi);
 
     let sectionsButton = document.querySelector(".sections__button");
     let dates = document.querySelectorAll(".date");
@@ -74,6 +87,7 @@ const resizeElements = () => {
         - searchInformationAbsoluteHeight 
         - selectedAppealsAbsoluteHeight 
         + 35 + "px"; // uncorrect height of appealsContainer
+
 };
 
 window.addEventListener("load", resizeElements);
