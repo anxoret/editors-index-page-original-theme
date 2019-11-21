@@ -10,6 +10,7 @@ let lastDateLi = lastDateTimePeriods.querySelectorAll(".date__li")[numberOfDates
 
 showAndHideDateUl(lastDateTimePeriods, "date__ul_close");
 dateHoverOnAndOff(lastDateName);
+lastDateLi.querySelector(".date__appeal-refresh-span").classList.remove("date__appeal-refresh-span_close");
 openTheDateAppeals(lastDateLi);
 
 lastDateLi.classList.add("date__li_selected");
