@@ -20,7 +20,7 @@ let allDates = document.querySelectorAll(".date");
 let lastDate = allDates[allDates.length - 1];
 let lastDateName = lastDate.querySelector(".date__name");
 
-let hoverDateName = lastDateName;
+let hoverDateName;
 const dateHoverOnAndOff = (element) => {
     if (hoverDateName == element) {
         element.classList.remove("date__name_arrow-down");
