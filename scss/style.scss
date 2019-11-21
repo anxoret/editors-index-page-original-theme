@@ -129,6 +129,7 @@ body {
     width: 230px;
     outline: none;
     resize: none;
+    border: 1px solid gray;
     border-radius: 5px;
     
     &:hover {
@@ -298,8 +299,9 @@ body {
 }
 
 .sections__li_first-theme {
-    margin: 0 5px 5px; 
-    border-bottom: 2px solid #e7e7e7;
+    display: inline-block;
+    margin: 0; 
+    border-bottom: 1px solid #e7e7e7;
     
     &:first-child {
         margin-top: 5px;
@@ -308,6 +310,11 @@ body {
     &:last-child {
         border: none
     } 
+
+    .sections__link_first-theme {
+        margin-left: 5px;
+        line-height: 30px;
+    }
 }
 
 .section-navigation__link_first-theme {
@@ -355,7 +362,8 @@ body {
     flex-direction: column;
     width: $buttonWidth;
     line-height: 24px;
-    border: 2px solid $buttonColor;
+    // border: 2px solid $buttonColor;
+    border: 1px solid #2e7fb2;
     border-radius: 5px;
     // background-color: #1491d8;
     background-color: #1387c9;
