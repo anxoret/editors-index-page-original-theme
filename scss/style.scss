@@ -362,11 +362,9 @@ body {
     flex-direction: column;
     width: $buttonWidth;
     line-height: 24px;
-    // border: 2px solid $buttonColor;
     border: 1px solid #2e7fb2;
     border-radius: 5px;
     background-color: #1491d8;
-    // background-color: #1387c9;
     box-shadow: 10px 10px 10px rgba(0,0,0,0.4);
     z-index: 9999;
 }
@@ -506,18 +504,20 @@ body {
     .date__time-span_first-theme {
         text-decoration: underline;
 
+        .date__start-hour-span_first-theme,
+        .date__start-minutes-span_first-theme,
+        .date__end-hour-span_first-theme,
+        .date__end-minutes-span_first-theme,
+        .date__appeal-refresh-span_first-theme {
+            font-weight: bold;
+        }
+
         &:hover {
-            text-decoration: underline;
+            background-color: lighten($accentColor, 20%);
         }
     }
 
-    .date__start-hour-span_first-theme,
-    .date__start-minutes-span_first-theme,
-    .date__end-hour-span_first-theme,
-    .date__end-minutes-span_first-theme,
-    .date__appeal-refresh-span_first-theme {
-        font-weight: bold;
-    }
+    
 
 }
 

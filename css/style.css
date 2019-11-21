@@ -572,14 +572,14 @@ body {
     margin-top: 5px; }
   .date__li_first-theme .date__time-span_first-theme {
     text-decoration: underline; }
+    .date__li_first-theme .date__time-span_first-theme .date__start-hour-span_first-theme,
+    .date__li_first-theme .date__time-span_first-theme .date__start-minutes-span_first-theme,
+    .date__li_first-theme .date__time-span_first-theme .date__end-hour-span_first-theme,
+    .date__li_first-theme .date__time-span_first-theme .date__end-minutes-span_first-theme,
+    .date__li_first-theme .date__time-span_first-theme .date__appeal-refresh-span_first-theme {
+      font-weight: bold; }
     .date__li_first-theme .date__time-span_first-theme:hover {
-      text-decoration: underline; }
-  .date__li_first-theme .date__start-hour-span_first-theme,
-  .date__li_first-theme .date__start-minutes-span_first-theme,
-  .date__li_first-theme .date__end-hour-span_first-theme,
-  .date__li_first-theme .date__end-minutes-span_first-theme,
-  .date__li_first-theme .date__appeal-refresh-span_first-theme {
-    font-weight: bold; }
+      background-color: #94d5fa; }
 
 .date__li_selected .date__time-span_first-theme {
   color: white;
