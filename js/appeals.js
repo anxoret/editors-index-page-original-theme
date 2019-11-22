@@ -213,20 +213,5 @@ const showAppealsInDOM = (appealsArray) => {
     });
 };
 
-const openAndCloseAllAppealText = () => {
-    let appealsInDOM = document.querySelectorAll(".appeal");
 
-    appealsNumbersWithBigTexts.forEach((appealNumber, i) => {
-        let appealImg = appealsInDOM[appealNumber].querySelector(".appeal__arrows .appeal__img");
-        appealImg.addEventListener("click", () => {
-            let appealRestText = document.querySelectorAll(".appeal__rest-text-span")[i];
-            appealRestText.classList.toggle("appeal__rest-text-span_close");
-
-            let appealEllipsisSpan = document.querySelectorAll(".appeal__ellipsis-span")[i];
-            appealEllipsisSpan.classList.toggle("appeal__ellipsis-span_close");
-
-            appealImg.classList.toggle("appeal__arrows_up");
-        });
-    });
-};
 
