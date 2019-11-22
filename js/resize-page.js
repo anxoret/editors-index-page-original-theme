@@ -57,7 +57,6 @@ const resizeElements = () => {
     // delete main vertical scrolling of the page
     let header = document.querySelector(".header");
     let headerAbsoluteHeight = getElementAbsoluteHeight(header) + 7;
-    console.log(headerAbsoluteHeight);
 
     datesSidebar.style.height = `calc(100vh - ${headerAbsoluteHeight}px)`;
     let datesSidebarAbsoluteWidth = getElementAbsoluteWidth(datesSidebar);
@@ -72,7 +71,7 @@ const resizeElements = () => {
     sectionButtonWrapper.style.width = datesSidebarAbsoluteWidth 
         - datesSidebarLeftRightMargins 
         - sectionButtonWrapperLeftRightMargins 
-        + "px"
+        + "px"; // uncorrect height of contents
     ;
 
     let searchInformation = document.querySelector(".search-information");
@@ -83,7 +82,7 @@ const resizeElements = () => {
     appealsContainer.style.height = mainContentAbsoluteHeight 
         - searchInformationAbsoluteHeight 
         - selectedAppealsAbsoluteHeight 
-        + "px"; 
+        + 35 + "px"; 
 
 };
 
