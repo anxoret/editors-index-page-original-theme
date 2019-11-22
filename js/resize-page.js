@@ -36,6 +36,7 @@ const getElementAbsoluteWidth = (element) => {
     return Math.ceil(element.offsetWidth + leftAndRightMargins);
 };
 
+// uncorrect height of content (display 1920x1080)
 const resizeElements = () => {
     let sections = document.querySelector(".sections_first-theme");
     let arrayOfSectionLi = document.querySelectorAll(".section-navigation__li");
@@ -46,8 +47,6 @@ const resizeElements = () => {
     }
 
     
-    // console.log(openSectionLi);
-
     let sectionsButton = document.querySelector(".sections__button");
     let dates = document.querySelectorAll(".date");
 
@@ -57,10 +56,7 @@ const resizeElements = () => {
 
     // delete main vertical scrolling of the page
     let header = document.querySelector(".header");
-    let sectionNavigationLi =  document.querySelector(".section-navigation__li");
-    // let headerAbsoluteHeight = getElementAbsoluteHeight(header) + 7;
     let headerAbsoluteHeight = getElementAbsoluteHeight(header) + 7;
-
     console.log(headerAbsoluteHeight);
 
     datesSidebar.style.height = `calc(100vh - ${headerAbsoluteHeight}px)`;
@@ -87,8 +83,7 @@ const resizeElements = () => {
     appealsContainer.style.height = mainContentAbsoluteHeight 
         - searchInformationAbsoluteHeight 
         - selectedAppealsAbsoluteHeight 
-        // + 35 + "px"; // uncorrect height of appealsContainer
-        + "px";
+        + "px"; 
 
 };
 

@@ -282,7 +282,6 @@ body {
         height: 30px;
     }
 
-
 }
 
 .nav__link_first-theme {
@@ -342,23 +341,15 @@ body {
     }
 }
 
-.section-navigation__link_open-section {
-    // text-decoration: underline;
-    // color: darken(#828080, 10%);
-}
-
 .sections_first-theme {
     display: flex;
     flex-direction: row;
     align-items: center;
     background-color: white;
-    // background-color: #f0f0f0;
 }
 
 .section__button-wrapper_first-theme {
     position: relative;
-    // margin: 10px 15px;
-    // background-color: $globalBackgroundColor;
 }
 
 .sections__button_first-theme {
